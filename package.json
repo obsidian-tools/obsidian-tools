@@ -1,0 +1,32 @@
+{
+  "name": "obsidian-tools",
+  "version": "1.0.0",
+  "description": "A collection of utilities for obsidian",
+  "main": "index.js",
+  "repository": "https://github.com/zephraph/obsidian-tools",
+  "author": "zephraph <zephraph@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "test": "lerna run test",
+    "build": "lerna run build",
+    "release": "auto shipit"
+  },
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ]
+  },
+  "devDependencies": {
+    "auto": "^10.16.5",
+    "lerna": "^3.22.1"
+  },
+  "auto": {
+    "plugins": [
+      "npm",
+      "all-contributors",
+      "first-time-contributor",
+      "released"
+    ]
+  }
+}

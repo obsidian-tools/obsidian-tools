@@ -1,0 +1,32 @@
+{
+  "name": "obsidian-plugin-build-tools",
+  "version": "1.0.0",
+  "description": "Utilities for developing obsidian plugins",
+  "keywords": [
+    "obsidian",
+    "obsidian.md",
+    "plugin",
+    "build-tool"
+  ],
+  "author": "zephraph <zephraph@gmail.com>",
+  "homepage": "https://github.com/zephraph/obsidian-tools#readme",
+  "license": "MIT",
+  "main": "lib/obsidian-build-tools.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zephraph/obsidian-tools.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/zephraph/obsidian-tools/issues"
+  }
+}
