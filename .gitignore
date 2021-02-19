@@ -3,3 +3,4 @@ node_modules
 packages/*/lib
 *-error.log
 package-lock.json
+.npmrc

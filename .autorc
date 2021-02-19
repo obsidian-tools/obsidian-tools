@@ -1,4 +1,5 @@
  {
+  "author": "zephraph <zephraph@gmail.com>",
   "plugins": [
     "npm",
     "all-contributors",

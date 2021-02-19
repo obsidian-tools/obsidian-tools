@@ -2,15 +2,14 @@
   "name": "obsidian-tools",
   "version": "1.0.0",
   "description": "A collection of utilities for obsidian",
-  "main": "index.js",
+  "private": true,
   "repository": "https://github.com/zephraph/obsidian-tools",
   "author": "zephraph <zephraph@gmail.com>",
   "license": "MIT",
-  "private": true,
   "scripts": {
     "test": "lerna run test",
     "build": "lerna run build",
-    "release": "auto shipit"
+    "release": "auto shipit -v"
   },
   "workspaces": {
     "packages": [
@@ -23,7 +22,7 @@
   "devDependencies": {
     "@auto-it/all-contributors": "^10.16.5",
     "@auto-it/first-time-contributor": "^10.16.5",
-    "auto": "^10.16.5",
+    "auto": "^10.16.7",
     "lerna": "^3.22.1"
   },
   "auto": {
@@ -33,5 +32,9 @@
       "first-time-contributor",
       "released"
     ]
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
   }
 }
