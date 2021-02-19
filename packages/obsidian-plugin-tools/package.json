@@ -25,7 +25,6 @@
     "url": "git+https://github.com/zephraph/obsidian-tools.git"
   },
   "scripts": {
-    "test": "echo \"Error: run tests from root\" && exit 1",
     "build": "esbuild --bundle --platform=node --external:obsidian --format=cjs --outfile=\"lib/obsidian-plugin-tools.js\" src/index.ts"
   },
   "bugs": {
