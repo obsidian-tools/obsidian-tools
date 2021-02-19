@@ -15,9 +15,14 @@
   "workspaces": {
     "packages": [
       "packages/*"
+    ],
+    "nohoist": [
+      "**/esbuild"
     ]
   },
   "devDependencies": {
+    "@auto-it/all-contributors": "^10.16.5",
+    "@auto-it/first-time-contributor": "^10.16.5",
     "auto": "^10.16.5",
     "lerna": "^3.22.1"
   },

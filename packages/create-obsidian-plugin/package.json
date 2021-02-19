@@ -1,6 +1,7 @@
 {
   "name": "create-obsidian-plugin",
-  "version": "1.0.0",
+  "private": true,
+  "version": "0.0.1",
   "description": "An unofficial tool for easily creating an obsidian plugin",
   "keywords": [
     "create",
@@ -28,5 +29,9 @@
   },
   "bugs": {
     "url": "https://github.com/zephraph/obsidian-tools/issues"
+  },
+  "devDependencies": {
+    "@types/node": "^14.14.28",
+    "typescript": "^4.1.5"
   }
 }

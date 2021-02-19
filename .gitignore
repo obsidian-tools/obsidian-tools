@@ -1,3 +1,5 @@
 node_modules
 .env
 packages/*/lib
+*-error.log
+package-lock.json
