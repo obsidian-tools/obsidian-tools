@@ -36,7 +36,7 @@ export default class ObsidianPlugin implements IPlugin {
   constructor({dir = process.cwd()}: IObsidianPluginOptions = {}) {
     this.styles = path.join(dir, "style.css");
     this.main = path.join(dir, "main.js");
-    this.main = path.join(dir, "manifest.json");
+    this.manifest = path.join(process.cwd(), "manifest.json");
     this.zip = glob.sync(path.join(dir, "*.zip"))[0];
   }
 
@@ -54,8 +54,7 @@ export default class ObsidianPlugin implements IPlugin {
         );
       }
 
-      const manifestPath = path.join(__dirname, "../manifest.json");
-      const manifest = JSON.parse(fs.readFileSync(manifestPath, "utf-8"));
+      const manifest = JSON.parse(fs.readFileSync(this.manifest, "utf-8"));
 
       return manifest.version;
     });
@@ -67,7 +66,7 @@ export default class ObsidianPlugin implements IPlugin {
       }
 
       if (!fs.existsSync(this.manifest)) {
-        auto.logger.log.error(`Could not find file "${this.main}"`);
+        auto.logger.log.error(`Could not find file "${this.manifest}"`);
         process.exit(1);
       }
     })
@@ -76,8 +75,7 @@ export default class ObsidianPlugin implements IPlugin {
       this.name,
       async ({ bump, dryRun, quiet }) => {
         // Update the manifest.json
-        const manifestPath = path.join(__dirname, "../manifest.json");
-        const manifest = JSON.parse(fs.readFileSync(manifestPath, "utf-8"));
+        const manifest = JSON.parse(fs.readFileSync(this.manifest, "utf-8"));
         const lastVersion = manifest.version;
         const newVersion = semver.inc(
           manifest.version,
@@ -103,8 +101,8 @@ export default class ObsidianPlugin implements IPlugin {
           manifest.version
         );
 
-        fs.writeFileSync(manifestPath, JSON.stringify(manifest, null, 2));
-        await execPromise("git", ["add", manifestPath]);
+        fs.writeFileSync(this.manifest, JSON.stringify(manifest, null, 2));
+        await execPromise("git", ["add", this.manifest]);
 
         // Update the versions.json
         const versionsPath = path.join(__dirname, "../versions.json");
@@ -179,11 +177,10 @@ export default class ObsidianPlugin implements IPlugin {
         }
 
         // Generate manifest updates for upload-assets plugin to pick up after
-        const manifestPath = path.join(__dirname, "../manifest.json");
-        const manifest = JSON.parse(fs.readFileSync(manifestPath, "utf-8"));
+        const manifest = JSON.parse(fs.readFileSync(this.manifest, "utf-8"));
         manifest.version = prerelease;
         auto.logger.log.info("Updated manifest.json version to: ", prerelease);
-        fs.writeFileSync(manifestPath, JSON.stringify(manifest, null, 2));
+        fs.writeFileSync(this.manifest, JSON.stringify(manifest, null, 2));
 
         await execPromise("git", [
           "tag",

@@ -22,6 +22,16 @@ yarn add -D auto-plugin-obsidian
 Add the following to your `.autorc`.
 Without the `dir` option the plugin assumes all distribution files are in the current working directory.
 
+This plugin expects the following project structure.
+
+```txt
+📜 main.js
+📜 styles.css
+📜.autorc
+📜manifest.json
+📜versions.json
+```
+
 ```json
 {
   "plugins": [
@@ -43,3 +53,12 @@ During the next release `auto` will update your compatibility map with the new i
 Your plugin might not be on the registry yet but you might still want to work on it and makes releases.
 If the directory where `auto` looks for your distribution files has a `.zip` file in it, that file will also get uploaded to the release.
 This way you can direct users in your `README.md` to manually install the plugin with the zip file.
+
+```txt
+📜 main.js
+📜 styles.css
+📜.autorc
+📜manifest.json
+📜versions.json
+📜my-plugin.zip
+```
