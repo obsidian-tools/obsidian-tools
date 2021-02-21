@@ -2,6 +2,21 @@
 
 #### 🐛 Bug Fix
 
+- `obsidian-plugin-utils@0.0.5`
+  - skip publish for package to get release out [#8](https://github.com/zephraph/obsidian-tools/pull/8) ([@hipstersmoothie](https://github.com/hipstersmoothie))
+- `auto-plugin-obsidian@0.0.3`
+  - Fix auto plugin build [#7](https://github.com/zephraph/obsidian-tools/pull/7) ([@hipstersmoothie](https://github.com/hipstersmoothie))
+
+#### Authors: 1
+
+- Andrew Lisowski ([@hipstersmoothie](https://github.com/hipstersmoothie))
+
+---
+
+# (Sun Feb 21 2021)
+
+#### 🐛 Bug Fix
+
 - `obsidian-plugin-utils@0.0.4`
   - Adding publish config to try to get it to publish [#5](https://github.com/zephraph/obsidian-tools/pull/5) ([@zephraph](https://github.com/zephraph))
 
