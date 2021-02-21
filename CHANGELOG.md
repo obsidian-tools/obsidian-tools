@@ -1,5 +1,18 @@
 # (Sun Feb 21 2021)
 
+#### 🚀 Enhancement
+
+- `obsidian-utils@0.1.0`
+  - Add function to find vault from disk [#14](https://github.com/zephraph/obsidian-tools/pull/14) ([@zephraph](https://github.com/zephraph))
+
+#### Authors: 1
+
+- Justin Bennett ([@zephraph](https://github.com/zephraph))
+
+---
+
+# (Sun Feb 21 2021)
+
 #### 🐛 Bug Fix
 
 - `auto-plugin-obsidian@0.1.3`
