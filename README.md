@@ -1,7 +1,9 @@
 <img src="./resources/logo.svg" alt="Obsidian Tools" />
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+
 [![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
+
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 A collection of tools that helps devs build plugins for obsidian
@@ -10,7 +12,7 @@ A collection of tools that helps devs build plugins for obsidian
 
 - **create-obsidian-plugin**: Allows one to do `yarn create obsidian-plugin` or `npm init obsidian-plugin` to get a fully formed plugin scaffolding
 - **obsidian-plugin-cli**: A cli tool that provides a complete plugin development experience out of the box.
-- **obsidian-plugin-tools**: A library of useful plugin related utilities such as getting information about an installed plugin, getting information about a plugin in obsidian's plugin registry, or programmatically installing a plugin
+- **obsidian-utils**: A collection of utilities such as getting information about an installed plugin, getting information about a plugin in obsidian's plugin registry, or programmatically installing a plugin
 - **auto-plugin-obsidian**: A plugin for [auto](https://github.com/intuit/auto) that autmomates the release process for an obsidian plugin
 
 ## Contributors ✨
