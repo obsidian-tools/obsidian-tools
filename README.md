@@ -1,4 +1,4 @@
-<img src="./resources/logo.svg" alt="Obsidian Tools"></img>
+<img src="./resources/logo.svg" alt="Obsidian Tools" />
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 
