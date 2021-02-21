@@ -110,7 +110,7 @@ export default class ObsidianPlugin implements IPlugin {
         await execPromise("git", ["add", this.manifest]);
 
         if (this.dir !== process.cwd()) {
-          fs.copyFileSync(this.manifest, this.dir);
+          fs.copyFileSync(this.manifest, path.join(this.dir, "manifest.json"));
         }
 
         // Update the versions.json
