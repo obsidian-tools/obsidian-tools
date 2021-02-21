@@ -1,14 +1,14 @@
 # Obsidian Tools
 
+<p align="right">
+  <img src="./resources/logo.svg" width="400px"></img>
+</p>
+
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 
 [![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
 
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
-
-<p align="center">
-  <img src="https://user-images.githubusercontent.com/3087225/108631189-97df9380-7436-11eb-85c6-6d7c709a26b0.png" width="400px"></img>
-</p>
 
 A collection of tools that helps devs build plugins for obsidian
 
