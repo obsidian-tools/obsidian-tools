@@ -51,12 +51,7 @@ export default class ObsidianPlugin implements IPlugin {
     }
 
     const manifest = JSON.parse(fs.readFileSync(this.manifest, "utf-8"));
-    const zipFilename = `${manifest.id}.zip`;
-
-    this.zip =
-      this.dir === process.cwd()
-        ? zipFilename
-        : path.join(this.dir, zipFilename);
+    this.zip = `${manifest.id}.zip`;
   }
 
   /** Tap into auto plugin points. */
@@ -164,16 +159,19 @@ export default class ObsidianPlugin implements IPlugin {
         return;
       }
 
+      const files = [this.manifest, this.main];
+
+      if (fs.existsSync(this.styles)) {
+        files.push(this.styles);
+      }
+
       if (this.dir === process.cwd()) {
-        const files = [this.manifest, this.main];
-
-        if (fs.existsSync(this.styles)) {
-          files.push(this.styles);
-        }
-
         await execPromise("zip", [this.zip, ...files]);
       } else {
-        await execPromise("zip", ["-r", this.zip, this.dir]);
+        const startDir = process.cwd();
+        process.chdir(this.dir);
+        await execPromise("zip", [this.zip, ...files]);
+        process.chdir(startDir);
       }
     });
 
@@ -238,7 +236,7 @@ export default class ObsidianPlugin implements IPlugin {
       this.main,
       this.manifest,
       this.styles,
-      this.zip,
+      this.dir === process.cwd() ? this.zip : path.join(this.dir, this.zip),
     ]);
 
     uploadAssets.apply(auto);
