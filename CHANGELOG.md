@@ -1,5 +1,22 @@
 # (Sun Feb 21 2021)
 
+#### 🐛 Bug Fix
+
+- `obsidian-plugin-utils@0.0.3`, `obsidian-utils@0.0.2`
+  - Adds obsidian-utils [#3](https://github.com/zephraph/obsidian-tools/pull/3) ([@zephraph](https://github.com/zephraph))
+
+#### 📝 Documentation
+
+- Update docs [#2](https://github.com/zephraph/obsidian-tools/pull/2) ([@zephraph](https://github.com/zephraph))
+
+#### Authors: 1
+
+- Justin Bennett ([@zephraph](https://github.com/zephraph))
+
+---
+
+# (Sun Feb 21 2021)
+
 :tada: This release contains work from a new contributor! :tada:
 
 Thank you, Andrew Lisowski ([@hipstersmoothie](https://github.com/hipstersmoothie)), for all your work!
