@@ -16,6 +16,8 @@ import * as t from "io-ts";
 const pluginOptions = t.partial({
   /** The directory with the plugin's distribution files  */
   dir: t.string,
+  /** Create a zip file for manual installs  */
+  zip: t.boolean,
 });
 
 export type IObsidianPluginOptions = t.TypeOf<typeof pluginOptions>;
@@ -32,7 +34,7 @@ export default class ObsidianPlugin implements IPlugin {
   /** Path to the plugin-name.zip for manual installs of the plugin */
   private readonly zip?: string;
   /** Directory with distribution files */
-  private readonly dir?: string;
+  private readonly dir: string;
 
   /** Initialize the plugin with it's options */
   constructor({ dir = process.cwd() }: IObsidianPluginOptions = {}) {
@@ -143,6 +145,26 @@ export default class ObsidianPlugin implements IPlugin {
         ]);
       }
     );
+
+    auto.hooks.afterVersion.tapPromise(this.name, async ({ dryRun }) => {
+      if (dryRun) {
+        return;
+      }
+
+      const manifest = JSON.parse(fs.readFileSync(this.manifest, "utf-8"));
+
+      if (this.dir === process.cwd()) {
+        const files = [this.manifest, this.main];
+
+        if (fs.existsSync(this.styles)) {
+          files.push(this.styles);
+        }
+
+        await execPromise("zip", [`${manifest.id}.zip`, ...files]);
+      } else {
+        await execPromise("zip", ["-r", `${manifest.id}.zip`, this.dir]);
+      }
+    });
 
     auto.hooks.publish.tapPromise(this.name, async () => {
       auto.logger.log.info("Pushing new tag to GitHub");
