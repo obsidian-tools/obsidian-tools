@@ -7,6 +7,9 @@ export const mkdir = promisify(fs.mkdir);
 export const read = promisify(fs.readFile);
 export const fileStats = promisify(fs.stat);
 
+export const readJSON = (filePath: string) =>
+  read(filePath, "utf-8").then((contents) => JSON.parse(contents));
+
 export const failIf = (condition: boolean, message: string) => {
   if (condition) throw new Error(message);
 };
