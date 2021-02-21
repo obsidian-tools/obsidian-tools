@@ -31,9 +31,12 @@ export default class ObsidianPlugin implements IPlugin {
   private readonly manifest: string;
   /** Path to the plugin-name.zip for manual installs of the plugin */
   private readonly zip?: string;
+  /** Directory with distribution files */
+  private readonly dir?: string;
 
   /** Initialize the plugin with it's options */
-  constructor({dir = process.cwd()}: IObsidianPluginOptions = {}) {
+  constructor({ dir = process.cwd() }: IObsidianPluginOptions = {}) {
+    this.dir = dir;
     this.styles = path.join(dir, "style.css");
     this.main = path.join(dir, "main.js");
     this.manifest = path.join(process.cwd(), "manifest.json");
@@ -69,7 +72,7 @@ export default class ObsidianPlugin implements IPlugin {
         auto.logger.log.error(`Could not find file "${this.manifest}"`);
         process.exit(1);
       }
-    })
+    });
 
     auto.hooks.version.tapPromise(
       this.name,
@@ -103,6 +106,10 @@ export default class ObsidianPlugin implements IPlugin {
 
         fs.writeFileSync(this.manifest, JSON.stringify(manifest, null, 2));
         await execPromise("git", ["add", this.manifest]);
+
+        if (this.dir !== process.cwd()) {
+          fs.copyFileSync(this.manifest, this.dir);
+        }
 
         // Update the versions.json
         const versionsPath = path.join(__dirname, "../versions.json");
