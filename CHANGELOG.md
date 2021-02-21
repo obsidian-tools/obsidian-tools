@@ -2,6 +2,24 @@
 
 #### 🐛 Bug Fix
 
+- `obsidian-plugin-utils@0.0.4`
+  - Adding publish config to try to get it to publish [#5](https://github.com/zephraph/obsidian-tools/pull/5) ([@zephraph](https://github.com/zephraph))
+
+#### 📝 Documentation
+
+- Add auto plugin to readme [#4](https://github.com/zephraph/obsidian-tools/pull/4) ([@hipstersmoothie](https://github.com/hipstersmoothie))
+
+#### Authors: 2
+
+- Andrew Lisowski ([@hipstersmoothie](https://github.com/hipstersmoothie))
+- Justin Bennett ([@zephraph](https://github.com/zephraph))
+
+---
+
+# (Sun Feb 21 2021)
+
+#### 🐛 Bug Fix
+
 - `obsidian-plugin-utils@0.0.3`, `obsidian-utils@0.0.2`
   - Adds obsidian-utils [#3](https://github.com/zephraph/obsidian-tools/pull/3) ([@zephraph](https://github.com/zephraph))
 
