@@ -1,0 +1,51 @@
+{
+  "name": "auto-plugin-obsidian",
+  "version": "0.0.1",
+  "description": "An auto plugin for automating the release of an obsidian plugin.",
+  "keywords": [
+    "create",
+    "obsidian",
+    "plugin",
+    "obsidian.md",
+    "auto",
+    "release"
+  ],
+  "author": "Andrew Lisowski <lisowski54@gmail.com>",
+  "homepage": "https://github.com/zephraph/obsidian-tools#readme",
+  "license": "MIT",
+  "main": "lib/auto-plugin-obsidian.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zephraph/obsidian-tools.git"
+  },
+  "scripts": {
+    "build": "esbuild --platform=node --format=cjs --outfile=\"lib/auto-plugin-obsidian.js\" src/index.ts"
+  },
+  "bugs": {
+    "url": "https://github.com/zephraph/obsidian-tools/issues"
+  },
+  "devDependencies": {
+    "@types/node": "^14.14.28",
+    "@types/semver": "^7.3.4",
+    "esbuild": "^0.8.49",
+    "typescript": "^4.1.5"
+  },
+  "dependencies": {
+    "@auto-it/core": "^10.16.5",
+    "@auto-it/upload-assets": "^10.16.7",
+    "fast-glob": "^3.2.5",
+    "fp-ts": "^2.5.3",
+    "io-ts": "^2.1.2",
+    "semver": "^7.3.4"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  }
+}
