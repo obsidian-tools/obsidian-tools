@@ -21,7 +21,7 @@ $ npm install -g obsidian-plugin-cli
 $ obsidian-plugin COMMAND
 running command...
 $ obsidian-plugin (-v|--version|version)
-obsidian-plugin-cli/0.0.1 darwin-x64 node-v12.18.4
+obsidian-plugin-cli/0.0.2 linux-x64 node-v14.15.5
 $ obsidian-plugin --help [COMMAND]
 USAGE
   $ obsidian-plugin COMMAND
@@ -48,7 +48,7 @@ OPTIONS
   -o, --outputDir=outputDir              [default: dist] path to write build output to
 ```
 
-_See code: [src/commands/build.ts](https://github.com/zephraph/obsidian-tools/blob/v0.0.1/src/commands/build.ts)_
+_See code: [src/commands/build.ts](https://github.com/zephraph/obsidian-tools/blob/v0.0.2/src/commands/build.ts)_
 
 ## `obsidian-plugin dev [ENTRYPOINT]`
 
@@ -62,7 +62,7 @@ OPTIONS
   -h, --help                             show CLI help
 ```
 
-_See code: [src/commands/dev.ts](https://github.com/zephraph/obsidian-tools/blob/v0.0.1/src/commands/dev.ts)_
+_See code: [src/commands/dev.ts](https://github.com/zephraph/obsidian-tools/blob/v0.0.2/src/commands/dev.ts)_
 
 ## `obsidian-plugin help [COMMAND]`
 

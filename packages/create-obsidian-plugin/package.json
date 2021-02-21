@@ -1,7 +1,7 @@
 {
   "name": "create-obsidian-plugin",
   "private": true,
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "An unofficial tool for easily creating an obsidian plugin",
   "keywords": [
     "create",
