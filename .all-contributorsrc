@@ -9,6 +9,19 @@
   "imageSize": 100,
   "commit": true,
   "commitConvention": "none",
-  "contributors": [],
+  "contributors": [
+    {
+      "login": "zephraph",
+      "name": "Justin Bennett",
+      "avatar_url": "https://avatars.githubusercontent.com/u/3087225?v=4",
+      "profile": "https://github.com/zephraph",
+      "contributions": [
+        "code",
+        "doc",
+        "infra",
+        "test"
+      ]
+    }
+  ],
   "contributorsPerLine": 7
 }
