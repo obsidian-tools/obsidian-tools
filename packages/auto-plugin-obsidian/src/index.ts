@@ -159,17 +159,19 @@ export default class ObsidianPlugin implements IPlugin {
         return;
       }
 
-      const files = [this.manifest, this.main];
+      const files = [this.main];
 
       if (fs.existsSync(this.styles)) {
         files.push(this.styles);
       }
 
       if (this.dir === process.cwd()) {
+        files.push(this.manifest);
         await execPromise("zip", [this.zip, ...files]);
       } else {
         const startDir = process.cwd();
         process.chdir(this.dir);
+        files.push(path.join(this.dir, "manifest.json"));
         await execPromise("zip", [this.zip, ...files]);
         process.chdir(startDir);
       }
