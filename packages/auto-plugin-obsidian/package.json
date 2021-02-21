@@ -25,7 +25,7 @@
     "url": "git+https://github.com/zephraph/obsidian-tools.git"
   },
   "scripts": {
-    "build": "esbuild --platform=node --format=cjs --outfile=\"lib/auto-plugin-obsidian.js\" src/index.ts"
+    "build": "esbuild --platform=node --target=node12 --format=cjs --outfile=\"lib/auto-plugin-obsidian.js\" src/index.ts"
   },
   "bugs": {
     "url": "https://github.com/zephraph/obsidian-tools/issues"

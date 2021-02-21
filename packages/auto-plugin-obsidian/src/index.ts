@@ -62,12 +62,12 @@ export default class ObsidianPlugin implements IPlugin {
 
     auto.hooks.beforeShipIt.tapPromise(this.name, async () => {
       if (!fs.existsSync(this.main)) {
-        auto.logger.log.console.error(`Could not find file "${this.main}"`);
+        auto.logger.log.error(`Could not find file "${this.main}"`);
         process.exit(1);
       }
 
       if (!fs.existsSync(this.manifest)) {
-        auto.logger.log.console.error(`Could not find file "${this.main}"`);
+        auto.logger.log.error(`Could not find file "${this.main}"`);
         process.exit(1);
       }
     })
