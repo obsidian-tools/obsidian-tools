@@ -1,6 +1,6 @@
 {
   "name": "auto-plugin-obsidian",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "An auto plugin for automating the release of an obsidian plugin.",
   "keywords": [
     "create",
