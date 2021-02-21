@@ -9,7 +9,7 @@ Features:
 - [ ] installing a plugin from disk
 - [x] reading a plugin from disk
 - [x] reading from obsidian's community plugin registry
-- [ ] listing the user's vaults
+- [x] listing the user's vaults
 
 ## Usage
 

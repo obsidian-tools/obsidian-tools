@@ -1,10 +1,12 @@
-<img src="./resources/logo.svg" alt="Obsidian Tools" />
+<img src="./resources/logo.svg" alt="Obsidian Tools" title="Obsidian logo copyright of Obsidian, used here with permission"/>
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+
 [![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
+
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
-A collection of tools that helps devs build plugins for obsidian
+A unofficial collection of tools that helps devs build plugins for obsidian
 
 ## Included packages
 
