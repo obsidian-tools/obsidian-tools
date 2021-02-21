@@ -3,5 +3,9 @@
   "version": "0.0.3",
   "main": "./index.js",
   "repository": "https://github.com/zephraph/obsidian-tools",
-  "author": "zephraph <zephraph@gmail.com>"
+  "author": "zephraph <zephraph@gmail.com>",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  }
 }
