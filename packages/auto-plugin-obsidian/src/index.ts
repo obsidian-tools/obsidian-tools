@@ -114,7 +114,7 @@ export default class ObsidianPlugin implements IPlugin {
         }
 
         // Update the versions.json
-        const versionsPath = path.join(__dirname, "../versions.json");
+        const versionsPath = path.join(process.cwd(), "../versions.json");
         const versions = JSON.parse(fs.readFileSync(versionsPath, "utf-8"));
 
         if (versions[lastVersion] !== manifest.minAppVersion) {
