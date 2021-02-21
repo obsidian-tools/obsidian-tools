@@ -1,6 +1,6 @@
 {
   "name": "obsidian-plugin-utils",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "main": "./index.js",
   "repository": "https://github.com/zephraph/obsidian-tools",
   "author": "zephraph <zephraph@gmail.com>",
