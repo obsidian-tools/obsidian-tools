@@ -1,5 +1,18 @@
 # (Sun Feb 21 2021)
 
+#### ⚠️ Pushed to `main`
+
+- `create-obsidian-plugin@0.0.3`
+  - Make create-obsidian-plugin public ([@zephraph](https://github.com/zephraph))
+
+#### Authors: 1
+
+- Justin Bennett ([@zephraph](https://github.com/zephraph))
+
+---
+
+# (Sun Feb 21 2021)
+
 :tada: This release contains work from a new contributor! :tada:
 
 Thank you, Justin Bennett ([@zephraph](https://github.com/zephraph)), for all your work!
