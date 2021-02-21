@@ -31,6 +31,8 @@ export default class ObsidianPlugin implements IPlugin {
   private readonly main: string;
   /** Path to the manifest.json for the plugin */
   private readonly manifest: string;
+  /** Path to the versions.json for the plugin */
+  private readonly versions: string;
   /** Path to the plugin-name.zip for manual installs of the plugin */
   private readonly zip?: string;
   /** Directory with distribution files */
@@ -42,6 +44,7 @@ export default class ObsidianPlugin implements IPlugin {
     this.styles = path.join(dir, "style.css");
     this.main = path.join(dir, "main.js");
     this.manifest = path.join(process.cwd(), "manifest.json");
+    this.versions = path.join(process.cwd(), "versions.json");
     this.zip = glob.sync(path.join(dir, "*.zip"))[0];
   }
 
@@ -72,6 +75,11 @@ export default class ObsidianPlugin implements IPlugin {
 
       if (!fs.existsSync(this.manifest)) {
         auto.logger.log.error(`Could not find file "${this.manifest}"`);
+        process.exit(1);
+      }
+
+      if (!fs.existsSync(this.versions)) {
+        auto.logger.log.error(`Could not find file "${this.versions}"`);
         process.exit(1);
       }
     });
@@ -114,8 +122,7 @@ export default class ObsidianPlugin implements IPlugin {
         }
 
         // Update the versions.json
-        const versionsPath = path.join(process.cwd(), "../versions.json");
-        const versions = JSON.parse(fs.readFileSync(versionsPath, "utf-8"));
+        const versions = JSON.parse(fs.readFileSync(this.versions, "utf-8"));
 
         if (versions[lastVersion] !== manifest.minAppVersion) {
           versions[manifest.version] = manifest.minAppVersion;
@@ -123,8 +130,8 @@ export default class ObsidianPlugin implements IPlugin {
           const newVersions = JSON.stringify(versions, null, 2);
           auto.logger.log.info("Updated versions.json: ", newVersions);
 
-          fs.writeFileSync(versionsPath, newVersions);
-          await execPromise("git", ["add", versionsPath]);
+          fs.writeFileSync(this.versions, newVersions);
+          await execPromise("git", ["add", this.versions]);
         }
 
         await execPromise("git", [
