@@ -1,5 +1,23 @@
 # (Sun Feb 21 2021)
 
+#### 🚀 Enhancement
+
+- `auto-plugin-obsidian@0.1.0`
+  - Fix manfest path and make zip a first class feature [#10](https://github.com/zephraph/obsidian-tools/pull/10) ([@hipstersmoothie](https://github.com/hipstersmoothie))
+
+#### 🐛 Bug Fix
+
+- Remove deprecated obsidian-plugin-tools [#6](https://github.com/zephraph/obsidian-tools/pull/6) ([@zephraph](https://github.com/zephraph))
+
+#### Authors: 2
+
+- Andrew Lisowski ([@hipstersmoothie](https://github.com/hipstersmoothie))
+- Justin Bennett ([@zephraph](https://github.com/zephraph))
+
+---
+
+# (Sun Feb 21 2021)
+
 #### 🐛 Bug Fix
 
 - `obsidian-plugin-utils@0.0.5`
