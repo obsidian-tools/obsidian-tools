@@ -2,6 +2,19 @@
 
 #### 🐛 Bug Fix
 
+- `auto-plugin-obsidian@0.1.2`
+  - fix versions.json lookup and verification [#12](https://github.com/zephraph/obsidian-tools/pull/12) ([@hipstersmoothie](https://github.com/hipstersmoothie))
+
+#### Authors: 1
+
+- Andrew Lisowski ([@hipstersmoothie](https://github.com/hipstersmoothie))
+
+---
+
+# (Sun Feb 21 2021)
+
+#### 🐛 Bug Fix
+
 - `auto-plugin-obsidian@0.1.1`
   - correct copy usage [#11](https://github.com/zephraph/obsidian-tools/pull/11) ([@hipstersmoothie](https://github.com/hipstersmoothie))
 

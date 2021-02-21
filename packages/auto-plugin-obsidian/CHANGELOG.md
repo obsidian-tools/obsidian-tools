@@ -1,3 +1,17 @@
+# v0.1.2 (Sun Feb 21 2021)
+
+#### 🐛 Bug Fix
+
+- fix versions.json lookup and verification [#12](https://github.com/zephraph/obsidian-tools/pull/12) ([@hipstersmoothie](https://github.com/hipstersmoothie))
+- check if version.json exists in beforeShipit ([@hipstersmoothie](https://github.com/hipstersmoothie))
+- fix versions path ([@hipstersmoothie](https://github.com/hipstersmoothie))
+
+#### Authors: 1
+
+- Andrew Lisowski ([@hipstersmoothie](https://github.com/hipstersmoothie))
+
+---
+
 # v0.1.1 (Sun Feb 21 2021)
 
 #### 🐛 Bug Fix
