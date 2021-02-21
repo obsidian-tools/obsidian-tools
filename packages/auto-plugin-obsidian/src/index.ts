@@ -13,7 +13,7 @@ import * as semver from "semver";
 import * as t from "io-ts";
 
 const styleFileName = "styles.css";
-const mainFileName = 'main.js';
+const mainFileName = "main.js";
 const manifestFileName = "manifest.json";
 
 const pluginOptions = t.partial({
@@ -127,8 +127,10 @@ export default class ObsidianPlugin implements IPlugin {
 
         // Update the versions.json
         const versions = JSON.parse(fs.readFileSync(this.versions, "utf-8"));
+        const versionKeys = Object.keys(versions);
+        const lastChangedVersion = versionKeys[versionKeys.length - 1];
 
-        if (versions[lastVersion] !== manifest.minAppVersion) {
+        if (versions[lastChangedVersion] !== manifest.minAppVersion) {
           versions[manifest.version] = manifest.minAppVersion;
 
           const newVersions = JSON.stringify(versions, null, 2);
