@@ -20,7 +20,7 @@ export const to = <T>(p: Promise<T>) => {
 /**
  * Converts a web fetch response to a node readable stream
  */
-export const resToReadable = (res: Response) => {
+const resToReadable = (res: Response) => {
   const reader = res.body.getReader();
   const readable = new Readable();
   readable._read = async () => {
@@ -32,3 +32,23 @@ export const resToReadable = (res: Response) => {
 
 export const toReadFromPath = (...pathParts: string[]) =>
   to(read(path.join(...pathParts), "utf-8"));
+
+export const fetchJSON = (...args: Parameters<typeof fetch>) =>
+  fetch(...args).then((res) => res.json());
+
+export const fetchToDisk = (
+  input: RequestInfo,
+  outPath: string,
+  init?: RequestInit
+) =>
+  fetch(input, init).then(async (res) => {
+    const outputFileStream = fs.createWriteStream(outPath);
+    const downloadStream = resToReadable(res);
+    downloadStream.pipe(outputFileStream);
+
+    return new Promise((resolve, reject) => {
+      outputFileStream.on("error", reject);
+      downloadStream.on("error", reject);
+      downloadStream.on("end", resolve);
+    });
+  });
