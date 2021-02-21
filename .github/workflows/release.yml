@@ -1,6 +1,14 @@
 name: Release
 
-on: [push]
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - "!main"
+    types:
+      - synchronized
 
 jobs:
   release:
