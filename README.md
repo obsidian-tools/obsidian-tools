@@ -6,7 +6,7 @@
 
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
-A collection of tools that helps devs build plugins for obsidian
+A unofficial collection of tools that helps devs build plugins for obsidian
 
 ## Included packages
 
