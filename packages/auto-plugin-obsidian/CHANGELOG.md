@@ -1,3 +1,16 @@
+# v0.1.1 (Sun Feb 21 2021)
+
+#### 🐛 Bug Fix
+
+- correct copy usage [#11](https://github.com/zephraph/obsidian-tools/pull/11) ([@hipstersmoothie](https://github.com/hipstersmoothie))
+- correct copy usage ([@hipstersmoothie](https://github.com/hipstersmoothie))
+
+#### Authors: 1
+
+- Andrew Lisowski ([@hipstersmoothie](https://github.com/hipstersmoothie))
+
+---
+
 # v0.1.0 (Sun Feb 21 2021)
 
 #### 🚀 Enhancement
