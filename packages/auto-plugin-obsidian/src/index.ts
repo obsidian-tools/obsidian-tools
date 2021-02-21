@@ -45,7 +45,18 @@ export default class ObsidianPlugin implements IPlugin {
     this.main = path.join(dir, "main.js");
     this.manifest = path.join(process.cwd(), "manifest.json");
     this.versions = path.join(process.cwd(), "versions.json");
-    this.zip = glob.sync(path.join(dir, "*.zip"))[0];
+
+    if (!fs.existsSync(this.manifest)) {
+      throw new Error(`Could not find file "${this.manifest}"`);
+    }
+
+    const manifest = JSON.parse(fs.readFileSync(this.manifest, "utf-8"));
+    const zipFilename = `${manifest.id}.zip`;
+
+    this.zip =
+      this.dir === process.cwd()
+        ? zipFilename
+        : path.join(this.dir, zipFilename);
   }
 
   /** Tap into auto plugin points. */
@@ -70,11 +81,6 @@ export default class ObsidianPlugin implements IPlugin {
     auto.hooks.beforeShipIt.tapPromise(this.name, async () => {
       if (!fs.existsSync(this.main)) {
         auto.logger.log.error(`Could not find file "${this.main}"`);
-        process.exit(1);
-      }
-
-      if (!fs.existsSync(this.manifest)) {
-        auto.logger.log.error(`Could not find file "${this.manifest}"`);
         process.exit(1);
       }
 
@@ -158,8 +164,6 @@ export default class ObsidianPlugin implements IPlugin {
         return;
       }
 
-      const manifest = JSON.parse(fs.readFileSync(this.manifest, "utf-8"));
-
       if (this.dir === process.cwd()) {
         const files = [this.manifest, this.main];
 
@@ -167,9 +171,9 @@ export default class ObsidianPlugin implements IPlugin {
           files.push(this.styles);
         }
 
-        await execPromise("zip", [`${manifest.id}.zip`, ...files]);
+        await execPromise("zip", [this.zip, ...files]);
       } else {
-        await execPromise("zip", ["-r", `${manifest.id}.zip`, this.dir]);
+        await execPromise("zip", ["-r", this.zip, this.dir]);
       }
     });
 
