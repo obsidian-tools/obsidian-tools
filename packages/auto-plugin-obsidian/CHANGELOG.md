@@ -1,3 +1,16 @@
+# v0.1.3 (Sun Feb 21 2021)
+
+#### 🐛 Bug Fix
+
+- calculate zip filename in constructor so it's picked up by upload-asset-plugin [#13](https://github.com/zephraph/obsidian-tools/pull/13) ([@hipstersmoothie](https://github.com/hipstersmoothie))
+- calculate zip filename in constructor so it's picked up by ([@hipstersmoothie](https://github.com/hipstersmoothie))
+
+#### Authors: 1
+
+- Andrew Lisowski ([@hipstersmoothie](https://github.com/hipstersmoothie))
+
+---
+
 # v0.1.2 (Sun Feb 21 2021)
 
 #### 🐛 Bug Fix
