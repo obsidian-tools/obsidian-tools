@@ -1,6 +1,5 @@
 {
   "name": "create-obsidian-plugin",
-  "private": true,
   "version": "0.0.2",
   "description": "An unofficial tool for easily creating an obsidian plugin",
   "keywords": [
@@ -24,12 +23,15 @@
     "type": "git",
     "url": "git+https://github.com/zephraph/obsidian-tools.git"
   },
-  "scripts": {},
+  "scripts": {
+    "build": "esbuild --bundle --platform=node --external:obsidian --format=cjs --outfile=\"lib/create-obsidian-plugin.js\" src/index.ts"
+  },
   "bugs": {
     "url": "https://github.com/zephraph/obsidian-tools/issues"
   },
   "devDependencies": {
     "@types/node": "^14.14.28",
+    "esbuild": "^0.8.49",
     "typescript": "^4.1.5"
   },
   "publishConfig": {
