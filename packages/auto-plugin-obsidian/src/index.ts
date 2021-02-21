@@ -16,6 +16,8 @@ import * as t from "io-ts";
 const pluginOptions = t.partial({
   /** The directory with the plugin's distribution files  */
   dir: t.string,
+  /** Create a zip file for manual installs  */
+  zip: t.boolean,
 });
 
 export type IObsidianPluginOptions = t.TypeOf<typeof pluginOptions>;
@@ -31,12 +33,15 @@ export default class ObsidianPlugin implements IPlugin {
   private readonly manifest: string;
   /** Path to the plugin-name.zip for manual installs of the plugin */
   private readonly zip?: string;
+  /** Directory with distribution files */
+  private readonly dir: string;
 
   /** Initialize the plugin with it's options */
-  constructor({dir = process.cwd()}: IObsidianPluginOptions = {}) {
+  constructor({ dir = process.cwd() }: IObsidianPluginOptions = {}) {
+    this.dir = dir;
     this.styles = path.join(dir, "style.css");
     this.main = path.join(dir, "main.js");
-    this.main = path.join(dir, "manifest.json");
+    this.manifest = path.join(process.cwd(), "manifest.json");
     this.zip = glob.sync(path.join(dir, "*.zip"))[0];
   }
 
@@ -54,8 +59,7 @@ export default class ObsidianPlugin implements IPlugin {
         );
       }
 
-      const manifestPath = path.join(__dirname, "../manifest.json");
-      const manifest = JSON.parse(fs.readFileSync(manifestPath, "utf-8"));
+      const manifest = JSON.parse(fs.readFileSync(this.manifest, "utf-8"));
 
       return manifest.version;
     });
@@ -67,17 +71,16 @@ export default class ObsidianPlugin implements IPlugin {
       }
 
       if (!fs.existsSync(this.manifest)) {
-        auto.logger.log.error(`Could not find file "${this.main}"`);
+        auto.logger.log.error(`Could not find file "${this.manifest}"`);
         process.exit(1);
       }
-    })
+    });
 
     auto.hooks.version.tapPromise(
       this.name,
       async ({ bump, dryRun, quiet }) => {
         // Update the manifest.json
-        const manifestPath = path.join(__dirname, "../manifest.json");
-        const manifest = JSON.parse(fs.readFileSync(manifestPath, "utf-8"));
+        const manifest = JSON.parse(fs.readFileSync(this.manifest, "utf-8"));
         const lastVersion = manifest.version;
         const newVersion = semver.inc(
           manifest.version,
@@ -103,8 +106,12 @@ export default class ObsidianPlugin implements IPlugin {
           manifest.version
         );
 
-        fs.writeFileSync(manifestPath, JSON.stringify(manifest, null, 2));
-        await execPromise("git", ["add", manifestPath]);
+        fs.writeFileSync(this.manifest, JSON.stringify(manifest, null, 2));
+        await execPromise("git", ["add", this.manifest]);
+
+        if (this.dir !== process.cwd()) {
+          fs.copyFileSync(this.manifest, this.dir);
+        }
 
         // Update the versions.json
         const versionsPath = path.join(__dirname, "../versions.json");
@@ -138,6 +145,26 @@ export default class ObsidianPlugin implements IPlugin {
         ]);
       }
     );
+
+    auto.hooks.afterVersion.tapPromise(this.name, async ({ dryRun }) => {
+      if (dryRun) {
+        return;
+      }
+
+      const manifest = JSON.parse(fs.readFileSync(this.manifest, "utf-8"));
+
+      if (this.dir === process.cwd()) {
+        const files = [this.manifest, this.main];
+
+        if (fs.existsSync(this.styles)) {
+          files.push(this.styles);
+        }
+
+        await execPromise("zip", [`${manifest.id}.zip`, ...files]);
+      } else {
+        await execPromise("zip", ["-r", `${manifest.id}.zip`, this.dir]);
+      }
+    });
 
     auto.hooks.publish.tapPromise(this.name, async () => {
       auto.logger.log.info("Pushing new tag to GitHub");
@@ -179,11 +206,10 @@ export default class ObsidianPlugin implements IPlugin {
         }
 
         // Generate manifest updates for upload-assets plugin to pick up after
-        const manifestPath = path.join(__dirname, "../manifest.json");
-        const manifest = JSON.parse(fs.readFileSync(manifestPath, "utf-8"));
+        const manifest = JSON.parse(fs.readFileSync(this.manifest, "utf-8"));
         manifest.version = prerelease;
         auto.logger.log.info("Updated manifest.json version to: ", prerelease);
-        fs.writeFileSync(manifestPath, JSON.stringify(manifest, null, 2));
+        fs.writeFileSync(this.manifest, JSON.stringify(manifest, null, 2));
 
         await execPromise("git", [
           "tag",
