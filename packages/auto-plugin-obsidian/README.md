@@ -5,7 +5,7 @@ An auto plugin for automating the release of an [obsidian.md](https://obsidian.m
 - Updates the version in your `manifest.json`
 - Automates `versions.json` compatibility
 - Supports `next`, `canary`, and manual installs
-- Uploads all distribution files (`main.js`, `manifest.json` and optionally `style.css`) to a GitHub release with a changelog
+- Uploads all distribution files (`main.js`, `manifest.json` and optionally `styles.css`) to a GitHub release with a changelog
 
 ## Installation
 
