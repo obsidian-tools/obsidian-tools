@@ -21,6 +21,16 @@
         "infra",
         "test"
       ]
+    },
+    {
+      "login": "hipstersmoothie",
+      "name": "Andrew Lisowski",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1192452?v=4",
+      "profile": "http://hipstersmoothie.com/",
+      "contributions": [
+        "doc",
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7
