@@ -8,10 +8,13 @@ import {
 } from "@auto-it/core";
 import UploadAssetsPlugins from "@auto-it/upload-assets";
 import * as path from "path";
-import * as glob from "fast-glob";
 import * as fs from "fs";
 import * as semver from "semver";
 import * as t from "io-ts";
+
+const styleFileName = "styles.css";
+const mainFileName = 'main.js';
+const manifestFileName = "manifest.json";
 
 const pluginOptions = t.partial({
   /** The directory with the plugin's distribution files  */
@@ -25,7 +28,7 @@ export type IObsidianPluginOptions = t.TypeOf<typeof pluginOptions>;
 export default class ObsidianPlugin implements IPlugin {
   name = "obsidian";
 
-  /** Path to the style.css for the plugin */
+  /** Path to the styles.css for the plugin */
   private readonly styles?: string;
   /** Path to the main.js for the plugin */
   private readonly main: string;
@@ -41,9 +44,9 @@ export default class ObsidianPlugin implements IPlugin {
   /** Initialize the plugin with it's options */
   constructor({ dir = process.cwd() }: IObsidianPluginOptions = {}) {
     this.dir = dir;
-    this.styles = path.join(dir, "style.css");
-    this.main = path.join(dir, "main.js");
-    this.manifest = path.join(process.cwd(), "manifest.json");
+    this.styles = path.join(dir, styleFileName);
+    this.main = path.join(dir, mainFileName);
+    this.manifest = path.join(process.cwd(), manifestFileName);
     this.versions = path.join(process.cwd(), "versions.json");
 
     if (!fs.existsSync(this.manifest)) {
@@ -119,7 +122,7 @@ export default class ObsidianPlugin implements IPlugin {
         await execPromise("git", ["add", this.manifest]);
 
         if (this.dir !== process.cwd()) {
-          fs.copyFileSync(this.manifest, path.join(this.dir, "manifest.json"));
+          fs.copyFileSync(this.manifest, path.join(this.dir, manifestFileName));
         }
 
         // Update the versions.json
@@ -171,10 +174,10 @@ export default class ObsidianPlugin implements IPlugin {
         const startDir = process.cwd();
         process.chdir(this.dir);
 
-        const files = ["main.js", "manifest.json"];
+        const files = [mainFileName, manifestFileName];
 
-        if (fs.existsSync("style.css")) {
-          files.push("style.css");
+        if (fs.existsSync(styleFileName)) {
+          files.push(styleFileName);
         }
 
         await execPromise("zip", [this.zip, ...files]);
