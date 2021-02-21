@@ -1,11 +1,3 @@
-# `obsidian-plugin-utils`
+## NOTICE
 
-> TODO: description
-
-## Usage
-
-```
-const obsidianPluginUtils = require('obsidian-plugin-utils');
-
-// TODO: DEMONSTRATE API
-```
+This package is **deprecated**. Please use [https://www.npmjs.com/package/obsidian-plugin-tools](obsidian-utils) instead.
