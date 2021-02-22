@@ -1,3 +1,15 @@
+# v0.5.2 (Mon Feb 22 2021)
+
+#### ⚠️ Pushed to `main`
+
+- Remove fs promises ref from utils ([@zephraph](https://github.com/zephraph))
+
+#### Authors: 1
+
+- Justin Bennett ([@zephraph](https://github.com/zephraph))
+
+---
+
 # v0.5.1 (Mon Feb 22 2021)
 
 #### 🐛 Bug Fix

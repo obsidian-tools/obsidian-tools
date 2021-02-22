@@ -1,5 +1,18 @@
 # (Mon Feb 22 2021)
 
+#### ⚠️ Pushed to `main`
+
+- `obsidian-utils@0.5.2`
+  - Remove fs promises ref from utils ([@zephraph](https://github.com/zephraph))
+
+#### Authors: 1
+
+- Justin Bennett ([@zephraph](https://github.com/zephraph))
+
+---
+
+# (Mon Feb 22 2021)
+
 #### 🐛 Bug Fix
 
 - `obsidian-utils@0.5.1`
