@@ -1,5 +1,18 @@
 # (Mon Feb 22 2021)
 
+#### 🐛 Bug Fix
+
+- `obsidian-utils@0.2.1`
+  - Fix `obsidian-utils` types [#20](https://github.com/zephraph/obsidian-tools/pull/20) ([@zephraph](https://github.com/zephraph))
+
+#### Authors: 1
+
+- Justin Bennett ([@zephraph](https://github.com/zephraph))
+
+---
+
+# (Mon Feb 22 2021)
+
 #### 🚀 Enhancement
 
 - `obsidian-utils@0.2.0`

@@ -1,3 +1,16 @@
+# v0.2.1 (Mon Feb 22 2021)
+
+#### 🐛 Bug Fix
+
+- Fix `obsidian-utils` types [#20](https://github.com/zephraph/obsidian-tools/pull/20) ([@zephraph](https://github.com/zephraph))
+- Change types to split into multiple files for esm compat ([@zephraph](https://github.com/zephraph))
+
+#### Authors: 1
+
+- Justin Bennett ([@zephraph](https://github.com/zephraph))
+
+---
+
 # v0.2.0 (Mon Feb 22 2021)
 
 #### 🚀 Enhancement
