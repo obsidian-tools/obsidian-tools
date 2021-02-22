@@ -1,4 +1,4 @@
-import { failIf, fileStats, read, to, toReadFromPath } from "./utils";
+import { failIf, failIfNotDefined, fileStats, toReadJSON } from "./utils";
 import path from "path";
 import log from "./log";
 
@@ -19,15 +19,17 @@ export async function readPluginFromDisk(
   pluginID: string
 ) {
   const manifestPath = path.join(pluginsPath, pluginID, "manifest.json");
-  const [manifestReadError, rawManifest] = await to(
-    read(manifestPath, "utf-8")
+  const [manifestReadError, manifest] = await toReadJSON<PluginManifest>(
+    manifestPath
   );
+
   failIf(manifestReadError, `Manifest failed to load: ${manifestReadError}`);
-  const manifest: PluginManifest = JSON.parse(rawManifest);
-  const [, rawData] = await toReadFromPath(pluginsPath, pluginID, "data.json");
+  failIfNotDefined(manifest, `Manifest loaded but wasn't defined`);
+
+  const [, data] = await toReadJSON<object>(pluginsPath, pluginID, "data.json");
   const results: InstalledPluginInfo = {
     manifest,
-    data: rawData ? JSON.parse(rawData) : undefined,
+    data: data ?? undefined,
     lastUpdated: (await fileStats(manifestPath)).mtime,
   };
   log.success(`Successfully fetched plugin from disk`);

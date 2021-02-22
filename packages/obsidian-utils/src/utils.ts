@@ -10,9 +10,19 @@ export const fileStats = promisify(fs.stat);
 export const readJSON = (filePath: string) =>
   read(filePath, "utf-8").then((contents) => JSON.parse(contents));
 
-export const failIf = (condition: boolean, message: string) => {
+export function failIfNotDefined<T = any>(
+  condition: T | null | undefined | false | 0,
+  message: string
+): asserts condition is T {
+  if (!condition) throw new Error(message);
+}
+
+export function failIf(
+  condition: any,
+  message: string
+): asserts condition is false | null | undefined | 0 {
   if (condition) throw new Error(message);
-};
+}
 
 export const to = <T>(p: Promise<T>) => {
   return p.then((v) => [null, v]).catch((e) => [e, null]) as
@@ -24,17 +34,25 @@ export const to = <T>(p: Promise<T>) => {
  * Converts a web fetch response to a node readable stream
  */
 const resToReadable = (res: Response) => {
+  failIfNotDefined(res.body, "Response has no body");
   const reader = res.body.getReader();
   const readable = new Readable();
   readable._read = async () => {
     const { done, value } = await reader.read();
-    readable.push(done ? null : Buffer.from(value));
+    if (value) readable.push(done ? null : Buffer.from(value));
   };
   return readable;
 };
 
-export const toReadFromPath = (...pathParts: string[]) =>
-  to(read(path.join(...pathParts), "utf-8"));
+export const toRead = (...pathParts: string[]) =>
+  to<string>(read(path.join(...pathParts), "utf-8"));
+
+export const toReadJSON = <T>(...pathParts: string[]) =>
+  to<T>(
+    read(path.join(...pathParts), "utf-8").then((content) =>
+      JSON.parse(content)
+    )
+  );
 
 export const fetchJSON = (...args: Parameters<typeof fetch>) =>
   fetch(...args).then((res) => res.json());
