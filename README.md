@@ -4,7 +4,7 @@
 [![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
-A unofficial collection of tools that helps devs build plugins for obsidian
+An unofficial collection of tools that helps devs build plugins for obsidian
 
 ## Included packages
 
