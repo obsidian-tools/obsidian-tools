@@ -3,12 +3,28 @@ import path from "path";
 import fs from "fs";
 import { to, readJSON, failIf } from "./utils";
 
+interface ObsidianVaultDefinition {
+  path: string;
+  ts: number;
+  open?: true;
+}
+
 interface Vault {
   name: string;
   path: string;
 }
 
-export const findVault = async (): Promise<Vault[]> => {
+const getVaultFromPath = (vaultPath: string): Vault => {
+  return {
+    name: path.basename(vaultPath),
+    path: vaultPath,
+  };
+};
+
+export const findVault = async (vaultPath?: string): Promise<Vault[]> => {
+  if (vaultPath && fs.existsSync(vaultPath)) {
+    return [getVaultFromPath(vaultPath)];
+  }
   const home = os.homedir();
   let obsidianPath = "";
   switch (os.platform()) {
@@ -41,8 +57,7 @@ export const findVault = async (): Promise<Vault[]> => {
     `Could not read obsidian.json: ${obsidianReadError}\nVaults won't be retrievable`
   );
 
-  return Object.values(obsidian.vaults).map((vault: any) => ({
-    path: vault.path,
-    name: path.basename(vault.path),
-  }));
+  return Object.values<ObsidianVaultDefinition>(obsidian.vaults).map<Vault>(
+    (vault) => getVaultFromPath(vault.path)
+  );
 };
