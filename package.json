@@ -9,7 +9,7 @@
   "scripts": {
     "test": "lerna run test",
     "build": "lerna run build",
-    "release": "auto shipit -v"
+    "release": "auto shipit"
   },
   "workspaces": {
     "packages": [
