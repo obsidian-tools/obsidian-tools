@@ -1,12 +1,5 @@
 import { PluginRegistry } from "./registry";
-import {
-  fetchToDisk,
-  fetchJSON,
-  failIf,
-  mkdir,
-  to,
-  failIfNotDefined,
-} from "./utils";
+import { fetchToDisk, fetchJSON, failIf, mkdir, to, failIfNot } from "./utils";
 import log from "./log";
 import fs from "fs";
 import path from "path";
@@ -39,7 +32,7 @@ export async function installPluginFromGithub(
     (asset: any) => asset.name === "manifest.json"
   )?.browser_download_url;
 
-  failIfNotDefined(
+  failIfNot(
     manifestDownloadPath,
     `Didn't find a manifest.json file in release. Check it here: https://github.com/${repo}/releases/tag/${version}`
   );
@@ -52,7 +45,7 @@ export async function installPluginFromGithub(
     manifestDownloadError,
     `Failed to download manifest.json.\n${manifestDownloadError}`
   );
-  failIfNotDefined(manifest, `manifest.json is empty`);
+  failIfNot(manifest, `manifest.json is empty`);
 
   const pluginID = manifest.id;
   const pluginPath = path.join(pluginsPath, pluginID);
@@ -96,7 +89,7 @@ export async function installPluginFromRegistry(
   log.debug("Trying to retrieve", pluginID, "from plugin registry");
   const plugin = await registry.getPlugin(pluginID);
 
-  failIfNotDefined(
+  failIfNot(
     plugin,
     `Unable to install ${plugin}, it wasn't found in the registry.`
   );
