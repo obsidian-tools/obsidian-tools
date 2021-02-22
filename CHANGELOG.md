@@ -2,6 +2,19 @@
 
 #### 🚀 Enhancement
 
+- `obsidian-utils@0.5.0`
+  - Add isVault util, rename failIfNot for clarity [#23](https://github.com/zephraph/obsidian-tools/pull/23) ([@zephraph](https://github.com/zephraph))
+
+#### Authors: 1
+
+- Justin Bennett ([@zephraph](https://github.com/zephraph))
+
+---
+
+# (Mon Feb 22 2021)
+
+#### 🚀 Enhancement
+
 - `obsidian-utils@0.4.0`
   - Pass along vault open state from obsidian config [#22](https://github.com/zephraph/obsidian-tools/pull/22) ([@zephraph](https://github.com/zephraph))
 

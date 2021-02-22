@@ -1,3 +1,19 @@
+# v0.5.0 (Mon Feb 22 2021)
+
+#### 🚀 Enhancement
+
+- Add isVault util, rename failIfNot for clarity [#23](https://github.com/zephraph/obsidian-tools/pull/23) ([@zephraph](https://github.com/zephraph))
+
+#### 🐛 Bug Fix
+
+- Add isVault util, rename failIfNot for clarity ([@zephraph](https://github.com/zephraph))
+
+#### Authors: 1
+
+- Justin Bennett ([@zephraph](https://github.com/zephraph))
+
+---
+
 # v0.4.0 (Mon Feb 22 2021)
 
 #### 🚀 Enhancement
