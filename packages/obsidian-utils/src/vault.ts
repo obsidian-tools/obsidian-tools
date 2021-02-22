@@ -12,12 +12,14 @@ interface ObsidianVaultDefinition {
 interface Vault {
   name: string;
   path: string;
+  open?: boolean;
 }
 
-const getVaultFromPath = (vaultPath: string): Vault => {
+const getVaultFromPath = (vaultPath: string, open?: boolean): Vault => {
   return {
     name: path.basename(vaultPath),
     path: vaultPath,
+    open,
   };
 };
 
@@ -58,6 +60,6 @@ export const findVault = async (vaultPath?: string): Promise<Vault[]> => {
   );
 
   return Object.values<ObsidianVaultDefinition>(obsidian.vaults).map<Vault>(
-    (vault) => getVaultFromPath(vault.path)
+    (vault) => getVaultFromPath(vault.path, vault.open)
   );
 };
