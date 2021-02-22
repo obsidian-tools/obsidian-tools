@@ -1,3 +1,16 @@
+# (Mon Feb 22 2021)
+
+#### 🚀 Enhancement
+
+- `obsidian-utils@0.2.0`
+  - Add typescript types to obsidian-utils [#19](https://github.com/zephraph/obsidian-tools/pull/19) ([@zephraph](https://github.com/zephraph))
+
+#### Authors: 1
+
+- Justin Bennett ([@zephraph](https://github.com/zephraph))
+
+---
+
 # (Sun Feb 21 2021)
 
 #### 🐛 Bug Fix
