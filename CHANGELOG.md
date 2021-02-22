@@ -1,5 +1,18 @@
 # (Mon Feb 22 2021)
 
+#### 🚀 Enhancement
+
+- `obsidian-utils@0.3.0`
+  - Export utils, update findVault to optionally take a vaultPath [#21](https://github.com/zephraph/obsidian-tools/pull/21) ([@zephraph](https://github.com/zephraph))
+
+#### Authors: 1
+
+- Justin Bennett ([@zephraph](https://github.com/zephraph))
+
+---
+
+# (Mon Feb 22 2021)
+
 #### 🐛 Bug Fix
 
 - `obsidian-utils@0.2.1`
