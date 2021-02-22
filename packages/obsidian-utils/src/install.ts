@@ -1,10 +1,17 @@
 import { PluginRegistry } from "./registry";
-import { fetchToDisk, fetchJSON, failIf, mkdir, to, failIfNot } from "./utils";
+import {
+  write,
+  fetchToDisk,
+  fetchJSON,
+  failIf,
+  mkdir,
+  to,
+  failIfNot,
+} from "./utils";
 import log from "./log";
 import fs from "fs";
 import path from "path";
 import { PluginManifest } from "obsidian";
-import { writeFile } from "fs/promises";
 
 export async function installPluginFromGithub(
   repo: string,
@@ -56,10 +63,7 @@ export async function installPluginFromGithub(
     log.success("plugin directory successfully created");
   }
 
-  await writeFile(
-    path.join(pluginPath, "manifest.json"),
-    JSON.stringify(manifest)
-  );
+  await write(path.join(pluginPath, "manifest.json"), JSON.stringify(manifest));
 
   await Promise.all(
     pluginReleaseInfo.assets

@@ -5,6 +5,7 @@ import path from "path";
 
 export const mkdir = promisify(fs.mkdir);
 export const read = promisify(fs.readFile);
+export const write = promisify(fs.writeFile);
 export const fileStats = promisify(fs.stat);
 
 export const readJSON = (filePath: string) =>
