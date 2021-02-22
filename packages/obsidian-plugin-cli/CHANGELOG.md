@@ -1,3 +1,19 @@
+# v0.1.0 (Mon Feb 22 2021)
+
+#### 🚀 Enhancement
+
+- Add notification when update is available [#26](https://github.com/zephraph/obsidian-tools/pull/26) ([@zephraph](https://github.com/zephraph))
+
+#### 🐛 Bug Fix
+
+- Add notification when update is available ([@zephraph](https://github.com/zephraph))
+
+#### Authors: 1
+
+- Justin Bennett ([@zephraph](https://github.com/zephraph))
+
+---
+
 # v0.0.3 (Mon Feb 22 2021)
 
 #### 🐛 Bug Fix
