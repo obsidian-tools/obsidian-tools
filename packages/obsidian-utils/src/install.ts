@@ -1,5 +1,12 @@
 import { PluginRegistry } from "./registry";
-import { fetchToDisk, fetchJSON, failIf, mkdir, to } from "./utils";
+import {
+  fetchToDisk,
+  fetchJSON,
+  failIf,
+  mkdir,
+  to,
+  failIfNotDefined,
+} from "./utils";
 import log from "./log";
 import fs from "fs";
 import path from "path";
@@ -13,13 +20,10 @@ export async function installPluginFromGithub(
 ) {
   // docs: https://docs.github.com/en/rest/reference/repos#get-a-release-by-tag-name
   const [pluginReleaseFetchError, pluginReleaseInfo] = await to(
-    fetch(
-      `https://api.github.com/repos/${plugin.repo}/releases/tags/${version}`,
-      {
-        method: "GET",
-        headers: { Accept: "application/vnd.github.v3+json" },
-      }
-    ).then((response) => response.json())
+    fetch(`https://api.github.com/repos/${repo}/releases/tags/${version}`, {
+      method: "GET",
+      headers: { Accept: "application/vnd.github.v3+json" },
+    }).then((response) => response.json())
   );
 
   failIf(
@@ -32,11 +36,11 @@ export async function installPluginFromGithub(
   log.debug("Finding manifest from release...");
 
   const manifestDownloadPath: string = pluginReleaseInfo.assets.find(
-    (asset) => asset.name === "manifest.json"
+    (asset: any) => asset.name === "manifest.json"
   )?.browser_download_url;
 
-  failIf(
-    !manifestDownloadPath,
+  failIfNotDefined(
+    manifestDownloadPath,
     `Didn't find a manifest.json file in release. Check it here: https://github.com/${repo}/releases/tag/${version}`
   );
 
@@ -48,6 +52,7 @@ export async function installPluginFromGithub(
     manifestDownloadError,
     `Failed to download manifest.json.\n${manifestDownloadError}`
   );
+  failIfNotDefined(manifest, `manifest.json is empty`);
 
   const pluginID = manifest.id;
   const pluginPath = path.join(pluginsPath, pluginID);
@@ -91,8 +96,8 @@ export async function installPluginFromRegistry(
   log.debug("Trying to retrieve", pluginID, "from plugin registry");
   const plugin = await registry.getPlugin(pluginID);
 
-  failIf(
-    !plugin,
+  failIfNotDefined(
+    plugin,
     `Unable to install ${plugin}, it wasn't found in the registry.`
   );
 

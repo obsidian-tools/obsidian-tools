@@ -1,4 +1,4 @@
-import { isBefore, subMinutes } from "date-fns/esm";
+import { isBefore, subMinutes } from "date-fns";
 import { failIf, to } from "./utils";
 import log from "./log";
 
