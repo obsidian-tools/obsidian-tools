@@ -1,7 +1,7 @@
 {
   "name": "obsidian-plugin-cli",
   "description": "A CLI tool to make building an obsidian plugin simple",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "author": "zephraph <zephraph@gmail.com>",
   "bin": {
     "obsidian-plugin": "./bin/run"
@@ -13,7 +13,7 @@
     "@oclif/plugin-help": "^3",
     "dedent": "^0.7.0",
     "esbuild": "^0.8.48",
-    "obsidian-utils": "^0.5.1",
+    "obsidian-utils": "^0.5.2",
     "prompts": "^2.4.0",
     "tslib": "^1"
   },
