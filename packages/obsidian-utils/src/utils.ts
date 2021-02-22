@@ -10,7 +10,7 @@ export const fileStats = promisify(fs.stat);
 export const readJSON = (filePath: string) =>
   read(filePath, "utf-8").then((contents) => JSON.parse(contents));
 
-export function failIfNotDefined<T = any>(
+export function failIfNot<T = any>(
   condition: T | null | undefined | false | 0,
   message: string
 ): asserts condition is T {
@@ -34,7 +34,7 @@ export const to = <T>(p: Promise<T>) => {
  * Converts a web fetch response to a node readable stream
  */
 const resToReadable = (res: Response) => {
-  failIfNotDefined(res.body, "Response has no body");
+  failIfNot(res.body, "Response has no body");
   const reader = res.body.getReader();
   const readable = new Readable();
   readable._read = async () => {

@@ -1,4 +1,4 @@
-import { failIf, failIfNotDefined, fileStats, toReadJSON } from "./utils";
+import { failIf, failIfNot, fileStats, toReadJSON } from "./utils";
 import path from "path";
 import log from "./log";
 
@@ -24,7 +24,7 @@ export async function readPluginFromDisk(
   );
 
   failIf(manifestReadError, `Manifest failed to load: ${manifestReadError}`);
-  failIfNotDefined(manifest, `Manifest loaded but wasn't defined`);
+  failIfNot(manifest, `Manifest loaded but wasn't defined`);
 
   const [, data] = await toReadJSON<object>(pluginsPath, pluginID, "data.json");
   const results: InstalledPluginInfo = {

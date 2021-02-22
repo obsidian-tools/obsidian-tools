@@ -15,6 +15,16 @@ interface Vault {
   open?: boolean;
 }
 
+export const isVault = (vaultPath: any): boolean => {
+  if (
+    typeof vaultPath === "string" &&
+    fs.existsSync(path.join(vaultPath, ".obsidian"))
+  ) {
+    return true;
+  }
+  return false;
+};
+
 const getVaultFromPath = (vaultPath: string, open?: boolean): Vault => {
   return {
     name: path.basename(vaultPath),
@@ -24,6 +34,9 @@ const getVaultFromPath = (vaultPath: string, open?: boolean): Vault => {
 };
 
 export const findVault = async (vaultPath?: string): Promise<Vault[]> => {
+  if (isVault(vaultPath)) {
+    return [getVaultFromPath(vaultPath!)];
+  }
   if (vaultPath && fs.existsSync(vaultPath)) {
     return [getVaultFromPath(vaultPath)];
   }
