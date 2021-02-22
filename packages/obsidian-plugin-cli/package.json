@@ -1,6 +1,6 @@
 {
   "name": "obsidian-plugin-cli",
-  "description": "A CLI tool to make building an obsidian plugin simple",
+  "description": "A CLI tool to make it easy to develop plugins for obisidian",
   "version": "0.1.0",
   "author": "zephraph <zephraph@gmail.com>",
   "bin": {
@@ -11,6 +11,7 @@
     "@oclif/command": "^1",
     "@oclif/config": "^1",
     "@oclif/plugin-help": "^3",
+    "chalk": "^4.1.0",
     "dedent": "^0.7.0",
     "esbuild": "^0.8.48",
     "obsidian-utils": "^0.5.2",

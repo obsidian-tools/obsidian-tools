@@ -5118,13 +5118,6 @@ objectorarray@^1.0.4:
   resolved "https://registry.yarnpkg.com/objectorarray/-/objectorarray-1.0.4.tgz#d69b2f0ff7dc2701903d308bb85882f4ddb49483"
   integrity sha512-91k8bjcldstRz1bG6zJo8lWD7c6QXcB4nTDUqiEvIL1xAsLoZlOOZZG+nd6YPz+V7zY1580J4Xxh1vZtyv4i/w==
 
-obsidian-utils@^0.5.2:
-  version "0.5.2"
-  resolved "https://registry.yarnpkg.com/obsidian-utils/-/obsidian-utils-0.5.2.tgz#fc6e93beca9a97e89e9a82e2590c90cc2de34d81"
-  integrity sha512-C8qOdhzEmYFp0QOkS0OauDD6MWg6hfJ1RvSCjYQzUqSckJnk/6Ap1hMkUf1KZMtDIQfGK8GI87/sF9G9ru0fUQ==
-  dependencies:
-    date-fns "^2.17.0"
-
 "obsidian@https://github.com/obsidianmd/obsidian-api/tarball/master":
   version "0.11.0"
   resolved "https://github.com/obsidianmd/obsidian-api/tarball/master#db65643b00c41a37a61e87b43cfe1f4c867e188c"

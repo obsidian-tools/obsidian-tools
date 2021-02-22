@@ -4,14 +4,15 @@ import * as esbuild from "esbuild";
 import fs from "fs";
 
 export default class Build extends Command {
+  static description = "builds plugin for release";
   static flags = {
     help: flags.help({ char: "h" }),
-    esbuildOverride: flags.string({
+    ["esbuild-override"]: flags.string({
       char: "e",
       description:
         "path to a JSON file over esbuild options to enhance/override the current build",
     }),
-    outputDir: flags.string({
+    ["output-dir"]: flags.string({
       char: "o",
       description: "path to write build output to",
       default: "dist",
@@ -22,7 +23,10 @@ export default class Build extends Command {
 
   async run() {
     const { args, flags } = this.parse(Build);
-    const { esbuildOverride, outputDir } = flags;
+    const {
+      ["esbuild-override"]: esbuildOverride,
+      ["output-dir"]: outputDir,
+    } = flags;
 
     let esbuildConfig = {};
     if (esbuildOverride) {

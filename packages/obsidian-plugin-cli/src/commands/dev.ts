@@ -6,6 +6,7 @@ import { promisify } from "util";
 import { findVault, isVault, utils } from "obsidian-utils";
 import prompts from "prompts";
 import dedent from "dedent";
+import { bold } from "chalk";
 
 const { to } = utils;
 
@@ -18,19 +19,31 @@ const mkdir = (path: string) => {
 };
 
 export default class Dev extends Command {
+  static description = dedent`
+    builds in watch mode and copies output to a specified vault for testing
+
+    If ${bold(
+      "--vault-path"
+    )} is not specified, this command will try to intelligently determine where your vaults are located.
+    If it's able to locate your vaults, you'll be given the option to select which vault you'd like to develop against. 
+    If, however, ${bold(
+      "--no-prompts"
+    )} is passed it will assume the last opened vault (if one is found) will be the vault to develop 
+    against. If that's not the behavior you desire, ensure to pass the explicit path to the vault you want to develop against 
+    with ${bold("--vault-path")}.
+  `;
   static flags = {
     help: flags.help({ char: "h" }),
-    esbuildOverride: flags.string({
+    ["esbuild-override"]: flags.string({
       char: "e",
       description:
         "path to a JSON file over esbuild options to enhance/override the current build",
     }),
-    vaultPath: flags.string({
+    ["vault-path"]: flags.string({
       char: "v",
-      description:
-        "path to the obsidian vault you want to develop this plugin in",
+      description: "path to the obsidian vault you want to develop in",
     }),
-    noPrompts: flags.boolean({
+    ["no-prompts"]: flags.boolean({
       char: "n",
       description: "disable prompting for user input",
     }),
@@ -40,7 +53,11 @@ export default class Dev extends Command {
 
   async run() {
     const { args, flags } = this.parse(Dev);
-    const { esbuildOverride, vaultPath, noPrompts } = flags;
+    const {
+      ["esbuild-override"]: esbuildOverride,
+      ["vault-path"]: vaultPath,
+      ["no-prompts"]: noPrompts,
+    } = flags;
 
     if (!args.entryPoint) {
       this.error("Must provide the path to a file to build");
