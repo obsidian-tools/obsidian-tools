@@ -2,6 +2,19 @@
 
 #### 🐛 Bug Fix
 
+- `obsidian-utils@0.5.1`
+  - Set node compat for utils to node v12 [#25](https://github.com/zephraph/obsidian-tools/pull/25) ([@zephraph](https://github.com/zephraph))
+
+#### Authors: 1
+
+- Justin Bennett ([@zephraph](https://github.com/zephraph))
+
+---
+
+# (Mon Feb 22 2021)
+
+#### 🐛 Bug Fix
+
 - `obsidian-plugin-cli@0.0.3`
   - Infer or prompt for vault path [#24](https://github.com/zephraph/obsidian-tools/pull/24) ([@zephraph](https://github.com/zephraph))
 

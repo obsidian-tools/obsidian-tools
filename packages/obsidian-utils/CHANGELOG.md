@@ -1,3 +1,16 @@
+# v0.5.1 (Mon Feb 22 2021)
+
+#### 🐛 Bug Fix
+
+- Set node compat for utils to node v12 [#25](https://github.com/zephraph/obsidian-tools/pull/25) ([@zephraph](https://github.com/zephraph))
+- Set node compat for utils to node v12 ([@zephraph](https://github.com/zephraph))
+
+#### Authors: 1
+
+- Justin Bennett ([@zephraph](https://github.com/zephraph))
+
+---
+
 # v0.5.0 (Mon Feb 22 2021)
 
 #### 🚀 Enhancement
