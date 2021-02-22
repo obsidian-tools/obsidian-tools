@@ -8,4 +8,5 @@ esbuild.build({
   format: "cjs",
   outfile: "lib/index.js",
   mainFields: ["module", "main"],
+  target: "es2019",
 });
