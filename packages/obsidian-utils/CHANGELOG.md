@@ -1,3 +1,19 @@
+# v0.4.0 (Mon Feb 22 2021)
+
+#### 🚀 Enhancement
+
+- Pass along vault open state from obsidian config [#22](https://github.com/zephraph/obsidian-tools/pull/22) ([@zephraph](https://github.com/zephraph))
+
+#### 🐛 Bug Fix
+
+- Pass along vault open state from obsidian config ([@zephraph](https://github.com/zephraph))
+
+#### Authors: 1
+
+- Justin Bennett ([@zephraph](https://github.com/zephraph))
+
+---
+
 # v0.3.0 (Mon Feb 22 2021)
 
 #### 🚀 Enhancement
