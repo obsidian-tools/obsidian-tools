@@ -1,5 +1,18 @@
 # (Mon Feb 22 2021)
 
+#### ⚠️ Pushed to `main`
+
+- `obsidian-plugin-cli@0.1.1`
+  - Update argument styles and docs ([@zephraph](https://github.com/zephraph))
+
+#### Authors: 1
+
+- Justin Bennett ([@zephraph](https://github.com/zephraph))
+
+---
+
+# (Mon Feb 22 2021)
+
 #### 🚀 Enhancement
 
 - `obsidian-plugin-cli@0.1.0`

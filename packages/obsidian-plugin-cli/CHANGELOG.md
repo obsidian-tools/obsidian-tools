@@ -1,3 +1,15 @@
+# v0.1.1 (Mon Feb 22 2021)
+
+#### ⚠️ Pushed to `main`
+
+- Update argument styles and docs ([@zephraph](https://github.com/zephraph))
+
+#### Authors: 1
+
+- Justin Bennett ([@zephraph](https://github.com/zephraph))
+
+---
+
 # v0.1.0 (Mon Feb 22 2021)
 
 #### 🚀 Enhancement
