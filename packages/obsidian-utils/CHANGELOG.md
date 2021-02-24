@@ -1,3 +1,19 @@
+# v0.6.0 (Wed Feb 24 2021)
+
+#### 🐛 Bug Fix
+
+- Major utils refactor with some CI updates [#27](https://github.com/zephraph/obsidian-tools/pull/27) ([@zephraph](https://github.com/zephraph))
+
+#### 📝 Documentation
+
+- Update docs [#28](https://github.com/zephraph/obsidian-tools/pull/28) ([@zephraph](https://github.com/zephraph))
+
+#### Authors: 1
+
+- Justin Bennett ([@zephraph](https://github.com/zephraph))
+
+---
+
 # v0.5.2 (Mon Feb 22 2021)
 
 #### ⚠️ Pushed to `main`

@@ -1,3 +1,15 @@
+# v0.2.0 (Wed Feb 24 2021)
+
+#### 🚀 Enhancement
+
+- Update obsidian-plugin-cli to use new utils [#29](https://github.com/zephraph/obsidian-tools/pull/29) ([@zephraph](https://github.com/zephraph))
+
+#### Authors: 1
+
+- Justin Bennett ([@zephraph](https://github.com/zephraph))
+
+---
+
 # v0.1.1 (Mon Feb 22 2021)
 
 #### ⚠️ Pushed to `main`

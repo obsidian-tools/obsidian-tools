@@ -1,3 +1,26 @@
+# (Wed Feb 24 2021)
+
+#### 🚀 Enhancement
+
+- `obsidian-plugin-cli@0.2.0`
+  - Update obsidian-plugin-cli to use new utils [#29](https://github.com/zephraph/obsidian-tools/pull/29) ([@zephraph](https://github.com/zephraph))
+
+#### 🐛 Bug Fix
+
+- `obsidian-utils@0.6.0`
+  - Major utils refactor with some CI updates [#27](https://github.com/zephraph/obsidian-tools/pull/27) ([@zephraph](https://github.com/zephraph))
+
+#### 📝 Documentation
+
+- `obsidian-utils@0.6.0`
+  - Update docs [#28](https://github.com/zephraph/obsidian-tools/pull/28) ([@zephraph](https://github.com/zephraph))
+
+#### Authors: 1
+
+- Justin Bennett ([@zephraph](https://github.com/zephraph))
+
+---
+
 # (Mon Feb 22 2021)
 
 #### ⚠️ Pushed to `main`
