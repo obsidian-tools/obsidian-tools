@@ -2,6 +2,19 @@
 
 #### 🚀 Enhancement
 
+- `obsidian-plugin-cli@0.3.0`, `obsidian-utils@0.7.0`
+  - Add hot reloading to dev build [#30](https://github.com/zephraph/obsidian-tools/pull/30) ([@zephraph](https://github.com/zephraph))
+
+#### Authors: 1
+
+- Justin Bennett ([@zephraph](https://github.com/zephraph))
+
+---
+
+# (Wed Feb 24 2021)
+
+#### 🚀 Enhancement
+
 - `obsidian-plugin-cli@0.2.0`
   - Update obsidian-plugin-cli to use new utils [#29](https://github.com/zephraph/obsidian-tools/pull/29) ([@zephraph](https://github.com/zephraph))
 

@@ -1,3 +1,15 @@
+# v0.7.0 (Wed Feb 24 2021)
+
+#### 🚀 Enhancement
+
+- Add hot reloading to dev build [#30](https://github.com/zephraph/obsidian-tools/pull/30) ([@zephraph](https://github.com/zephraph))
+
+#### Authors: 1
+
+- Justin Bennett ([@zephraph](https://github.com/zephraph))
+
+---
+
 # v0.6.0 (Wed Feb 24 2021)
 
 #### 🐛 Bug Fix
