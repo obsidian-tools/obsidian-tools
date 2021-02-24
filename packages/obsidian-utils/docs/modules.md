@@ -6,8 +6,8 @@
 
 ### Modules
 
-- [index](modules/index.md)
 - [log](modules/log.md)
+- [obsidian-utils](modules/obsidian_utils.md)
 - [plugin](modules/plugin.md)
 - [plugin/install](modules/plugin_install.md)
 - [plugin/local](modules/plugin_local.md)

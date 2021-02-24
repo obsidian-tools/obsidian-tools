@@ -25,12 +25,15 @@ import { GitHubPluginVersion, Repo } from "../types";
 import { vaultPathToPluginsPath } from "./utils";
 
 /**
+ * Given a repo short code, version, and the vault to install a plugin with, this
+ * function downloads the plugin from GitHub's releases and adds it to the specified
+ * vault.
  *
  * @param repo A short code reference a github repo formatted like `owner/repoName`
- * @param version
- * @param vaultPath
+ * @param version Latest or a semver like 1.0.0
+ * @param vaultPath Path to the vault in which the plugin should be installed
  */
-export async function installFromGithub(
+export async function installPluginFromGithub(
   repo: Repo,
   version: GitHubPluginVersion,
   vaultPath: string
@@ -104,7 +107,7 @@ export async function installFromGithub(
   debug(`${pluginID} successfully installed`);
 }
 
-export async function installFromRegistry(
+export async function installPluginFromRegistry(
   pluginID: string,
   version: GitHubPluginVersion,
   vaultPath: string,
@@ -121,7 +124,7 @@ export async function installFromRegistry(
   );
 
   debug(pluginID, "found in plugin registry");
-  return installFromGithub(plugin.repo, version, vaultPath);
+  return installPluginFromGithub(plugin.repo, version, vaultPath);
 }
 
 /** Installs a plugin from the file system to a specified vault */

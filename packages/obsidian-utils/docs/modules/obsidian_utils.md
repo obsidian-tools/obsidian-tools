@@ -1,29 +1,69 @@
-[obsidian-utils](../README.md) / [Exports](../modules.md) / utils
+[obsidian-utils](../README.md) / [Exports](../modules.md) / obsidian-utils
 
-# Module: utils
+# Module: obsidian-utils
 
-A collection of meta utils that simplifies some common Node.js tasks.
+A collections of tools to make programmatically interacting with obsidian simpler.
+
+## Usage
+
+**`example`** 
+
+Use the utils to find your open vault and install a plugin from GitHub into it.
+
+```
+import { findVault, installPluginFromGithub } from 'obsidian-utils'
+const myVault = await findVault();
+await installPluginFromGithub('pjeby/hot-reload', 'latest', myVault.path)
+```
 
 ## Table of contents
 
+### References
+
+- [registerLogger](obsidian_utils.md#registerlogger)
+
+### Classes
+
+- [PluginRegistry](../classes/obsidian_utils.pluginregistry.md)
+
+### Interfaces
+
+- [InstalledPluginInfo](../interfaces/obsidian_utils.installedplugininfo.md)
+- [PluginRegistryData](../interfaces/obsidian_utils.pluginregistrydata.md)
+- [PluginRegistryRecord](../interfaces/obsidian_utils.pluginregistryrecord.md)
+
 ### Functions
 
-- [copyFile](utils.md#copyfile)
-- [failIf](utils.md#failif)
-- [failIfNot](utils.md#failifnot)
-- [fetchJSON](utils.md#fetchjson)
-- [fetchToDisk](utils.md#fetchtodisk)
-- [fileStats](utils.md#filestats)
-- [mkdir](utils.md#mkdir)
-- [read](utils.md#read)
-- [readDir](utils.md#readdir)
-- [readJSON](utils.md#readjson)
-- [rmdir](utils.md#rmdir)
-- [to](utils.md#to)
-- [toRead](utils.md#toread)
-- [toReadJSON](utils.md#toreadjson)
-- [toWrite](utils.md#towrite)
-- [write](utils.md#write)
+- [copyFile](obsidian_utils.md#copyfile)
+- [failIf](obsidian_utils.md#failif)
+- [failIfNot](obsidian_utils.md#failifnot)
+- [fetchJSON](obsidian_utils.md#fetchjson)
+- [fetchToDisk](obsidian_utils.md#fetchtodisk)
+- [fileStats](obsidian_utils.md#filestats)
+- [findVault](obsidian_utils.md#findvault)
+- [getInfoOnInstalledPlugin](obsidian_utils.md#getinfooninstalledplugin)
+- [installLocalPlugin](obsidian_utils.md#installlocalplugin)
+- [installPluginFromGithub](obsidian_utils.md#installpluginfromgithub)
+- [installPluginFromRegistry](obsidian_utils.md#installpluginfromregistry)
+- [isPluginInstalled](obsidian_utils.md#isplugininstalled)
+- [isVault](obsidian_utils.md#isvault)
+- [mkdir](obsidian_utils.md#mkdir)
+- [read](obsidian_utils.md#read)
+- [readDir](obsidian_utils.md#readdir)
+- [readJSON](obsidian_utils.md#readjson)
+- [rmdir](obsidian_utils.md#rmdir)
+- [to](obsidian_utils.md#to)
+- [toRead](obsidian_utils.md#toread)
+- [toReadJSON](obsidian_utils.md#toreadjson)
+- [toWrite](obsidian_utils.md#towrite)
+- [vaultPathToPluginsPath](obsidian_utils.md#vaultpathtopluginspath)
+- [write](obsidian_utils.md#write)
+
+## References
+
+### registerLogger
+
+Re-exports: [registerLogger](log.md#registerlogger)
 
 ## Functions
 
@@ -152,6 +192,128 @@ Name | Type |
 `options?` | StatOptions |
 
 **Returns:** *Promise*<Stats \| BigIntStats\>
+
+___
+
+### findVault
+
+▸ `Const`**findVault**(`vaultPath?`: *string*): *Promise*<Vault[]\>
+
+Attempts to find where your obsidian vaults are by locating obsidian's app config. It's relatively reliable
+on Windows and OSX, but there may be issues on linux and will definitely be issues on weird platforms.
+PRs welcome.
+
+#### Parameters:
+
+Name | Type | Description |
+:------ | :------ | :------ |
+`vaultPath?` | *string* | A path to an Obsidian vault (which, at the very least contains a .obsidian directory)    |
+
+**Returns:** *Promise*<Vault[]\>
+
+___
+
+### getInfoOnInstalledPlugin
+
+▸ **getInfoOnInstalledPlugin**(`pluginID`: *string*, `vaultPath`: *string*): *Promise*<[*InstalledPluginInfo*](../interfaces/plugin_local.installedplugininfo.md)\>
+
+Gets information about an installed plugin including the contents of
+its manifest.json, data.json (if it exists), and when the last time the
+plugin was updated on disk.
+
+#### Parameters:
+
+Name | Type | Description |
+:------ | :------ | :------ |
+`pluginID` | *string* | The ID of the plugin to read    |
+`vaultPath` | *string* | Path to the plugins directory in your vault. Usually something like `/path/to/vault/.obsidian/plugins`.   |
+
+**Returns:** *Promise*<[*InstalledPluginInfo*](../interfaces/plugin_local.installedplugininfo.md)\>
+
+___
+
+### installLocalPlugin
+
+▸ **installLocalPlugin**(`pluginPath`: *string*, `vaultPath`: *string*): *Promise*<void\>
+
+Installs a plugin from the file system to a specified vault
+
+#### Parameters:
+
+Name | Type |
+:------ | :------ |
+`pluginPath` | *string* |
+`vaultPath` | *string* |
+
+**Returns:** *Promise*<void\>
+
+___
+
+### installPluginFromGithub
+
+▸ **installPluginFromGithub**(`repo`: [*Repo*](types.md#repo), `version`: [*GitHubPluginVersion*](types.md#githubpluginversion), `vaultPath`: *string*): *Promise*<void\>
+
+Given a repo short code, version, and the vault to install a plugin with, this
+function downloads the plugin from GitHub's releases and adds it to the specified
+vault.
+
+#### Parameters:
+
+Name | Type | Description |
+:------ | :------ | :------ |
+`repo` | [*Repo*](types.md#repo) | A short code reference a github repo formatted like `owner/repoName`   |
+`version` | [*GitHubPluginVersion*](types.md#githubpluginversion) | Latest or a semver like 1.0.0   |
+`vaultPath` | *string* | Path to the vault in which the plugin should be installed    |
+
+**Returns:** *Promise*<void\>
+
+___
+
+### installPluginFromRegistry
+
+▸ **installPluginFromRegistry**(`pluginID`: *string*, `version`: [*GitHubPluginVersion*](types.md#githubpluginversion), `vaultPath`: *string*, `registry?`: [*PluginRegistry*](../classes/plugin_registry.pluginregistry.md)): *Promise*<void\>
+
+#### Parameters:
+
+Name | Type |
+:------ | :------ |
+`pluginID` | *string* |
+`version` | [*GitHubPluginVersion*](types.md#githubpluginversion) |
+`vaultPath` | *string* |
+`registry` | [*PluginRegistry*](../classes/plugin_registry.pluginregistry.md) |
+
+**Returns:** *Promise*<void\>
+
+___
+
+### isPluginInstalled
+
+▸ **isPluginInstalled**(`pluginID`: *string*, `vaultPath`: *string*): *Promise*<boolean\>
+
+#### Parameters:
+
+Name | Type |
+:------ | :------ |
+`pluginID` | *string* |
+`vaultPath` | *string* |
+
+**Returns:** *Promise*<boolean\>
+
+___
+
+### isVault
+
+▸ `Const`**isVault**(`vaultPath`: *any*): *boolean*
+
+Determines if the given path is a path to a vault
+
+#### Parameters:
+
+Name | Type |
+:------ | :------ |
+`vaultPath` | *any* |
+
+**Returns:** *boolean*
 
 ___
 
@@ -333,7 +495,7 @@ ___
 
 ▸ `Const`**toRead**(...`pathParts`: *string*[]): *Promise*<[*any*, *null*]\> \| *Promise*<[*null*, *string*]\>
 
-Async read pre-wrapped with [to](utils.md#to)
+Async read pre-wrapped with [to](obsidian_utils.md#to)
 
 #### Parameters:
 
@@ -377,6 +539,20 @@ Name | Type |
 `...pathParts` | *string*[] |
 
 **Returns:** *Promise*<[*any*, *null*]\> \| *Promise*<[*null*, *void*]\>
+
+___
+
+### vaultPathToPluginsPath
+
+▸ `Const`**vaultPathToPluginsPath**(`vaultPath`: *string*): *string*
+
+#### Parameters:
+
+Name | Type |
+:------ | :------ |
+`vaultPath` | *string* |
+
+**Returns:** *string*
 
 ___
 

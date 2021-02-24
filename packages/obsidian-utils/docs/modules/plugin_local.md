@@ -12,14 +12,14 @@ Handles all local (to the file system) plugin operations.
 
 ### Functions
 
-- [getInfoOnInstalled](plugin_local.md#getinfooninstalled)
-- [isInstalled](plugin_local.md#isinstalled)
+- [getInfoOnInstalledPlugin](plugin_local.md#getinfooninstalledplugin)
+- [isPluginInstalled](plugin_local.md#isplugininstalled)
 
 ## Functions
 
-### getInfoOnInstalled
+### getInfoOnInstalledPlugin
 
-▸ **getInfoOnInstalled**(`pluginID`: *string*, `vaultPath`: *string*): *Promise*<[*InstalledPluginInfo*](../interfaces/plugin_local.installedplugininfo.md)\>
+▸ **getInfoOnInstalledPlugin**(`pluginID`: *string*, `vaultPath`: *string*): *Promise*<[*InstalledPluginInfo*](../interfaces/plugin_local.installedplugininfo.md)\>
 
 Gets information about an installed plugin including the contents of
 its manifest.json, data.json (if it exists), and when the last time the
@@ -36,9 +36,9 @@ Name | Type | Description |
 
 ___
 
-### isInstalled
+### isPluginInstalled
 
-▸ **isInstalled**(`pluginID`: *string*, `vaultPath`: *string*): *Promise*<boolean\>
+▸ **isPluginInstalled**(`pluginID`: *string*, `vaultPath`: *string*): *Promise*<boolean\>
 
 #### Parameters:
 

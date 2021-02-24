@@ -6,3 +6,4 @@
 export * from "./install";
 export * from "./local";
 export * from "./registry";
+export * from "./utils";

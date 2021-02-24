@@ -23,7 +23,10 @@ export interface InstalledPluginInfo {
  * @param vaultPath Path to the plugins directory in your vault. Usually something like `/path/to/vault/.obsidian/plugins`.
  * @param pluginID The ID of the plugin to read
  */
-export async function getInfoOnInstalled(pluginID: string, vaultPath: string) {
+export async function getInfoOnInstalledPlugin(
+  pluginID: string,
+  vaultPath: string
+) {
   const pluginsPath = vaultPathToPluginsPath(vaultPath);
   const manifestPath = path.join(pluginsPath, pluginID, "manifest.json");
   const [manifestReadError, manifest] = await toReadJSON<PluginManifest>(
@@ -44,7 +47,7 @@ export async function getInfoOnInstalled(pluginID: string, vaultPath: string) {
   return results;
 }
 
-export async function isInstalled(pluginID: string, vaultPath: string) {
+export async function isPluginInstalled(pluginID: string, vaultPath: string) {
   const pluginsPath = vaultPathToPluginsPath(vaultPath);
   const [manifestReadError, manifest] = await toReadJSON<PluginManifest>(
     pluginsPath,
