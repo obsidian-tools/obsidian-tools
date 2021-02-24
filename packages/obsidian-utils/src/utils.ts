@@ -69,6 +69,9 @@ const resToReadable = (res: Response | NodeResponse) => {
 export const toRead = (...pathParts: string[]) =>
   to<string>(read(path.join(...pathParts), "utf-8"));
 
+export const toWrite = (payload: string, ...pathParts: string[]) =>
+  to(write(path.join(...pathParts), payload));
+
 export const toReadJSON = <T>(...pathParts: string[]) =>
   to<T>(
     read(path.join(...pathParts), "utf-8").then((content) =>

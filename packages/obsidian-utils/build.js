@@ -2,9 +2,9 @@ const esbuild = require("esbuild");
 
 esbuild.build({
   entryPoints: ["src/index.ts"],
-  bundle: true,
+  bundle: false,
   platform: "node",
-  external: ["obsidian", "node-fetch"],
+  // external: ["obsidian", "node-fetch"],
   inject: ["./polyfill/fetch.js"],
   define: { fetch: "fetchPolyfill" },
   format: "cjs",

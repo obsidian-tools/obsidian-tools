@@ -3,12 +3,16 @@ import path from "path";
 import * as esbuild from "esbuild";
 import fs from "fs";
 import { promisify } from "util";
-import { vault, plugin, utils, log } from "obsidian-utils";
 import prompts from "prompts";
 import dedent from "dedent";
 import { bold, dim } from "ansi-colors";
-
-const { to } = utils;
+import {
+  findVault,
+  isVault,
+  to,
+  isPluginInstalled,
+  installPluginFromGithub,
+} from "obsidian-utils";
 
 const localManifestPath = path.join(process.cwd(), "manifest.json");
 
@@ -79,7 +83,7 @@ export default class Dev extends Command {
     }
     const manifest = JSON.parse(await read(localManifestPath, "utf-8"));
 
-    const [vaultError, vaults] = await to(vault.findVault(vaultPath));
+    const [vaultError, vaults] = await to(findVault(vaultPath));
     if (vaultError || !vaults || vaults.length === 0) {
       if (noPrompts) {
         this.error(`No vault could be located\n${vaultError}`.trim());
@@ -109,7 +113,7 @@ export default class Dev extends Command {
             message: "Enter the path to your vault",
             type: "text",
             validate: (v) =>
-              vault.isVault(v) || `${v} is not a valid vault, try again`,
+              isVault(v) || `${v} is not a valid vault, try again`,
           });
           if (!selectedVaultPath) this.error(`No vault selected`);
           vaultPath = selectedVaultPath;
@@ -119,8 +123,7 @@ export default class Dev extends Command {
           name: "selectedVaultPath",
           message: "Enter the path to your vault",
           type: "text",
-          validate: (v) =>
-            vault.isVault(v) || `${v} is not a valid vault, try again`,
+          validate: (v) => isVault(v) || `${v} is not a valid vault, try again`,
         });
         if (!selectedVaultPath) this.error(`No vault selected`);
         vaultPath = selectedVaultPath;
@@ -172,7 +175,7 @@ export default class Dev extends Command {
 
     copyConfig();
 
-    if (!(await plugin.isInstalled("hot-reload", vaultPath)) && !noPrompts) {
+    if (!(await isPluginInstalled("hot-reload", vaultPath)) && !noPrompts) {
       const { installHotReload } = await prompts({
         name: "installHotReload",
         type: "confirm",
@@ -182,7 +185,7 @@ export default class Dev extends Command {
       });
       if (installHotReload) {
         this.log("Installing hot-reload from github...");
-        await plugin.installFromGithub("pjeby/hot-reload", "latest", vaultPath);
+        await installPluginFromGithub("pjeby/hot-reload", "latest", vaultPath);
         fs.openSync(path.join(pluginPath, ".hotreload"), "w");
         this.log(
           "Success! You'll need to enable the plugin in obsidian for hot-reloading to start"
