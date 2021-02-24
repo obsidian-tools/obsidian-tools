@@ -1,3 +1,15 @@
+# v0.4.0 (Wed Feb 24 2021)
+
+#### 🚀 Enhancement
+
+- Example `obsidian-utils` so that each function is individually importable... again. [#31](https://github.com/zephraph/obsidian-tools/pull/31) ([@zephraph](https://github.com/zephraph))
+
+#### Authors: 1
+
+- Justin Bennett ([@zephraph](https://github.com/zephraph))
+
+---
+
 # v0.3.0 (Wed Feb 24 2021)
 
 #### 🚀 Enhancement
