@@ -3,7 +3,7 @@ import path from "path";
 import * as esbuild from "esbuild";
 import fs from "fs";
 import { promisify } from "util";
-import { findVault, isVault, utils } from "obsidian-utils";
+import { vault, utils } from "obsidian-utils";
 import prompts from "prompts";
 import dedent from "dedent";
 import { bold } from "chalk";
@@ -42,6 +42,7 @@ export default class Dev extends Command {
     ["vault-path"]: flags.string({
       char: "v",
       description: "path to the obsidian vault you want to develop in",
+      default: "",
     }),
     ["no-prompts"]: flags.boolean({
       char: "n",
@@ -53,7 +54,7 @@ export default class Dev extends Command {
 
   async run() {
     const { args, flags } = this.parse(Dev);
-    const {
+    let {
       ["esbuild-override"]: esbuildOverride,
       ["vault-path"]: vaultPath,
       ["no-prompts"]: noPrompts,
@@ -78,8 +79,7 @@ export default class Dev extends Command {
     }
     const manifest = JSON.parse(await read(localManifestPath, "utf-8"));
 
-    let vault = "";
-    const [vaultError, vaults] = await to(findVault(vaultPath));
+    const [vaultError, vaults] = await to(vault.findVault(vaultPath));
     if (vaultError || !vaults || vaults.length === 0) {
       if (noPrompts) {
         this.error(`No vault could be located\n${vaultError}`.trim());
@@ -102,7 +102,7 @@ export default class Dev extends Command {
           ],
         });
         if (selectedVaultPath) {
-          vault = selectedVaultPath;
+          vaultPath = selectedVaultPath;
         } else {
           let { selectedVaultPath } = await prompts({
             name: "selectedVaultPath",
@@ -112,20 +112,21 @@ export default class Dev extends Command {
               isVault(v) || `${v} is not a valid vault, try again`,
           });
           if (!selectedVaultPath) this.error(`No vault selected`);
-          vault = selectedVaultPath;
+          vaultPath = selectedVaultPath;
         }
       } else {
         let { selectedVaultPath } = await prompts({
           name: "selectedVaultPath",
           message: "Enter the path to your vault",
           type: "text",
-          validate: (v) => isVault(v) || `${v} is not a valid vault, try again`,
+          validate: (v) =>
+            vault.isVault(v) || `${v} is not a valid vault, try again`,
         });
         if (!selectedVaultPath) this.error(`No vault selected`);
-        vault = selectedVaultPath;
+        vaultPath = selectedVaultPath;
       }
     } else if (vaults.length === 1) {
-      vault = vaults[0].path;
+      vaultPath = vaults[0].path;
     } else {
       const openedVaults = vaults.filter((vault) => vault.open);
       if (noPrompts && openedVaults.length === 1) {
@@ -133,7 +134,7 @@ export default class Dev extends Command {
           Using vault ${openedVaults[0].name} given it's the last opened
           If that's not the intended vault, enable prompts or pass vault path instead
         `);
-        vault = openedVaults[0].path;
+        vaultPath = openedVaults[0].path;
       } else if (noPrompts) {
         this.error(
           `Unsure which vault to select: ${vaults
@@ -152,11 +153,16 @@ export default class Dev extends Command {
           })),
         });
         if (!selectedVaultPath) this.error(`No vault was selected`);
-        vault = selectedVaultPath;
+        vaultPath = selectedVaultPath;
       }
     }
 
-    const pluginPath = path.join(vault, ".obsidian", "plugins", manifest.id);
+    const pluginPath = path.join(
+      vaultPath,
+      ".obsidian",
+      "plugins",
+      manifest.id
+    );
     const pluginManifestPath = path.join(pluginPath, "manifest.json");
 
     const copyConfig = () => {
