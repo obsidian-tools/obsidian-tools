@@ -7,6 +7,7 @@ on:
 jobs:
   generate-docs:
     runs-on: ubuntu-latest
+    steps:
       - uses: actions/checkout@v2
 
       - name: Use Node.js 14.x
@@ -21,7 +22,7 @@ jobs:
         run: |
           yarn lerna run generate-docs
 
-      - uses: EndBug/add-and-commit@v7 
+      - uses: EndBug/add-and-commit@v7
         with:
-          add: 'packages'
-          message: 'Automated updates'
+          add: "packages"
+          message: "Automated updates"
