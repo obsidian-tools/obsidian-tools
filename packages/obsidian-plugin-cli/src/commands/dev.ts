@@ -109,7 +109,7 @@ export default class Dev extends Command {
             message: "Enter the path to your vault",
             type: "text",
             validate: (v) =>
-              isVault(v) || `${v} is not a valid vault, try again`,
+              vault.isVault(v) || `${v} is not a valid vault, try again`,
           });
           if (!selectedVaultPath) this.error(`No vault selected`);
           vaultPath = selectedVaultPath;
