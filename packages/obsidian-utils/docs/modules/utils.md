@@ -40,8 +40,6 @@ Name | Type |
 
 **Returns:** *Promise*<void\>
 
-Defined in: [packages/obsidian-utils/src/utils.ts:19](https://github.com/zephraph/obsidian-tools/blob/a18aea2/packages/obsidian-utils/src/utils.ts#L19)
-
 ___
 
 ### failIf
@@ -58,8 +56,6 @@ Name | Type |
 `message` | *string* |
 
 **Returns:** asserts condition is undefined \| null \| false \| 0
-
-Defined in: [packages/obsidian-utils/src/utils.ts:33](https://github.com/zephraph/obsidian-tools/blob/a18aea2/packages/obsidian-utils/src/utils.ts#L33)
 
 ___
 
@@ -84,8 +80,6 @@ Name | Type |
 
 **Returns:** asserts condition is T
 
-Defined in: [packages/obsidian-utils/src/utils.ts:25](https://github.com/zephraph/obsidian-tools/blob/a18aea2/packages/obsidian-utils/src/utils.ts#L25)
-
 ___
 
 ### fetchJSON
@@ -101,8 +95,6 @@ Name | Type |
 `...args` | [input: RequestInfo, init?: RequestInit] |
 
 **Returns:** *Promise*<any\>
-
-Defined in: [packages/obsidian-utils/src/utils.ts:80](https://github.com/zephraph/obsidian-tools/blob/a18aea2/packages/obsidian-utils/src/utils.ts#L80)
 
 ___
 
@@ -123,8 +115,6 @@ Name | Type |
 
 **Returns:** *Promise*<unknown\>
 
-Defined in: [packages/obsidian-utils/src/utils.ts:87](https://github.com/zephraph/obsidian-tools/blob/a18aea2/packages/obsidian-utils/src/utils.ts#L87)
-
 ___
 
 ### fileStats
@@ -140,8 +130,6 @@ Name | Type |
 
 **Returns:** *Promise*<Stats\>
 
-Defined in: [packages/obsidian-utils/src/utils.ts:16](https://github.com/zephraph/obsidian-tools/blob/a18aea2/packages/obsidian-utils/src/utils.ts#L16)
-
 ▸ `Const`**fileStats**(`path`: PathLike, `options`: StatOptions & { `bigint`: *true*  }): *Promise*<BigIntStats\>
 
 #### Parameters:
@@ -153,8 +141,6 @@ Name | Type |
 
 **Returns:** *Promise*<BigIntStats\>
 
-Defined in: [packages/obsidian-utils/src/utils.ts:16](https://github.com/zephraph/obsidian-tools/blob/a18aea2/packages/obsidian-utils/src/utils.ts#L16)
-
 ▸ `Const`**fileStats**(`path`: PathLike, `options?`: StatOptions): *Promise*<Stats \| BigIntStats\>
 
 #### Parameters:
@@ -165,8 +151,6 @@ Name | Type |
 `options?` | StatOptions |
 
 **Returns:** *Promise*<Stats \| BigIntStats\>
-
-Defined in: [packages/obsidian-utils/src/utils.ts:16](https://github.com/zephraph/obsidian-tools/blob/a18aea2/packages/obsidian-utils/src/utils.ts#L16)
 
 ___
 
@@ -183,8 +167,6 @@ Name | Type |
 
 **Returns:** *Promise*<string \| undefined\>
 
-Defined in: [packages/obsidian-utils/src/utils.ts:13](https://github.com/zephraph/obsidian-tools/blob/a18aea2/packages/obsidian-utils/src/utils.ts#L13)
-
 ▸ `Const`**mkdir**(`path`: PathLike, `options?`: Mode \| MakeDirectoryOptions & { `recursive?`: *false*  } \| *null*): *Promise*<void\>
 
 #### Parameters:
@@ -196,8 +178,6 @@ Name | Type |
 
 **Returns:** *Promise*<void\>
 
-Defined in: [packages/obsidian-utils/src/utils.ts:13](https://github.com/zephraph/obsidian-tools/blob/a18aea2/packages/obsidian-utils/src/utils.ts#L13)
-
 ▸ `Const`**mkdir**(`path`: PathLike, `options?`: Mode \| MakeDirectoryOptions \| *null*): *Promise*<string \| undefined\>
 
 #### Parameters:
@@ -208,8 +188,6 @@ Name | Type |
 `options?` | Mode \| MakeDirectoryOptions \| *null* |
 
 **Returns:** *Promise*<string \| undefined\>
-
-Defined in: [packages/obsidian-utils/src/utils.ts:13](https://github.com/zephraph/obsidian-tools/blob/a18aea2/packages/obsidian-utils/src/utils.ts#L13)
 
 ___
 
@@ -226,8 +204,6 @@ Name | Type |
 
 **Returns:** *Promise*<Buffer\>
 
-Defined in: [packages/obsidian-utils/src/utils.ts:14](https://github.com/zephraph/obsidian-tools/blob/a18aea2/packages/obsidian-utils/src/utils.ts#L14)
-
 ▸ `Const`**read**(`path`: PathLike \| *number*, `options`: { `encoding`: BufferEncoding ; `flag?`: *string*  } \| *string*): *Promise*<string\>
 
 #### Parameters:
@@ -239,8 +215,6 @@ Name | Type |
 
 **Returns:** *Promise*<string\>
 
-Defined in: [packages/obsidian-utils/src/utils.ts:14](https://github.com/zephraph/obsidian-tools/blob/a18aea2/packages/obsidian-utils/src/utils.ts#L14)
-
 ▸ `Const`**read**(`path`: PathLike \| *number*, `options?`: BaseEncodingOptions & { `flag?`: *string*  } \| *string* \| *null*): *Promise*<string \| Buffer\>
 
 #### Parameters:
@@ -251,8 +225,6 @@ Name | Type |
 `options?` | BaseEncodingOptions & { `flag?`: *string*  } \| *string* \| *null* |
 
 **Returns:** *Promise*<string \| Buffer\>
-
-Defined in: [packages/obsidian-utils/src/utils.ts:14](https://github.com/zephraph/obsidian-tools/blob/a18aea2/packages/obsidian-utils/src/utils.ts#L14)
 
 ___
 
@@ -269,8 +241,6 @@ Name | Type |
 
 **Returns:** *Promise*<string[]\>
 
-Defined in: [packages/obsidian-utils/src/utils.ts:18](https://github.com/zephraph/obsidian-tools/blob/a18aea2/packages/obsidian-utils/src/utils.ts#L18)
-
 ▸ `Const`**readDir**(`path`: PathLike, `options`: *buffer* \| { `encoding`: *buffer* ; `withFileTypes?`: *false*  }): *Promise*<Buffer[]\>
 
 #### Parameters:
@@ -281,8 +251,6 @@ Name | Type |
 `options` | *buffer* \| { `encoding`: *buffer* ; `withFileTypes?`: *false*  } |
 
 **Returns:** *Promise*<Buffer[]\>
-
-Defined in: [packages/obsidian-utils/src/utils.ts:18](https://github.com/zephraph/obsidian-tools/blob/a18aea2/packages/obsidian-utils/src/utils.ts#L18)
 
 ▸ `Const`**readDir**(`path`: PathLike, `options?`: BaseEncodingOptions & { `withFileTypes?`: *false*  } \| BufferEncoding \| *null*): *Promise*<string[] \| Buffer[]\>
 
@@ -295,8 +263,6 @@ Name | Type |
 
 **Returns:** *Promise*<string[] \| Buffer[]\>
 
-Defined in: [packages/obsidian-utils/src/utils.ts:18](https://github.com/zephraph/obsidian-tools/blob/a18aea2/packages/obsidian-utils/src/utils.ts#L18)
-
 ▸ `Const`**readDir**(`path`: PathLike, `options`: BaseEncodingOptions & { `withFileTypes`: *true*  }): *Promise*<Dirent[]\>
 
 #### Parameters:
@@ -307,8 +273,6 @@ Name | Type |
 `options` | BaseEncodingOptions & { `withFileTypes`: *true*  } |
 
 **Returns:** *Promise*<Dirent[]\>
-
-Defined in: [packages/obsidian-utils/src/utils.ts:18](https://github.com/zephraph/obsidian-tools/blob/a18aea2/packages/obsidian-utils/src/utils.ts#L18)
 
 ___
 
@@ -324,8 +288,6 @@ Name | Type |
 
 **Returns:** *Promise*<any\>
 
-Defined in: [packages/obsidian-utils/src/utils.ts:21](https://github.com/zephraph/obsidian-tools/blob/a18aea2/packages/obsidian-utils/src/utils.ts#L21)
-
 ___
 
 ### rmdir
@@ -340,8 +302,6 @@ Name | Type |
 `options?` | RmDirOptions |
 
 **Returns:** *Promise*<void\>
-
-Defined in: [packages/obsidian-utils/src/utils.ts:17](https://github.com/zephraph/obsidian-tools/blob/a18aea2/packages/obsidian-utils/src/utils.ts#L17)
 
 ___
 
@@ -366,8 +326,6 @@ Name | Type |
 
 **Returns:** *Promise*<[*null*, T]\> \| *Promise*<[*any*, *null*]\>
 
-Defined in: [packages/obsidian-utils/src/utils.ts:44](https://github.com/zephraph/obsidian-tools/blob/a18aea2/packages/obsidian-utils/src/utils.ts#L44)
-
 ___
 
 ### toRead
@@ -383,8 +341,6 @@ Name | Type |
 `...pathParts` | *string*[] |
 
 **Returns:** *Promise*<[*any*, *null*]\> \| *Promise*<[*null*, *string*]\>
-
-Defined in: [packages/obsidian-utils/src/utils.ts:69](https://github.com/zephraph/obsidian-tools/blob/a18aea2/packages/obsidian-utils/src/utils.ts#L69)
 
 ___
 
@@ -406,8 +362,6 @@ Name | Type |
 
 **Returns:** *Promise*<[*any*, *null*]\> \| *Promise*<[*null*, T]\>
 
-Defined in: [packages/obsidian-utils/src/utils.ts:72](https://github.com/zephraph/obsidian-tools/blob/a18aea2/packages/obsidian-utils/src/utils.ts#L72)
-
 ___
 
 ### write
@@ -423,5 +377,3 @@ Name | Type |
 `options?` | WriteFileOptions |
 
 **Returns:** *Promise*<void\>
-
-Defined in: [packages/obsidian-utils/src/utils.ts:15](https://github.com/zephraph/obsidian-tools/blob/a18aea2/packages/obsidian-utils/src/utils.ts#L15)

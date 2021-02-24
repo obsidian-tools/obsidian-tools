@@ -34,8 +34,6 @@ Name | Type | Description |
 
 **Returns:** *Promise*<[*InstalledPluginInfo*](../interfaces/plugin_local.installedplugininfo.md)\>
 
-Defined in: [packages/obsidian-utils/src/plugin/local.ts:25](https://github.com/zephraph/obsidian-tools/blob/a18aea2/packages/obsidian-utils/src/plugin/local.ts#L25)
-
 ___
 
 ### isInstalled
@@ -50,5 +48,3 @@ Name | Type |
 `pluginsPath` | *string* |
 
 **Returns:** *Promise*<boolean\>
-
-Defined in: [packages/obsidian-utils/src/plugin/local.ts:48](https://github.com/zephraph/obsidian-tools/blob/a18aea2/packages/obsidian-utils/src/plugin/local.ts#L48)

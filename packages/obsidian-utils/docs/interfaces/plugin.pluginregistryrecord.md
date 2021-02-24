@@ -20,15 +20,11 @@
 
 • **author**: *string*
 
-Defined in: [packages/obsidian-utils/src/plugin/registry.ts:18](https://github.com/zephraph/obsidian-tools/blob/a18aea2/packages/obsidian-utils/src/plugin/registry.ts#L18)
-
 ___
 
 ### description
 
 • **description**: *string*
-
-Defined in: [packages/obsidian-utils/src/plugin/registry.ts:19](https://github.com/zephraph/obsidian-tools/blob/a18aea2/packages/obsidian-utils/src/plugin/registry.ts#L19)
 
 ___
 
@@ -36,20 +32,14 @@ ___
 
 • **id**: *string*
 
-Defined in: [packages/obsidian-utils/src/plugin/registry.ts:16](https://github.com/zephraph/obsidian-tools/blob/a18aea2/packages/obsidian-utils/src/plugin/registry.ts#L16)
-
 ___
 
 ### name
 
 • **name**: *string*
 
-Defined in: [packages/obsidian-utils/src/plugin/registry.ts:17](https://github.com/zephraph/obsidian-tools/blob/a18aea2/packages/obsidian-utils/src/plugin/registry.ts#L17)
-
 ___
 
 ### repo
 
 • **repo**: \`${string}/${string}\`
-
-Defined in: [packages/obsidian-utils/src/plugin/registry.ts:20](https://github.com/zephraph/obsidian-tools/blob/a18aea2/packages/obsidian-utils/src/plugin/registry.ts#L20)

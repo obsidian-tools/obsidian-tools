@@ -34,8 +34,6 @@ Name | Type |
 
 **Returns:** *void*
 
-Defined in: [packages/obsidian-utils/src/log.ts:21](https://github.com/zephraph/obsidian-tools/blob/a18aea2/packages/obsidian-utils/src/log.ts#L21)
-
 ___
 
 ### error
@@ -49,8 +47,6 @@ Name | Type |
 `...args` | *any*[] |
 
 **Returns:** *void*
-
-Defined in: [packages/obsidian-utils/src/log.ts:25](https://github.com/zephraph/obsidian-tools/blob/a18aea2/packages/obsidian-utils/src/log.ts#L25)
 
 ___
 
@@ -66,8 +62,6 @@ Name | Type |
 
 **Returns:** *void*
 
-Defined in: [packages/obsidian-utils/src/log.ts:23](https://github.com/zephraph/obsidian-tools/blob/a18aea2/packages/obsidian-utils/src/log.ts#L23)
-
 ___
 
 ### log
@@ -81,8 +75,6 @@ Name | Type |
 `...args` | *any*[] |
 
 **Returns:** *void*
-
-Defined in: [packages/obsidian-utils/src/log.ts:22](https://github.com/zephraph/obsidian-tools/blob/a18aea2/packages/obsidian-utils/src/log.ts#L22)
 
 ___
 
@@ -100,8 +92,6 @@ Name | Type |
 
 **Returns:** *void*
 
-Defined in: [packages/obsidian-utils/src/log.ts:15](https://github.com/zephraph/obsidian-tools/blob/a18aea2/packages/obsidian-utils/src/log.ts#L15)
-
 ___
 
 ### warn
@@ -115,5 +105,3 @@ Name | Type |
 `...args` | *any*[] |
 
 **Returns:** *void*
-
-Defined in: [packages/obsidian-utils/src/log.ts:24](https://github.com/zephraph/obsidian-tools/blob/a18aea2/packages/obsidian-utils/src/log.ts#L24)

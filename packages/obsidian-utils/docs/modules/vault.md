@@ -29,8 +29,6 @@ Name | Type | Description |
 
 **Returns:** *Promise*<Vault[]\>
 
-Defined in: [packages/obsidian-utils/src/vault.ts:66](https://github.com/zephraph/obsidian-tools/blob/a18aea2/packages/obsidian-utils/src/vault.ts#L66)
-
 ___
 
 ### isVault
@@ -46,5 +44,3 @@ Name | Type |
 `vaultPath` | *any* |
 
 **Returns:** *boolean*
-
-Defined in: [packages/obsidian-utils/src/vault.ts:32](https://github.com/zephraph/obsidian-tools/blob/a18aea2/packages/obsidian-utils/src/vault.ts#L32)

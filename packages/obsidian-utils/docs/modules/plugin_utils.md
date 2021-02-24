@@ -21,5 +21,3 @@ Name | Type |
 `vaultPath` | *string* |
 
 **Returns:** *string*
-
-Defined in: [packages/obsidian-utils/src/plugin/utils.ts:3](https://github.com/zephraph/obsidian-tools/blob/a18aea2/packages/obsidian-utils/src/plugin/utils.ts#L3)
