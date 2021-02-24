@@ -1,14 +1,27 @@
 const esbuild = require("esbuild");
 
 esbuild.build({
-  entryPoints: ["src/index.ts"],
-  bundle: false,
+  entryPoints: ["src/obsidian-utils.ts"],
+  bundle: true,
   platform: "node",
-  // external: ["obsidian", "node-fetch"],
+  external: ["obsidian", "node-fetch"],
   inject: ["./polyfill/fetch.js"],
   define: { fetch: "fetchPolyfill" },
   format: "cjs",
-  outfile: "lib/index.js",
+  outfile: "lib/obsidian-utils.js",
+  mainFields: ["module", "main"],
+  target: "es2019",
+});
+
+esbuild.build({
+  entryPoints: ["src/obsidian-utils.ts"],
+  bundle: true,
+  platform: "node",
+  external: ["obsidian", "node-fetch"],
+  inject: ["./polyfill/fetch.esm.js"],
+  define: { fetch: "fetchPolyfill" },
+  format: "esm",
+  outfile: "lib/obsidian-utils.esm.js",
   mainFields: ["module", "main"],
   target: "es2019",
 });
