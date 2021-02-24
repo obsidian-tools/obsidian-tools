@@ -1,6 +1,13 @@
+/**
+ * A data structure that reflects obsidian's official plugin registry. It provides a mechanism
+ * to read the registry and get details about specific plugins from the registry.
+ *
+ * @packageDocumentation
+ */
 import { isBefore, subMinutes } from "date-fns";
-import { failIf, to } from "./utils";
-import log from "./log";
+import { failIf, to } from "../utils";
+import { debug } from "../log";
+import { Repo } from "../types";
 
 const DEFAULT_REGISTRY_URL =
   "https://raw.githubusercontent.com/obsidianmd/obsidian-releases/master/community-plugins.json";
@@ -10,7 +17,7 @@ export interface PluginRegistryRecord {
   name: string;
   author: string;
   description: string;
-  repo: string;
+  repo: Repo;
 }
 
 export interface PluginRegistryData {
@@ -26,7 +33,7 @@ export class PluginRegistry {
   constructor(private registryURL: string = DEFAULT_REGISTRY_URL) {}
 
   private async updateRegistry() {
-    log.info("Fetching the plugin registry...");
+    debug("Fetching the plugin registry...");
     const [pluginRegistryFetchError, pluginRegistry] = await to(
       fetch(this.registryURL).then((response) => response.json())
     );
@@ -35,7 +42,7 @@ export class PluginRegistry {
       "Failed to fetch the plugin registry from github"
     );
     PluginRegistry._registry = pluginRegistry;
-    log.info("Plugin registry downloaded");
+    debug("Plugin registry downloaded");
   }
 
   public async getRegistry() {

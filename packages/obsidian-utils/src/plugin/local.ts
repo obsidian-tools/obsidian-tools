@@ -1,6 +1,11 @@
-import { failIf, failIfNot, fileStats, toReadJSON } from "./utils";
+/**
+ * Handles all local (to the file system) plugin operations.
+ *
+ * @packageDocumentation
+ */
+import { failIf, failIfNot, fileStats, toReadJSON } from "../utils";
 import path from "path";
-import log from "./log";
+import { debug } from "../log";
 
 import type { PluginManifest } from "obsidian";
 
@@ -11,12 +16,15 @@ export interface InstalledPluginInfo {
 }
 
 /**
+ * Gets information about an installed plugin including the contents of
+ * its manifest.json, data.json (if it exists), and when the last time the
+ * plugin was updated on disk.
  * @param pluginsPath Path to the plugins directory in your vault. Usually something like `/path/to/vault/.obsidian/plugins`.
  * @param pluginID The ID of the plugin to read
  */
-export async function readPluginFromDisk(
-  pluginsPath: string,
-  pluginID: string
+export async function getInfoOnInstalled(
+  pluginID: string,
+  pluginsPath: string
 ) {
   const manifestPath = path.join(pluginsPath, pluginID, "manifest.json");
   const [manifestReadError, manifest] = await toReadJSON<PluginManifest>(
@@ -32,7 +40,16 @@ export async function readPluginFromDisk(
     data: data ?? undefined,
     lastUpdated: (await fileStats(manifestPath)).mtime,
   };
-  log.success(`Successfully fetched plugin from disk`);
-  log.table(results);
+  debug(`Successfully fetched plugin from disk`);
+  debug(results);
   return results;
+}
+
+export async function isInstalled(pluginID: string, pluginsPath: string) {
+  const [manifestReadError, manifest] = await toReadJSON<PluginManifest>(
+    pluginsPath,
+    pluginID,
+    ".manifest.json"
+  );
+  return manifestReadError || !manifest ? false : true;
 }
