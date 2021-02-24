@@ -22,4 +22,4 @@ Name | Type |
 
 **Returns:** *string*
 
-Defined in: packages/obsidian-utils/src/plugin/utils.ts:3
+Defined in: [packages/obsidian-utils/src/plugin/utils.ts:3](https://github.com/zephraph/obsidian-tools/blob/a9d0109/packages/obsidian-utils/src/plugin/utils.ts#L3)

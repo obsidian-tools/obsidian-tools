@@ -34,7 +34,7 @@ Name | Type |
 
 **Returns:** *void*
 
-Defined in: [packages/obsidian-utils/src/log.ts:21](https://github.com/zephraph/obsidian-tools/blob/646e643/packages/obsidian-utils/src/log.ts#L21)
+Defined in: [packages/obsidian-utils/src/log.ts:21](https://github.com/zephraph/obsidian-tools/blob/a9d0109/packages/obsidian-utils/src/log.ts#L21)
 
 ___
 
@@ -50,7 +50,7 @@ Name | Type |
 
 **Returns:** *void*
 
-Defined in: [packages/obsidian-utils/src/log.ts:25](https://github.com/zephraph/obsidian-tools/blob/646e643/packages/obsidian-utils/src/log.ts#L25)
+Defined in: [packages/obsidian-utils/src/log.ts:25](https://github.com/zephraph/obsidian-tools/blob/a9d0109/packages/obsidian-utils/src/log.ts#L25)
 
 ___
 
@@ -66,7 +66,7 @@ Name | Type |
 
 **Returns:** *void*
 
-Defined in: [packages/obsidian-utils/src/log.ts:23](https://github.com/zephraph/obsidian-tools/blob/646e643/packages/obsidian-utils/src/log.ts#L23)
+Defined in: [packages/obsidian-utils/src/log.ts:23](https://github.com/zephraph/obsidian-tools/blob/a9d0109/packages/obsidian-utils/src/log.ts#L23)
 
 ___
 
@@ -82,7 +82,7 @@ Name | Type |
 
 **Returns:** *void*
 
-Defined in: [packages/obsidian-utils/src/log.ts:22](https://github.com/zephraph/obsidian-tools/blob/646e643/packages/obsidian-utils/src/log.ts#L22)
+Defined in: [packages/obsidian-utils/src/log.ts:22](https://github.com/zephraph/obsidian-tools/blob/a9d0109/packages/obsidian-utils/src/log.ts#L22)
 
 ___
 
@@ -100,7 +100,7 @@ Name | Type |
 
 **Returns:** *void*
 
-Defined in: [packages/obsidian-utils/src/log.ts:15](https://github.com/zephraph/obsidian-tools/blob/646e643/packages/obsidian-utils/src/log.ts#L15)
+Defined in: [packages/obsidian-utils/src/log.ts:15](https://github.com/zephraph/obsidian-tools/blob/a9d0109/packages/obsidian-utils/src/log.ts#L15)
 
 ___
 
@@ -116,4 +116,4 @@ Name | Type |
 
 **Returns:** *void*
 
-Defined in: [packages/obsidian-utils/src/log.ts:24](https://github.com/zephraph/obsidian-tools/blob/646e643/packages/obsidian-utils/src/log.ts#L24)
+Defined in: [packages/obsidian-utils/src/log.ts:24](https://github.com/zephraph/obsidian-tools/blob/a9d0109/packages/obsidian-utils/src/log.ts#L24)

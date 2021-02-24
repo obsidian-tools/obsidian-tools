@@ -34,7 +34,7 @@ Name | Type | Description |
 
 **Returns:** *Promise*<[*InstalledPluginInfo*](../interfaces/plugin_local.installedplugininfo.md)\>
 
-Defined in: packages/obsidian-utils/src/plugin/local.ts:25
+Defined in: [packages/obsidian-utils/src/plugin/local.ts:25](https://github.com/zephraph/obsidian-tools/blob/a9d0109/packages/obsidian-utils/src/plugin/local.ts#L25)
 
 ___
 
@@ -51,4 +51,4 @@ Name | Type |
 
 **Returns:** *Promise*<boolean\>
 
-Defined in: packages/obsidian-utils/src/plugin/local.ts:48
+Defined in: [packages/obsidian-utils/src/plugin/local.ts:48](https://github.com/zephraph/obsidian-tools/blob/a9d0109/packages/obsidian-utils/src/plugin/local.ts#L48)
