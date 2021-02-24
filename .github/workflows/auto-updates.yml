@@ -1,11 +1,15 @@
-name: Pre-merge
+name: Automated Updates
 
 on:
   push:
-    branches: "!main"
+    branches: 
+      - '*'         
+      - '*/*'       
+      - '**'
+      - "!main"
 
 jobs:
-  pre-merge:
+  generate-docs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -18,7 +22,7 @@ jobs:
       - name: Install dependencies
         uses: bahmutov/npm-install@v1
 
-      - name: Run pre-merge updates
+      - name: Run automated updates
         run: |
           yarn lerna run generate-docs
 
