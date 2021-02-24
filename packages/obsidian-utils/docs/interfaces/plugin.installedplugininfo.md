@@ -18,7 +18,7 @@
 
 • `Optional` **data**: *undefined* \| *object*
 
-Defined in: [packages/obsidian-utils/src/plugin/local.ts:14](https://github.com/zephraph/obsidian-tools/blob/a9d0109/packages/obsidian-utils/src/plugin/local.ts#L14)
+Defined in: [packages/obsidian-utils/src/plugin/local.ts:14](https://github.com/zephraph/obsidian-tools/blob/a18aea2/packages/obsidian-utils/src/plugin/local.ts#L14)
 
 ___
 
@@ -26,7 +26,7 @@ ___
 
 • **lastUpdated**: Date
 
-Defined in: [packages/obsidian-utils/src/plugin/local.ts:15](https://github.com/zephraph/obsidian-tools/blob/a9d0109/packages/obsidian-utils/src/plugin/local.ts#L15)
+Defined in: [packages/obsidian-utils/src/plugin/local.ts:15](https://github.com/zephraph/obsidian-tools/blob/a18aea2/packages/obsidian-utils/src/plugin/local.ts#L15)
 
 ___
 
@@ -34,4 +34,4 @@ ___
 
 • **manifest**: PluginManifest
 
-Defined in: [packages/obsidian-utils/src/plugin/local.ts:13](https://github.com/zephraph/obsidian-tools/blob/a9d0109/packages/obsidian-utils/src/plugin/local.ts#L13)
+Defined in: [packages/obsidian-utils/src/plugin/local.ts:13](https://github.com/zephraph/obsidian-tools/blob/a18aea2/packages/obsidian-utils/src/plugin/local.ts#L13)

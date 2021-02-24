@@ -16,7 +16,7 @@
 
 Ƭ **GitHubPluginVersion**: *latest* \| [*PluginVersion*](types.md#pluginversion)
 
-Defined in: [packages/obsidian-utils/src/types.ts:3](https://github.com/zephraph/obsidian-tools/blob/a9d0109/packages/obsidian-utils/src/types.ts#L3)
+Defined in: [packages/obsidian-utils/src/types.ts:3](https://github.com/zephraph/obsidian-tools/blob/a18aea2/packages/obsidian-utils/src/types.ts#L3)
 
 ___
 
@@ -24,7 +24,7 @@ ___
 
 Ƭ **PluginVersion**: \`${number}.${number}.${number}\`
 
-Defined in: [packages/obsidian-utils/src/types.ts:2](https://github.com/zephraph/obsidian-tools/blob/a9d0109/packages/obsidian-utils/src/types.ts#L2)
+Defined in: [packages/obsidian-utils/src/types.ts:2](https://github.com/zephraph/obsidian-tools/blob/a18aea2/packages/obsidian-utils/src/types.ts#L2)
 
 ___
 
@@ -32,4 +32,4 @@ ___
 
 Ƭ **Repo**: \`${string}/${string}\`
 
-Defined in: [packages/obsidian-utils/src/types.ts:1](https://github.com/zephraph/obsidian-tools/blob/a9d0109/packages/obsidian-utils/src/types.ts#L1)
+Defined in: [packages/obsidian-utils/src/types.ts:1](https://github.com/zephraph/obsidian-tools/blob/a18aea2/packages/obsidian-utils/src/types.ts#L1)
