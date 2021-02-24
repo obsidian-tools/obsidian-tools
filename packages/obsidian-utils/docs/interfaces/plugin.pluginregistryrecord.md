@@ -20,7 +20,7 @@
 
 • **author**: *string*
 
-Defined in: [packages/obsidian-utils/src/plugin/registry.ts:18](https://github.com/zephraph/obsidian-tools/blob/a9d0109/packages/obsidian-utils/src/plugin/registry.ts#L18)
+Defined in: [packages/obsidian-utils/src/plugin/registry.ts:18](https://github.com/zephraph/obsidian-tools/blob/a18aea2/packages/obsidian-utils/src/plugin/registry.ts#L18)
 
 ___
 
@@ -28,7 +28,7 @@ ___
 
 • **description**: *string*
 
-Defined in: [packages/obsidian-utils/src/plugin/registry.ts:19](https://github.com/zephraph/obsidian-tools/blob/a9d0109/packages/obsidian-utils/src/plugin/registry.ts#L19)
+Defined in: [packages/obsidian-utils/src/plugin/registry.ts:19](https://github.com/zephraph/obsidian-tools/blob/a18aea2/packages/obsidian-utils/src/plugin/registry.ts#L19)
 
 ___
 
@@ -36,7 +36,7 @@ ___
 
 • **id**: *string*
 
-Defined in: [packages/obsidian-utils/src/plugin/registry.ts:16](https://github.com/zephraph/obsidian-tools/blob/a9d0109/packages/obsidian-utils/src/plugin/registry.ts#L16)
+Defined in: [packages/obsidian-utils/src/plugin/registry.ts:16](https://github.com/zephraph/obsidian-tools/blob/a18aea2/packages/obsidian-utils/src/plugin/registry.ts#L16)
 
 ___
 
@@ -44,7 +44,7 @@ ___
 
 • **name**: *string*
 
-Defined in: [packages/obsidian-utils/src/plugin/registry.ts:17](https://github.com/zephraph/obsidian-tools/blob/a9d0109/packages/obsidian-utils/src/plugin/registry.ts#L17)
+Defined in: [packages/obsidian-utils/src/plugin/registry.ts:17](https://github.com/zephraph/obsidian-tools/blob/a18aea2/packages/obsidian-utils/src/plugin/registry.ts#L17)
 
 ___
 
@@ -52,4 +52,4 @@ ___
 
 • **repo**: \`${string}/${string}\`
 
-Defined in: [packages/obsidian-utils/src/plugin/registry.ts:20](https://github.com/zephraph/obsidian-tools/blob/a9d0109/packages/obsidian-utils/src/plugin/registry.ts#L20)
+Defined in: [packages/obsidian-utils/src/plugin/registry.ts:20](https://github.com/zephraph/obsidian-tools/blob/a18aea2/packages/obsidian-utils/src/plugin/registry.ts#L20)

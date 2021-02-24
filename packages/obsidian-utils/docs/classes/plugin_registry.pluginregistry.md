@@ -29,7 +29,7 @@ Name | Type |
 
 **Returns:** [*PluginRegistry*](plugin_registry.pluginregistry.md)
 
-Defined in: [packages/obsidian-utils/src/plugin/registry.ts:32](https://github.com/zephraph/obsidian-tools/blob/a9d0109/packages/obsidian-utils/src/plugin/registry.ts#L32)
+Defined in: [packages/obsidian-utils/src/plugin/registry.ts:32](https://github.com/zephraph/obsidian-tools/blob/a18aea2/packages/obsidian-utils/src/plugin/registry.ts#L32)
 
 ## Methods
 
@@ -45,7 +45,7 @@ Name | Type |
 
 **Returns:** *Promise*<undefined \| [*PluginRegistryRecord*](../interfaces/plugin_registry.pluginregistryrecord.md)\>
 
-Defined in: [packages/obsidian-utils/src/plugin/registry.ts:56](https://github.com/zephraph/obsidian-tools/blob/a9d0109/packages/obsidian-utils/src/plugin/registry.ts#L56)
+Defined in: [packages/obsidian-utils/src/plugin/registry.ts:56](https://github.com/zephraph/obsidian-tools/blob/a18aea2/packages/obsidian-utils/src/plugin/registry.ts#L56)
 
 ___
 
@@ -55,4 +55,4 @@ ___
 
 **Returns:** *Promise*<[*PluginRegistryData*](../interfaces/plugin_registry.pluginregistrydata.md)\>
 
-Defined in: [packages/obsidian-utils/src/plugin/registry.ts:48](https://github.com/zephraph/obsidian-tools/blob/a9d0109/packages/obsidian-utils/src/plugin/registry.ts#L48)
+Defined in: [packages/obsidian-utils/src/plugin/registry.ts:48](https://github.com/zephraph/obsidian-tools/blob/a18aea2/packages/obsidian-utils/src/plugin/registry.ts#L48)

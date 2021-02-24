@@ -28,7 +28,7 @@ Name | Type | Description |
 
 **Returns:** *Promise*<void\>
 
-Defined in: [packages/obsidian-utils/src/plugin/install.ts:33](https://github.com/zephraph/obsidian-tools/blob/a9d0109/packages/obsidian-utils/src/plugin/install.ts#L33)
+Defined in: [packages/obsidian-utils/src/plugin/install.ts:33](https://github.com/zephraph/obsidian-tools/blob/a18aea2/packages/obsidian-utils/src/plugin/install.ts#L33)
 
 ___
 
@@ -47,7 +47,7 @@ Name | Type |
 
 **Returns:** *Promise*<void\>
 
-Defined in: [packages/obsidian-utils/src/plugin/install.ts:107](https://github.com/zephraph/obsidian-tools/blob/a9d0109/packages/obsidian-utils/src/plugin/install.ts#L107)
+Defined in: [packages/obsidian-utils/src/plugin/install.ts:107](https://github.com/zephraph/obsidian-tools/blob/a18aea2/packages/obsidian-utils/src/plugin/install.ts#L107)
 
 ___
 
@@ -66,4 +66,4 @@ Name | Type |
 
 **Returns:** *Promise*<void\>
 
-Defined in: [packages/obsidian-utils/src/plugin/install.ts:128](https://github.com/zephraph/obsidian-tools/blob/a9d0109/packages/obsidian-utils/src/plugin/install.ts#L128)
+Defined in: [packages/obsidian-utils/src/plugin/install.ts:128](https://github.com/zephraph/obsidian-tools/blob/a18aea2/packages/obsidian-utils/src/plugin/install.ts#L128)
