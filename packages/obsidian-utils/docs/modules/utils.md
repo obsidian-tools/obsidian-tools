@@ -22,6 +22,7 @@ A collection of meta utils that simplifies some common Node.js tasks.
 - [to](utils.md#to)
 - [toRead](utils.md#toread)
 - [toReadJSON](utils.md#toreadjson)
+- [toWrite](utils.md#towrite)
 - [write](utils.md#write)
 
 ## Functions
@@ -361,6 +362,21 @@ Name | Type |
 `...pathParts` | *string*[] |
 
 **Returns:** *Promise*<[*any*, *null*]\> \| *Promise*<[*null*, T]\>
+
+___
+
+### toWrite
+
+▸ `Const`**toWrite**(`payload`: *string*, ...`pathParts`: *string*[]): *Promise*<[*any*, *null*]\> \| *Promise*<[*null*, *void*]\>
+
+#### Parameters:
+
+Name | Type |
+:------ | :------ |
+`payload` | *string* |
+`...pathParts` | *string*[] |
+
+**Returns:** *Promise*<[*any*, *null*]\> \| *Promise*<[*null*, *void*]\>
 
 ___
 

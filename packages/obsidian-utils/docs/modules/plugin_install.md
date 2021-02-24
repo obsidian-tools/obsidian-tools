@@ -8,44 +8,11 @@ This module is dedicated to the installation of plugins
 
 ### Functions
 
-- [installFromGithub](plugin_install.md#installfromgithub)
-- [installFromRegistry](plugin_install.md#installfromregistry)
 - [installLocalPlugin](plugin_install.md#installlocalplugin)
+- [installPluginFromGithub](plugin_install.md#installpluginfromgithub)
+- [installPluginFromRegistry](plugin_install.md#installpluginfromregistry)
 
 ## Functions
-
-### installFromGithub
-
-▸ **installFromGithub**(`repo`: [*Repo*](types.md#repo), `version`: [*GitHubPluginVersion*](types.md#githubpluginversion), `vaultPath`: *string*): *Promise*<void\>
-
-#### Parameters:
-
-Name | Type | Description |
-:------ | :------ | :------ |
-`repo` | [*Repo*](types.md#repo) | A short code reference a github repo formatted like `owner/repoName`   |
-`version` | [*GitHubPluginVersion*](types.md#githubpluginversion) |  |
-`vaultPath` | *string* |     |
-
-**Returns:** *Promise*<void\>
-
-___
-
-### installFromRegistry
-
-▸ **installFromRegistry**(`pluginID`: *string*, `version`: [*GitHubPluginVersion*](types.md#githubpluginversion), `vaultPath`: *string*, `registry?`: [*PluginRegistry*](../classes/plugin_registry.pluginregistry.md)): *Promise*<void\>
-
-#### Parameters:
-
-Name | Type |
-:------ | :------ |
-`pluginID` | *string* |
-`version` | [*GitHubPluginVersion*](types.md#githubpluginversion) |
-`vaultPath` | *string* |
-`registry` | [*PluginRegistry*](../classes/plugin_registry.pluginregistry.md) |
-
-**Returns:** *Promise*<void\>
-
-___
 
 ### installLocalPlugin
 
@@ -59,5 +26,42 @@ Name | Type |
 :------ | :------ |
 `pluginPath` | *string* |
 `vaultPath` | *string* |
+
+**Returns:** *Promise*<void\>
+
+___
+
+### installPluginFromGithub
+
+▸ **installPluginFromGithub**(`repo`: [*Repo*](types.md#repo), `version`: [*GitHubPluginVersion*](types.md#githubpluginversion), `vaultPath`: *string*): *Promise*<void\>
+
+Given a repo short code, version, and the vault to install a plugin with, this
+function downloads the plugin from GitHub's releases and adds it to the specified
+vault.
+
+#### Parameters:
+
+Name | Type | Description |
+:------ | :------ | :------ |
+`repo` | [*Repo*](types.md#repo) | A short code reference a github repo formatted like `owner/repoName`   |
+`version` | [*GitHubPluginVersion*](types.md#githubpluginversion) | Latest or a semver like 1.0.0   |
+`vaultPath` | *string* | Path to the vault in which the plugin should be installed    |
+
+**Returns:** *Promise*<void\>
+
+___
+
+### installPluginFromRegistry
+
+▸ **installPluginFromRegistry**(`pluginID`: *string*, `version`: [*GitHubPluginVersion*](types.md#githubpluginversion), `vaultPath`: *string*, `registry?`: [*PluginRegistry*](../classes/plugin_registry.pluginregistry.md)): *Promise*<void\>
+
+#### Parameters:
+
+Name | Type |
+:------ | :------ |
+`pluginID` | *string* |
+`version` | [*GitHubPluginVersion*](types.md#githubpluginversion) |
+`vaultPath` | *string* |
+`registry` | [*PluginRegistry*](../classes/plugin_registry.pluginregistry.md) |
 
 **Returns:** *Promise*<void\>
