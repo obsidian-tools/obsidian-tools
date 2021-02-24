@@ -19,7 +19,7 @@ Handles all local (to the file system) plugin operations.
 
 ### getInfoOnInstalled
 
-▸ **getInfoOnInstalled**(`pluginID`: *string*, `pluginsPath`: *string*): *Promise*<[*InstalledPluginInfo*](../interfaces/plugin_local.installedplugininfo.md)\>
+▸ **getInfoOnInstalled**(`pluginID`: *string*, `vaultPath`: *string*): *Promise*<[*InstalledPluginInfo*](../interfaces/plugin_local.installedplugininfo.md)\>
 
 Gets information about an installed plugin including the contents of
 its manifest.json, data.json (if it exists), and when the last time the
@@ -30,7 +30,7 @@ plugin was updated on disk.
 Name | Type | Description |
 :------ | :------ | :------ |
 `pluginID` | *string* | The ID of the plugin to read    |
-`pluginsPath` | *string* | Path to the plugins directory in your vault. Usually something like `/path/to/vault/.obsidian/plugins`.   |
+`vaultPath` | *string* | Path to the plugins directory in your vault. Usually something like `/path/to/vault/.obsidian/plugins`.   |
 
 **Returns:** *Promise*<[*InstalledPluginInfo*](../interfaces/plugin_local.installedplugininfo.md)\>
 
@@ -38,13 +38,13 @@ ___
 
 ### isInstalled
 
-▸ **isInstalled**(`pluginID`: *string*, `pluginsPath`: *string*): *Promise*<boolean\>
+▸ **isInstalled**(`pluginID`: *string*, `vaultPath`: *string*): *Promise*<boolean\>
 
 #### Parameters:
 
 Name | Type |
 :------ | :------ |
 `pluginID` | *string* |
-`pluginsPath` | *string* |
+`vaultPath` | *string* |
 
 **Returns:** *Promise*<boolean\>
