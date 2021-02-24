@@ -1,16 +1,27 @@
+/**
+ * A collection of meta utils that simplifies some common Node.js tasks.
+ *
+ * @packageDocumentation
+ */
+
 import { Readable } from "stream";
 import { promisify } from "util";
 import fs from "fs";
 import path from "path";
+import type { Response as NodeResponse } from "node-fetch";
 
 export const mkdir = promisify(fs.mkdir);
 export const read = promisify(fs.readFile);
 export const write = promisify(fs.writeFile);
 export const fileStats = promisify(fs.stat);
+export const rmdir = promisify(fs.rmdir);
+export const readDir = promisify(fs.readdir);
+export const copyFile = promisify(fs.copyFile);
 
 export const readJSON = (filePath: string) =>
   read(filePath, "utf-8").then((contents) => JSON.parse(contents));
 
+/** throws an exception if any falsy value is passed */
 export function failIfNot<T = any>(
   condition: T | null | undefined | false | 0,
   message: string
@@ -18,6 +29,7 @@ export function failIfNot<T = any>(
   if (!condition) throw new Error(message);
 }
 
+/** Throws an exception if any truthy vault is passed */
 export function failIf(
   condition: any,
   message: string
@@ -25,6 +37,10 @@ export function failIf(
   if (condition) throw new Error(message);
 }
 
+/**
+ * Inspired by `await-to-js`, this is a simple promise result handler that makes error handling
+ * async code much less verbose. No `try`/`catch` statements needed!
+ **/
 export const to = <T>(p: Promise<T>) => {
   return p.then((v) => [null, v]).catch((e) => [e, null]) as
     | Promise<[null, T]>
@@ -32,10 +48,14 @@ export const to = <T>(p: Promise<T>) => {
 };
 
 /**
- * Converts a web fetch response to a node readable stream
+ * Converts a web fetch response to a node readable stream. This is needed
+ * when piping data from `fetch` (in electron's rendering process) to a writable stream
  */
-const resToReadable = (res: Response) => {
+const resToReadable = (res: Response | NodeResponse) => {
   failIfNot(res.body, "Response has no body");
+  if ("pipe" in res.body) {
+    return res.body;
+  }
   const reader = res.body.getReader();
   const readable = new Readable();
   readable._read = async () => {
@@ -45,6 +65,7 @@ const resToReadable = (res: Response) => {
   return readable;
 };
 
+/** Async read pre-wrapped with {@link to} */
 export const toRead = (...pathParts: string[]) =>
   to<string>(read(path.join(...pathParts), "utf-8"));
 
@@ -55,9 +76,14 @@ export const toReadJSON = <T>(...pathParts: string[]) =>
     )
   );
 
+/** Helper to fetch and then convert the result to json */
 export const fetchJSON = (...args: Parameters<typeof fetch>) =>
   fetch(...args).then((res) => res.json());
 
+/**
+ * An isomorphic method of downloading a file to disk. Compatible in both
+ * electron's render instance and on node.
+ */
 export const fetchToDisk = (
   input: RequestInfo,
   outPath: string,

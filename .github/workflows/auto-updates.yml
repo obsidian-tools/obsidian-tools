@@ -1,0 +1,32 @@
+name: Automated Updates
+
+on:
+  push:
+    branches: 
+      - '*'         
+      - '*/*'       
+      - '**'
+      - "!main"
+
+jobs:
+  generate-docs:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Use Node.js 14.x
+        uses: actions/setup-node@v1
+        with:
+          node-version: 14.x
+
+      - name: Install dependencies
+        uses: bahmutov/npm-install@v1
+
+      - name: Run automated updates
+        run: |
+          yarn lerna run generate-docs
+
+      - uses: EndBug/add-and-commit@v7
+        with:
+          add: "packages"
+          message: "Automated updates"

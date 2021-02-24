@@ -10,9 +10,3 @@ Features:
 - [x] reading a plugin from disk
 - [x] reading from obsidian's community plugin registry
 - [x] listing the user's vaults
-
-## Usage
-
-```
-import * as obsidianUtils from 'obsidian-utils'
-```
