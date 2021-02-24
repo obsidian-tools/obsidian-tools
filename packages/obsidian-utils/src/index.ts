@@ -17,7 +17,7 @@
  * @packageDocumentation
  */
 
-export * from "./plugin";
+export * from "./plugin/index";
 export * from "./vault";
 export * from "./utils";
 export { registerLogger } from "./log";
