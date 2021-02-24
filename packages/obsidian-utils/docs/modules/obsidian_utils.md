@@ -1,6 +1,6 @@
-[obsidian-utils](../README.md) / [Exports](../modules.md) / index
+[obsidian-utils](../README.md) / [Exports](../modules.md) / obsidian-utils
 
-# Module: index
+# Module: obsidian-utils
 
 A collections of tools to make programmatically interacting with obsidian simpler.
 
@@ -21,44 +21,44 @@ await plugin.installFromGithub('pjeby/hot-reload', 'latest', myVault.path)
 
 ### References
 
-- [registerLogger](index.md#registerlogger)
+- [registerLogger](obsidian_utils.md#registerlogger)
 
 ### Classes
 
-- [PluginRegistry](../classes/index.pluginregistry.md)
+- [PluginRegistry](../classes/obsidian_utils.pluginregistry.md)
 
 ### Interfaces
 
-- [InstalledPluginInfo](../interfaces/index.installedplugininfo.md)
-- [PluginRegistryData](../interfaces/index.pluginregistrydata.md)
-- [PluginRegistryRecord](../interfaces/index.pluginregistryrecord.md)
+- [InstalledPluginInfo](../interfaces/obsidian_utils.installedplugininfo.md)
+- [PluginRegistryData](../interfaces/obsidian_utils.pluginregistrydata.md)
+- [PluginRegistryRecord](../interfaces/obsidian_utils.pluginregistryrecord.md)
 
 ### Functions
 
-- [copyFile](index.md#copyfile)
-- [failIf](index.md#failif)
-- [failIfNot](index.md#failifnot)
-- [fetchJSON](index.md#fetchjson)
-- [fetchToDisk](index.md#fetchtodisk)
-- [fileStats](index.md#filestats)
-- [findVault](index.md#findvault)
-- [getInfoOnInstalledPlugin](index.md#getinfooninstalledplugin)
-- [installLocalPlugin](index.md#installlocalplugin)
-- [installPluginFromGithub](index.md#installpluginfromgithub)
-- [installPluginFromRegistry](index.md#installpluginfromregistry)
-- [isPluginInstalled](index.md#isplugininstalled)
-- [isVault](index.md#isvault)
-- [mkdir](index.md#mkdir)
-- [read](index.md#read)
-- [readDir](index.md#readdir)
-- [readJSON](index.md#readjson)
-- [rmdir](index.md#rmdir)
-- [to](index.md#to)
-- [toRead](index.md#toread)
-- [toReadJSON](index.md#toreadjson)
-- [toWrite](index.md#towrite)
-- [vaultPathToPluginsPath](index.md#vaultpathtopluginspath)
-- [write](index.md#write)
+- [copyFile](obsidian_utils.md#copyfile)
+- [failIf](obsidian_utils.md#failif)
+- [failIfNot](obsidian_utils.md#failifnot)
+- [fetchJSON](obsidian_utils.md#fetchjson)
+- [fetchToDisk](obsidian_utils.md#fetchtodisk)
+- [fileStats](obsidian_utils.md#filestats)
+- [findVault](obsidian_utils.md#findvault)
+- [getInfoOnInstalledPlugin](obsidian_utils.md#getinfooninstalledplugin)
+- [installLocalPlugin](obsidian_utils.md#installlocalplugin)
+- [installPluginFromGithub](obsidian_utils.md#installpluginfromgithub)
+- [installPluginFromRegistry](obsidian_utils.md#installpluginfromregistry)
+- [isPluginInstalled](obsidian_utils.md#isplugininstalled)
+- [isVault](obsidian_utils.md#isvault)
+- [mkdir](obsidian_utils.md#mkdir)
+- [read](obsidian_utils.md#read)
+- [readDir](obsidian_utils.md#readdir)
+- [readJSON](obsidian_utils.md#readjson)
+- [rmdir](obsidian_utils.md#rmdir)
+- [to](obsidian_utils.md#to)
+- [toRead](obsidian_utils.md#toread)
+- [toReadJSON](obsidian_utils.md#toreadjson)
+- [toWrite](obsidian_utils.md#towrite)
+- [vaultPathToPluginsPath](obsidian_utils.md#vaultpathtopluginspath)
+- [write](obsidian_utils.md#write)
 
 ## References
 
@@ -496,7 +496,7 @@ ___
 
 ▸ `Const`**toRead**(...`pathParts`: *string*[]): *Promise*<[*any*, *null*]\> \| *Promise*<[*null*, *string*]\>
 
-Async read pre-wrapped with [to](index.md#to)
+Async read pre-wrapped with [to](obsidian_utils.md#to)
 
 #### Parameters:
 

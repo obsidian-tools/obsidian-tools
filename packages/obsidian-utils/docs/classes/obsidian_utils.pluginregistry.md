@@ -1,19 +1,19 @@
-[obsidian-utils](../README.md) / [Exports](../modules.md) / [index](../modules/index.md) / PluginRegistry
+[obsidian-utils](../README.md) / [Exports](../modules.md) / [obsidian-utils](../modules/obsidian_utils.md) / PluginRegistry
 
 # Class: PluginRegistry
 
-[index](../modules/index.md).PluginRegistry
+[obsidian-utils](../modules/obsidian_utils.md).PluginRegistry
 
 ## Table of contents
 
 ### Constructors
 
-- [constructor](index.pluginregistry.md#constructor)
+- [constructor](obsidian_utils.pluginregistry.md#constructor)
 
 ### Methods
 
-- [getPlugin](index.pluginregistry.md#getplugin)
-- [getRegistry](index.pluginregistry.md#getregistry)
+- [getPlugin](obsidian_utils.pluginregistry.md#getplugin)
+- [getRegistry](obsidian_utils.pluginregistry.md#getregistry)
 
 ## Constructors
 
