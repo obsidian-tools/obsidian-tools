@@ -16,7 +16,6 @@ function that provides the ability to set the top level logger and control how i
 - [debug](log.md#debug)
 - [error](log.md#error)
 - [info](log.md#info)
-- [log](log.md#log)
 - [registerLogger](log.md#registerlogger)
 - [warn](log.md#warn)
 
@@ -53,20 +52,6 @@ ___
 ### info
 
 ▸ `Const`**info**(...`args`: *any*[]): *void*
-
-#### Parameters:
-
-Name | Type |
-:------ | :------ |
-`...args` | *any*[] |
-
-**Returns:** *void*
-
-___
-
-### log
-
-▸ `Const`**log**(...`args`: *any*[]): *void*
 
 #### Parameters:
 
