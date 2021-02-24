@@ -3,10 +3,10 @@ import path from "path";
 import * as esbuild from "esbuild";
 import fs from "fs";
 import { promisify } from "util";
-import { vault, utils } from "obsidian-utils";
+import { vault, plugin, utils, log } from "obsidian-utils";
 import prompts from "prompts";
 import dedent from "dedent";
-import { bold } from "chalk";
+import { bold, dim } from "ansi-colors";
 
 const { to } = utils;
 
@@ -156,13 +156,13 @@ export default class Dev extends Command {
         vaultPath = selectedVaultPath;
       }
     }
-
     const pluginPath = path.join(
       vaultPath,
       ".obsidian",
       "plugins",
       manifest.id
     );
+
     const pluginManifestPath = path.join(pluginPath, "manifest.json");
 
     const copyConfig = () => {
@@ -171,6 +171,24 @@ export default class Dev extends Command {
     };
 
     copyConfig();
+
+    if (!(await plugin.isInstalled("hot-reload", vaultPath)) && !noPrompts) {
+      const { installHotReload } = await prompts({
+        name: "installHotReload",
+        type: "confirm",
+        message: `Would you like to install pjeby's hot-reload plugin to have your plugin reload on change? ${dim(
+          "(recommended)"
+        )}`,
+      });
+      if (installHotReload) {
+        this.log("Installing hot-reload from github...");
+        await plugin.installFromGithub("pjeby/hot-reload", "latest", vaultPath);
+        fs.openSync(path.join(pluginPath, ".hotreload"), "w");
+        this.log(
+          "Success! You'll need to enable the plugin in obsidian for hot-reloading to start"
+        );
+      }
+    }
 
     fs.watch(localManifestPath, (eventType) => {
       if (eventType === "change") {

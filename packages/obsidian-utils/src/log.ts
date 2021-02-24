@@ -8,18 +8,19 @@
  *
  * @packageDocumentation
  */
-type LogLevel = "debug" | "log" | "info" | "warn" | "error";
+type LogLevel = "debug" | "info" | "warn" | "error";
 let logger = (level: LogLevel, ...args: any[]): void => {};
 
 /** Allows a consuming library to provide its own logger */
 export const registerLogger = (
   fn: (namespace: string, level: LogLevel, ...args: any[]) => void
 ) => {
-  logger = fn.bind(null, "obsidian-utils");
+  logger = (level: LogLevel, ...args: any[]) => {
+    fn("obsidian-utils", level, ...args);
+  };
 };
 
-export const debug = logger.bind(null, "debug");
-export const log = logger.bind(null, "log");
-export const info = logger.bind(null, "info");
-export const warn = logger.bind(null, "warn");
-export const error = logger.bind(null, "error");
+export const debug = (...args: any[]) => logger("debug", ...args);
+export const info = (...args: any[]) => logger("info", ...args);
+export const warn = (...args: any[]) => logger("warn", ...args);
+export const error = (...args: any[]) => logger("error", ...args);
