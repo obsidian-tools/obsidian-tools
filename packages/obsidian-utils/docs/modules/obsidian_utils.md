@@ -8,13 +8,12 @@ A collections of tools to make programmatically interacting with obsidian simple
 
 **`example`** 
 
-Using the vault and plugin module to find your open vault and install a plugin
-from GitHub into it.
+Use the utils to find your open vault and install a plugin from GitHub into it.
 
 ```
-import { vault, plugin } from 'obsidian-utils'
-const myVault = await vault.findVault();
-await plugin.installFromGithub('pjeby/hot-reload', 'latest', myVault.path)
+import { findVault, installPluginFromGithub } from 'obsidian-utils'
+const myVault = await findVault();
+await installPluginFromGithub('pjeby/hot-reload', 'latest', myVault.path)
 ```
 
 ## Table of contents
