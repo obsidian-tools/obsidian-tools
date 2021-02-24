@@ -31,7 +31,7 @@
     "prebuild": "rm -rf ./lib",
     "build": "node build",
     "postbuild": "tsc",
-    "generate-docs": "typedoc --plugin typedoc-plugin-markdown --excludePrivate --readme .template/docs-readme.md src/"
+    "generate-docs": "typedoc --plugin typedoc-plugin-markdown --disableSources --excludePrivate --readme .template/docs-readme.md src/"
   },
   "bugs": {
     "url": "https://github.com/zephraph/obsidian-tools/issues"

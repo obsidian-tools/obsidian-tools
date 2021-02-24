@@ -29,8 +29,6 @@ Name | Type |
 
 **Returns:** [*PluginRegistry*](plugin_registry.pluginregistry.md)
 
-Defined in: [packages/obsidian-utils/src/plugin/registry.ts:32](https://github.com/zephraph/obsidian-tools/blob/a9d0109/packages/obsidian-utils/src/plugin/registry.ts#L32)
-
 ## Methods
 
 ### getPlugin
@@ -45,8 +43,6 @@ Name | Type |
 
 **Returns:** *Promise*<undefined \| [*PluginRegistryRecord*](../interfaces/plugin_registry.pluginregistryrecord.md)\>
 
-Defined in: [packages/obsidian-utils/src/plugin/registry.ts:56](https://github.com/zephraph/obsidian-tools/blob/a9d0109/packages/obsidian-utils/src/plugin/registry.ts#L56)
-
 ___
 
 ### getRegistry
@@ -54,5 +50,3 @@ ___
 ▸ **getRegistry**(): *Promise*<[*PluginRegistryData*](../interfaces/plugin_registry.pluginregistrydata.md)\>
 
 **Returns:** *Promise*<[*PluginRegistryData*](../interfaces/plugin_registry.pluginregistrydata.md)\>
-
-Defined in: [packages/obsidian-utils/src/plugin/registry.ts:48](https://github.com/zephraph/obsidian-tools/blob/a9d0109/packages/obsidian-utils/src/plugin/registry.ts#L48)

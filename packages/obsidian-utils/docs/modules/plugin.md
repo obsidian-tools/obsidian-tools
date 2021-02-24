@@ -43,8 +43,6 @@ Name | Type | Description |
 
 **Returns:** *Promise*<[*InstalledPluginInfo*](../interfaces/plugin_local.installedplugininfo.md)\>
 
-Defined in: [packages/obsidian-utils/src/plugin/local.ts:25](https://github.com/zephraph/obsidian-tools/blob/a9d0109/packages/obsidian-utils/src/plugin/local.ts#L25)
-
 ___
 
 ### installFromGithub
@@ -60,8 +58,6 @@ Name | Type | Description |
 `vaultPath` | *string* |     |
 
 **Returns:** *Promise*<void\>
-
-Defined in: [packages/obsidian-utils/src/plugin/install.ts:33](https://github.com/zephraph/obsidian-tools/blob/a9d0109/packages/obsidian-utils/src/plugin/install.ts#L33)
 
 ___
 
@@ -80,8 +76,6 @@ Name | Type |
 
 **Returns:** *Promise*<void\>
 
-Defined in: [packages/obsidian-utils/src/plugin/install.ts:107](https://github.com/zephraph/obsidian-tools/blob/a9d0109/packages/obsidian-utils/src/plugin/install.ts#L107)
-
 ___
 
 ### installLocalPlugin
@@ -99,8 +93,6 @@ Name | Type |
 
 **Returns:** *Promise*<void\>
 
-Defined in: [packages/obsidian-utils/src/plugin/install.ts:128](https://github.com/zephraph/obsidian-tools/blob/a9d0109/packages/obsidian-utils/src/plugin/install.ts#L128)
-
 ___
 
 ### isInstalled
@@ -115,5 +107,3 @@ Name | Type |
 `pluginsPath` | *string* |
 
 **Returns:** *Promise*<boolean\>
-
-Defined in: [packages/obsidian-utils/src/plugin/local.ts:48](https://github.com/zephraph/obsidian-tools/blob/a9d0109/packages/obsidian-utils/src/plugin/local.ts#L48)

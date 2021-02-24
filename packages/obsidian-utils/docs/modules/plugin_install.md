@@ -28,8 +28,6 @@ Name | Type | Description |
 
 **Returns:** *Promise*<void\>
 
-Defined in: [packages/obsidian-utils/src/plugin/install.ts:33](https://github.com/zephraph/obsidian-tools/blob/a9d0109/packages/obsidian-utils/src/plugin/install.ts#L33)
-
 ___
 
 ### installFromRegistry
@@ -47,8 +45,6 @@ Name | Type |
 
 **Returns:** *Promise*<void\>
 
-Defined in: [packages/obsidian-utils/src/plugin/install.ts:107](https://github.com/zephraph/obsidian-tools/blob/a9d0109/packages/obsidian-utils/src/plugin/install.ts#L107)
-
 ___
 
 ### installLocalPlugin
@@ -65,5 +61,3 @@ Name | Type |
 `vaultPath` | *string* |
 
 **Returns:** *Promise*<void\>
-
-Defined in: [packages/obsidian-utils/src/plugin/install.ts:128](https://github.com/zephraph/obsidian-tools/blob/a9d0109/packages/obsidian-utils/src/plugin/install.ts#L128)
