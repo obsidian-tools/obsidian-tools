@@ -1,3 +1,15 @@
+# v0.4.3 (Thu Feb 25 2021)
+
+#### 🐛 Bug Fix
+
+- Ensure entrypoint gets properly passed [#34](https://github.com/zephraph/obsidian-tools/pull/34) ([@zephraph](https://github.com/zephraph))
+
+#### Authors: 1
+
+- Justin Bennett ([@zephraph](https://github.com/zephraph))
+
+---
+
 # v0.4.2 (Thu Feb 25 2021)
 
 #### 🐛 Bug Fix
