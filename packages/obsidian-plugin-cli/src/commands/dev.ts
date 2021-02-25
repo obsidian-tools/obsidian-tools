@@ -1,6 +1,5 @@
 import { Command, flags } from "@oclif/command";
 import path from "path";
-import * as esbuild from "esbuild";
 import fs from "fs";
 import { promisify } from "util";
 import prompts from "prompts";
@@ -13,6 +12,7 @@ import {
   isPluginInstalled,
   installPluginFromGithub,
 } from "obsidian-utils";
+import { build } from "../build";
 
 const localManifestPath = path.join(process.cwd(), "manifest.json");
 
@@ -200,13 +200,9 @@ export default class Dev extends Command {
       }
     });
 
-    await esbuild.build({
+    await build({
       entryPoints: [args.entryPoint],
       outfile: path.join(pluginPath, "main.js"),
-      bundle: true,
-      format: "cjs",
-      platform: "node",
-      external: ["obsidian"],
       watch: true,
       ...esbuildConfig,
     });
