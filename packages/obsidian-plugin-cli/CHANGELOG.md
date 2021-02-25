@@ -1,3 +1,15 @@
+# v0.4.2 (Thu Feb 25 2021)
+
+#### 🐛 Bug Fix
+
+- Fix esbuild error [#33](https://github.com/zephraph/obsidian-tools/pull/33) ([@zephraph](https://github.com/zephraph))
+
+#### Authors: 1
+
+- Justin Bennett ([@zephraph](https://github.com/zephraph))
+
+---
+
 # v0.4.1 (Thu Feb 25 2021)
 
 ### Release Notes

@@ -1,5 +1,18 @@
 # (Thu Feb 25 2021)
 
+#### 🐛 Bug Fix
+
+- `obsidian-plugin-cli@0.4.2`
+  - Fix esbuild error [#33](https://github.com/zephraph/obsidian-tools/pull/33) ([@zephraph](https://github.com/zephraph))
+
+#### Authors: 1
+
+- Justin Bennett ([@zephraph](https://github.com/zephraph))
+
+---
+
+# (Thu Feb 25 2021)
+
 ### Release Notes
 
 #### Support esbuild config files, change esbuild-override to esbuild-config ([#32](https://github.com/zephraph/obsidian-tools/pull/32))
