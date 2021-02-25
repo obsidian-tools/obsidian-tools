@@ -1,3 +1,30 @@
+# (Thu Feb 25 2021)
+
+### Release Notes
+
+#### Support esbuild config files, change esbuild-override to esbuild-config ([#32](https://github.com/zephraph/obsidian-tools/pull/32))
+
+This release introduces the ability to automatically include config for esbuild without having to pass the option via the command line. All you need to do is create a `esbuild.config.json` (or any other format supported by [cosmiconfig](https://github.com/davidtheclark/cosmiconfig)) and it'll automatically be included in your build. You can still manually specify a path to the config using `--esbuild-config`. 
+
+This release also updates the default resolution strategy that esbuild will use to find modules. The new order is `browser`, `module`, `main`.  You can learn more by reading esbuild's [main fields](https://esbuild.github.io/api/#main-fields) docs and you can also override this option by specifying you're own `mainFields` options in your esbuild config. 
+
+💥 BREAKING CHANGES 💥 
+
+The `--esbuild-override` command is now `--esbuild-config`
+
+---
+
+#### 🐛 Bug Fix
+
+- `obsidian-plugin-cli@0.4.1`
+  - Support esbuild config files, change esbuild-override to esbuild-config [#32](https://github.com/zephraph/obsidian-tools/pull/32) ([@zephraph](https://github.com/zephraph))
+
+#### Authors: 1
+
+- Justin Bennett ([@zephraph](https://github.com/zephraph))
+
+---
+
 # (Wed Feb 24 2021)
 
 #### 🚀 Enhancement
