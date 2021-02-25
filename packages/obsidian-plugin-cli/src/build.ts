@@ -1,4 +1,4 @@
-import esbuild from "esbuild";
+import * as esbuild from "esbuild";
 
 export const build = (options: esbuild.BuildOptions) => {
   return esbuild.build({
