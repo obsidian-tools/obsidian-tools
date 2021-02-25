@@ -14,11 +14,14 @@ export const getConfig = async (entryPoint: any, configPath?: string) => {
     esbuildConfig = config;
   }
 
-  if (!entryPoint && !esbuildConfig.entryPoints) {
-    throw new Error("Please provide the path to a file to build");
-  } else if (!entryPoint) {
-    return (esbuildConfig.entryPoints = [entryPoint]);
-  } else {
+  if (entryPoint) {
+    esbuildConfig.entryPoints = [entryPoint];
     return esbuildConfig;
   }
+
+  if (!esbuildConfig.entryPoints) {
+    throw new Error("Please provide the path to a file to build");
+  }
+
+  return esbuildConfig;
 };
