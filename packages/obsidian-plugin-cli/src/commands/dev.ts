@@ -13,6 +13,7 @@ import {
   installPluginFromGithub,
 } from "obsidian-utils";
 import { build } from "../build";
+import { getConfig } from "../config";
 
 const localManifestPath = path.join(process.cwd(), "manifest.json");
 
@@ -38,7 +39,7 @@ export default class Dev extends Command {
   `;
   static flags = {
     help: flags.help({ char: "h" }),
-    ["esbuild-override"]: flags.string({
+    ["esbuild-config"]: flags.string({
       char: "e",
       description:
         "path to a JSON file over esbuild options to enhance/override the current build",
@@ -59,21 +60,17 @@ export default class Dev extends Command {
   async run() {
     const { args, flags } = this.parse(Dev);
     let {
-      ["esbuild-override"]: esbuildOverride,
+      ["esbuild-config"]: esbuildConfigPath,
       ["vault-path"]: vaultPath,
       ["no-prompts"]: noPrompts,
     } = flags;
 
-    if (!args.entryPoint) {
-      this.error("Must provide the path to a file to build");
-    }
+    const [configError, esbuildConfig] = await to(
+      getConfig(args.entryPoint, esbuildConfigPath)
+    );
 
-    let esbuildConfig = {};
-    if (esbuildOverride) {
-      if (!esbuildOverride.endsWith(".json")) {
-        this.error("Expected esbuildOverride to be json file");
-      }
-      esbuildConfig = JSON.parse(fs.readFileSync(esbuildOverride, "utf-8"));
+    if (configError) {
+      this.error(configError);
     }
 
     if (!fs.existsSync(localManifestPath)) {
@@ -201,7 +198,6 @@ export default class Dev extends Command {
     });
 
     await build({
-      entryPoints: [args.entryPoint],
       outfile: path.join(pluginPath, "main.js"),
       watch: true,
       ...esbuildConfig,

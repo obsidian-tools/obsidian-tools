@@ -6,6 +6,7 @@ export const build = (options: esbuild.BuildOptions) => {
     platform: "node",
     external: ["obsidian"],
     format: "cjs",
+    mainFields: ["browser", "module", "main"],
     ...options,
   });
 };
