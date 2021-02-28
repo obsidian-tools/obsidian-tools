@@ -4,7 +4,7 @@ import fs from "fs";
 import { promisify } from "util";
 import prompts from "prompts";
 import dedent from "dedent";
-import { bold, dim } from "ansi-colors";
+import { bold, dim, green, underline } from "ansi-colors";
 import {
   findVault,
   isVault,
@@ -185,7 +185,11 @@ export default class Dev extends Command {
         await installPluginFromGithub("pjeby/hot-reload", "latest", vaultPath);
         fs.openSync(path.join(pluginPath, ".hotreload"), "w");
         this.log(
-          "Success! You'll need to enable the plugin in obsidian for hot-reloading to start"
+          `${green("Success!")} You'll need to ${bold(
+            underline("reload obsidian (CMD+R)")
+          )} and ${bold(
+            underline("enable the plugin")
+          )} for hot-reloading to start!`
         );
       }
     }
