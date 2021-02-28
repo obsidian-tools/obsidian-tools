@@ -1,3 +1,16 @@
+# v0.4.4 (Sun Feb 28 2021)
+
+#### 🐛 Bug Fix
+
+- improve instructions for enabling hot reload plugin [#36](https://github.com/zephraph/obsidian-tools/pull/36) ([@hipstersmoothie](https://github.com/hipstersmoothie))
+- improve instructions for enabling hot reload plugin ([@hipstersmoothie](https://github.com/hipstersmoothie))
+
+#### Authors: 1
+
+- Andrew Lisowski ([@hipstersmoothie](https://github.com/hipstersmoothie))
+
+---
+
 # v0.4.3 (Thu Feb 25 2021)
 
 #### 🐛 Bug Fix

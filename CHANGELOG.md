@@ -1,3 +1,16 @@
+# (Sun Feb 28 2021)
+
+#### 🐛 Bug Fix
+
+- `obsidian-plugin-cli@0.4.4`
+  - improve instructions for enabling hot reload plugin [#36](https://github.com/zephraph/obsidian-tools/pull/36) ([@hipstersmoothie](https://github.com/hipstersmoothie))
+
+#### Authors: 1
+
+- Andrew Lisowski ([@hipstersmoothie](https://github.com/hipstersmoothie))
+
+---
+
 # (Thu Feb 25 2021)
 
 #### 🐛 Bug Fix
