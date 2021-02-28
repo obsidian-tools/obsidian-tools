@@ -1,3 +1,16 @@
+# v0.4.5 (Sun Feb 28 2021)
+
+#### 🐛 Bug Fix
+
+- Minify output of "obsidian-plugin build" [#35](https://github.com/zephraph/obsidian-tools/pull/35) ([@hipstersmoothie](https://github.com/hipstersmoothie))
+- Minify output of "obsidian-plugin build" ([@hipstersmoothie](https://github.com/hipstersmoothie))
+
+#### Authors: 1
+
+- Andrew Lisowski ([@hipstersmoothie](https://github.com/hipstersmoothie))
+
+---
+
 # v0.4.4 (Sun Feb 28 2021)
 
 #### 🐛 Bug Fix
