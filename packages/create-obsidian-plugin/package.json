@@ -24,7 +24,8 @@
     "url": "git+https://github.com/zephraph/obsidian-tools.git"
   },
   "scripts": {
-    "build": "esbuild --bundle --platform=node --external:obsidian --format=cjs --outfile=\"lib/create-obsidian-plugin.js\" src/index.ts"
+    "build": "tsc",
+    "echo": "node test.js"
   },
   "bugs": {
     "url": "https://github.com/zephraph/obsidian-tools/issues"
@@ -37,5 +38,10 @@
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",
     "access": "public"
+  },
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "execa": "^5.0.0",
+    "prompts": "^2.4.0"
   }
 }
