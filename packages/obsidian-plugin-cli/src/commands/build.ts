@@ -40,6 +40,7 @@ export default class Build extends Command {
 
     await build({
       outfile: path.join(outputDir, "main.js"),
+      minify: true,
       ...esbuildConfig,
     });
 
