@@ -8,6 +8,9 @@
     "plugin",
     "obsidian.md"
   ],
+  "bin": {
+    "create-obsidian-plugin": "./bin/run"
+  },
   "author": "Justin Bennett <zephraph@gmail.com>",
   "homepage": "https://github.com/zephraph/obsidian-tools#readme",
   "license": "MIT",
