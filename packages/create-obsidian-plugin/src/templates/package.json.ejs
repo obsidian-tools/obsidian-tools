@@ -1,7 +1,7 @@
 {
-  "name": "<%= props.name %>",
+  "name": "<%= plugin.id %>",
   "version": "0.0.1",
-  "description": "<%= props.description %>",
+  "description": "<%= plugin.description %>",
   "main": "lib/main.js",
   "scripts": {
     "build": "obsidian-plugin build src/main.ts",
@@ -9,7 +9,7 @@
   },
   "devDependencies": {
     "typescript": "^4.1.5",
-    "obsidian-plugin-cli": "<%= props.opcVersion %>",
+    "obsidian-plugin-cli": "^0.4.3",
     "obsidian": "obsidianmd/obsidian-api"
   }
 }
