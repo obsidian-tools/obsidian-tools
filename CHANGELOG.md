@@ -1,3 +1,16 @@
+# (Fri Mar 05 2021)
+
+#### 🚀 Enhancement
+
+- `create-obsidian-plugin@0.1.0`
+  - Initial, working `create-obsidian-plugin` [#38](https://github.com/zephraph/obsidian-tools/pull/38) ([@zephraph](https://github.com/zephraph))
+
+#### Authors: 1
+
+- Justin Bennett ([@zephraph](https://github.com/zephraph))
+
+---
+
 # (Sun Feb 28 2021)
 
 #### 🐛 Bug Fix
