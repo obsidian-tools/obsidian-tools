@@ -24,18 +24,32 @@
     "url": "git+https://github.com/zephraph/obsidian-tools.git"
   },
   "scripts": {
-    "build": "esbuild --bundle --platform=node --external:obsidian --format=cjs --outfile=\"lib/create-obsidian-plugin.js\" src/index.ts"
+    "prebuild": "rm -rf ./lib",
+    "build": "tsc && cp -R src/templates lib/templates",
+    "prestart": "yarn build",
+    "start": "./bin/run",
+    "echo": "node test.js"
   },
   "bugs": {
     "url": "https://github.com/zephraph/obsidian-tools/issues"
   },
   "devDependencies": {
+    "@types/ejs": "^3.0.6",
     "@types/node": "^14.14.28",
+    "@types/prettier": "^2.2.2",
     "esbuild": "^0.8.49",
     "typescript": "^4.1.5"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",
     "access": "public"
+  },
+  "dependencies": {
+    "ansi-colors": "^4.1.1",
+    "dedent": "^0.7.0",
+    "ejs": "^3.1.6",
+    "execa": "^5.0.0",
+    "prettier": "^2.2.1",
+    "prompts": "^2.4.0"
   }
 }

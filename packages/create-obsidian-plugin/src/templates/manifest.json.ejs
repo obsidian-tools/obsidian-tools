@@ -1,0 +1,11 @@
+{
+  "id": "<%= plugin.id %>",
+  "name": "<%= plugin.name %>",
+  "description": "<%= plugin.description %>",
+  "author": "<%= plugin.author %>",
+  <% if (plugin.authorUrl) { %>
+    "authorUrl": "<%= plugin.authorUrl %>",
+  <% } %>
+  "minAppVersion": "0.11.0",
+  "version": "0.0.1"
+}
