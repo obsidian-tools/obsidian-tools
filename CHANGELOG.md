@@ -1,5 +1,18 @@
 # (Fri Mar 05 2021)
 
+#### 🐛 Bug Fix
+
+- `create-obsidian-plugin@0.1.1`
+  - Add bin to create-obsidian-plugin [#39](https://github.com/zephraph/obsidian-tools/pull/39) ([@zephraph](https://github.com/zephraph))
+
+#### Authors: 1
+
+- Justin Bennett ([@zephraph](https://github.com/zephraph))
+
+---
+
+# (Fri Mar 05 2021)
+
 #### 🚀 Enhancement
 
 - `create-obsidian-plugin@0.1.0`

@@ -1,3 +1,16 @@
+# v0.1.1 (Fri Mar 05 2021)
+
+#### 🐛 Bug Fix
+
+- Add bin to create-obsidian-plugin [#39](https://github.com/zephraph/obsidian-tools/pull/39) ([@zephraph](https://github.com/zephraph))
+- Add bin to create-obsidian-plugin ([@zephraph](https://github.com/zephraph))
+
+#### Authors: 1
+
+- Justin Bennett ([@zephraph](https://github.com/zephraph))
+
+---
+
 # v0.1.0 (Fri Mar 05 2021)
 
 #### 🚀 Enhancement
