@@ -5,7 +5,7 @@
   "main": "lib/main.js",
   "scripts": {
     "build": "obsidian-plugin build<%= plugin.hasStylesheet && " --with-stylesheet src/styles.css" || "" %> src/main.ts",
-    "dev": "obsidian-plugin dev src/main.ts"
+    "dev": "obsidian-plugin dev<%= plugin.hasStylesheet && " --with-stylesheet src/styles.css" || "" %> src/main.ts",
   },
   "devDependencies": {
     "typescript": "^4.1.5",
