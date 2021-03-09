@@ -31,6 +31,7 @@ export interface PluginInfo {
   description: string;
   author: string;
   authorUrl: string;
+  hasStylesheet: string;
 }
 
 export async function prompt(): Promise<PluginInfo> {
@@ -77,6 +78,11 @@ export async function prompt(): Promise<PluginInfo> {
         type: "text",
         name: "authorUrl",
         message: "Add your website or social media account (optional)",
+      },
+      {
+        type: "confirm",
+        name: "hasStylesheet",
+        message: "Does your plugin include styles?",
       },
     ],
     {

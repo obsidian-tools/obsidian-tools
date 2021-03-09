@@ -19,6 +19,10 @@ export default class Build extends Command {
       description: "path to write build output to",
       default: "dist",
     }),
+    ["with-stylesheet"]: flags.string({
+      char: "S",
+      description: "include a stylesheet",
+    }),
   };
 
   static args = [{ name: "entryPoint" }];
@@ -28,6 +32,7 @@ export default class Build extends Command {
     const {
       ["esbuild-config"]: esbuildConfigPath,
       ["output-dir"]: outputDir,
+      ["with-stylesheet"]: stylesheet,
     } = flags;
 
     const [configError, esbuildConfig] = await to(
@@ -38,11 +43,20 @@ export default class Build extends Command {
       this.error(configError);
     }
 
-    await build({
-      outfile: path.join(outputDir, "main.js"),
-      minify: true,
-      ...esbuildConfig,
-    });
+    if (stylesheet) {
+      esbuildConfig!.entryPoints!.push(stylesheet);
+      await build({
+        outdir: outputDir,
+        minify: true,
+        ...esbuildConfig,
+      });
+    } else {
+      await build({
+        outfile: path.join(outputDir, "main.js"),
+        minify: true,
+        ...esbuildConfig,
+      });
+    }
 
     fs.copyFileSync("./manifest.json", path.join(outputDir, "manifest.json"));
   }

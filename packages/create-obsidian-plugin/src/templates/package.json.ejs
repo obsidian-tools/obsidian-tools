@@ -4,7 +4,7 @@
   "description": "<%= plugin.description %>",
   "main": "lib/main.js",
   "scripts": {
-    "build": "obsidian-plugin build src/main.ts",
+    "build": "obsidian-plugin build<%= plugin.hasStylesheet && " --with-stylesheet src/styles.css" || "" %> src/main.ts",
     "dev": "obsidian-plugin dev src/main.ts"
   },
   "devDependencies": {
