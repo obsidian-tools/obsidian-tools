@@ -3,7 +3,7 @@ import { renderFile } from "ejs";
 import path from "path";
 import { write, mkdir } from "./utils/fs";
 import { format } from "prettier";
-import { install, runCommandText } from "./utils/platform";
+import { run, runCommandText, installCommandText } from "./utils/platform";
 import dedent from "dedent";
 import { green, cyan, yellow } from "ansi-colors";
 import fs from "fs";
@@ -13,23 +13,28 @@ const newline = () => console.log();
 const pluginPath = (plugin: PluginInfo, ...subPaths: string[]) =>
   path.join(process.cwd(), plugin.id, ...subPaths);
 
+interface WriteTemplateOptions {
+  subPath?: string;
+  templateData?: Record<string, unknown>;
+}
+
 const makeWriteTemplate = (plugin: PluginInfo) => async (
   name: string,
-  relativePathToProjectRoot = ""
+  { subPath = "", templateData = {} }: WriteTemplateOptions = {}
 ) => {
   const content = await renderFile(
     path.join(__dirname, "templates", `${name}.ejs`),
-    { plugin },
+    { plugin, ...templateData },
     { rmWhitespace: true }
   );
-  const destinationDir = pluginPath(plugin, relativePathToProjectRoot);
+  const destinationDir = pluginPath(plugin, subPath);
 
   if (!fs.existsSync(destinationDir)) {
     await mkdir(destinationDir, { recursive: true });
   }
 
   await write(
-    pluginPath(plugin, relativePathToProjectRoot, name),
+    pluginPath(plugin, subPath, name),
     path.extname(name) !== "" ? format(content, { filepath: name }) : content
   );
 };
@@ -42,10 +47,19 @@ const makeWriteTemplate = (plugin: PluginInfo) => async (
 
   await writeTemplate("manifest.json");
   await writeTemplate("package.json");
-  await writeTemplate("main.ts", "src");
+  await writeTemplate("main.ts", { subPath: "src" });
   await writeTemplate("tsconfig.json");
   await writeTemplate("types.d.ts");
   await writeTemplate(".gitignore");
+  await writeTemplate("README.md", {
+    templateData: {
+      platform: {
+        build: runCommandText("build"),
+        dev: runCommandText("dev"),
+        install: installCommandText,
+      },
+    },
+  });
 
   await write(
     pluginPath(plugin, "LICENSE"),
@@ -53,12 +67,12 @@ const makeWriteTemplate = (plugin: PluginInfo) => async (
   );
 
   if (plugin.hasStylesheet) {
-    await writeTemplate("styles.css", "src");
+    await writeTemplate("styles.css", { subPath: "src" });
   }
 
   console.log("Installing plugin dependencies, this may take a little while.");
 
-  const installProcess = install(pluginPath(plugin));
+  const installProcess = run("install", pluginPath(plugin));
   installProcess.stdout?.pipe(process.stdout);
 
   await installProcess;

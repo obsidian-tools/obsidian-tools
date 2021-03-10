@@ -1,6 +1,6 @@
 # `create-obsidian-plugin`
 
-A tool to easily create a plugin for [obsidian](https://obsidian.md/)
+A tool to easily create plugins for [obsidian](https://obsidian.md/)
 
 ## Getting started
 
