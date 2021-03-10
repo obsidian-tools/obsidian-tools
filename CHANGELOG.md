@@ -2,6 +2,24 @@
 
 #### 🚀 Enhancement
 
+- `create-obsidian-plugin@0.3.0`
+  - Add license selection [#42](https://github.com/zephraph/obsidian-tools/pull/42) ([@zephraph](https://github.com/zephraph))
+
+#### 📝 Documentation
+
+- `create-obsidian-plugin@0.3.0`
+  - Add docs for create-obsidian-plugin [#41](https://github.com/zephraph/obsidian-tools/pull/41) ([@zephraph](https://github.com/zephraph))
+
+#### Authors: 1
+
+- Justin Bennett ([@zephraph](https://github.com/zephraph))
+
+---
+
+# (Wed Mar 10 2021)
+
+#### 🚀 Enhancement
+
 - `create-obsidian-plugin@0.2.0`, `obsidian-plugin-cli@0.5.0`
   - Add CSS support [#40](https://github.com/zephraph/obsidian-tools/pull/40) ([@zephraph](https://github.com/zephraph))
 

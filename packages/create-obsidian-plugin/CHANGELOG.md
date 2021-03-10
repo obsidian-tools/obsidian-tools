@@ -1,3 +1,24 @@
+# v0.3.0 (Wed Mar 10 2021)
+
+#### 🚀 Enhancement
+
+- Add license selection [#42](https://github.com/zephraph/obsidian-tools/pull/42) ([@zephraph](https://github.com/zephraph))
+
+#### 🐛 Bug Fix
+
+- Add license selection ([@zephraph](https://github.com/zephraph))
+- Add docs for create-obsidian-plugin ([@zephraph](https://github.com/zephraph))
+
+#### 📝 Documentation
+
+- Add docs for create-obsidian-plugin [#41](https://github.com/zephraph/obsidian-tools/pull/41) ([@zephraph](https://github.com/zephraph))
+
+#### Authors: 1
+
+- Justin Bennett ([@zephraph](https://github.com/zephraph))
+
+---
+
 # v0.2.0 (Wed Mar 10 2021)
 
 #### 🚀 Enhancement
