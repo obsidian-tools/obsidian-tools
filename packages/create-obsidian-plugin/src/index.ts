@@ -5,10 +5,13 @@ import { write, mkdir } from "./utils/fs";
 import { format } from "prettier";
 import { install, runCommandText } from "./utils/platform";
 import dedent from "dedent";
-import { green, cyan } from "ansi-colors";
+import { green, cyan, yellow } from "ansi-colors";
 import fs from "fs";
 
 const newline = () => console.log();
+
+const pluginPath = (plugin: PluginInfo, ...subPaths: string[]) =>
+  path.join(process.cwd(), plugin.id, ...subPaths);
 
 const makeWriteTemplate = (plugin: PluginInfo) => async (
   name: string,
@@ -19,23 +22,17 @@ const makeWriteTemplate = (plugin: PluginInfo) => async (
     { plugin },
     { rmWhitespace: true }
   );
-  const destinationDir = path.join(
-    process.cwd(),
-    plugin.id,
-    relativePathToProjectRoot
-  );
+  const destinationDir = pluginPath(plugin, relativePathToProjectRoot);
 
   if (!fs.existsSync(destinationDir)) {
     await mkdir(destinationDir, { recursive: true });
   }
 
   await write(
-    path.join(destinationDir, name),
+    pluginPath(plugin, relativePathToProjectRoot, name),
     path.extname(name) !== "" ? format(content, { filepath: name }) : content
   );
 };
-
-const pluginPath = (plugin: PluginInfo) => path.join(process.cwd(), plugin.id);
 
 (async () => {
   let plugin = await prompt();
@@ -49,6 +46,11 @@ const pluginPath = (plugin: PluginInfo) => path.join(process.cwd(), plugin.id);
   await writeTemplate("tsconfig.json");
   await writeTemplate("types.d.ts");
   await writeTemplate(".gitignore");
+
+  await write(
+    pluginPath(plugin, "LICENSE"),
+    (await import(`spdx-license-list/licenses/${plugin.license}`)).licenseText
+  );
 
   if (plugin.hasStylesheet) {
     await writeTemplate("styles.css", "src");
@@ -68,6 +70,8 @@ const pluginPath = (plugin: PluginInfo) => path.join(process.cwd(), plugin.id);
 
       ${cyan(`cd ${plugin.id}`)}
       ${cyan(runCommandText("dev"))}
+
+    ${yellow("Please check your LICENSE file to see if any updates are needed")}
   `);
 
   newline();
