@@ -3,6 +3,7 @@ import fs from "fs";
 import { yellow, green, dim, reset } from "ansi-colors";
 import dedent from "dedent";
 import { cmd } from "./utils/platform";
+import licenses from "spdx-license-list";
 
 const capitalize = (word: string) => word[0].toUpperCase() + word.slice(1);
 const empty = (v: any) => Boolean(v);
@@ -32,6 +33,7 @@ export interface PluginInfo {
   author: string;
   authorUrl: string;
   hasStylesheet: string;
+  license: string;
 }
 
 export async function prompt(): Promise<PluginInfo> {
@@ -83,6 +85,21 @@ export async function prompt(): Promise<PluginInfo> {
         type: "confirm",
         name: "hasStylesheet",
         message: "Does your plugin include styles?",
+      },
+      {
+        type: "autocomplete",
+        name: "license",
+        message: `Choose a license ${reset(
+          dim("(type to filter, ↑ or ↓ to navigate)")
+        )}`,
+        initial: "MIT",
+        choices: Object.entries(licenses).map(([key, license]) => {
+          return {
+            value: key,
+            title: license.name,
+            description: (license.osiApproved && "OSI Approved") || "",
+          };
+        }),
       },
     ],
     {
