@@ -1,7 +1,7 @@
 {
   "name": "obsidian-plugin-cli",
   "description": "A CLI tool to make it easy to develop plugins for obisidian",
-  "version": "0.4.5",
+  "version": "0.5.0",
   "author": "zephraph <zephraph@gmail.com>",
   "bin": {
     "obsidian-plugin": "./bin/run"

@@ -23,7 +23,7 @@ $ npm install -g obsidian-plugin-cli
 $ obsidian-plugin COMMAND
 running command...
 $ obsidian-plugin (-v|--version|version)
-obsidian-plugin-cli/0.4.5 linux-x64 node-v14.15.5
+obsidian-plugin-cli/0.5.0 linux-x64 node-v14.16.0
 $ obsidian-plugin --help [COMMAND]
 USAGE
   $ obsidian-plugin COMMAND
@@ -47,12 +47,13 @@ USAGE
   $ obsidian-plugin build [ENTRYPOINT]
 
 OPTIONS
-  -e, --esbuild-config=esbuild-config  path to a config file containing esbuild options to apply to the build
-  -h, --help                           show CLI help
-  -o, --output-dir=output-dir          [default: dist] path to write build output to
+  -S, --with-stylesheet=with-stylesheet  include a stylesheet
+  -e, --esbuild-config=esbuild-config    path to a config file containing esbuild options to apply to the build
+  -h, --help                             show CLI help
+  -o, --output-dir=output-dir            [default: dist] path to write build output to
 ```
 
-_See code: [src/commands/build.ts](https://github.com/zephraph/obsidian-tools/blob/v0.4.5/src/commands/build.ts)_
+_See code: [src/commands/build.ts](https://github.com/zephraph/obsidian-tools/blob/v0.5.0/src/commands/build.ts)_
 
 ## `obsidian-plugin dev [ENTRYPOINT]`
 
@@ -63,10 +64,11 @@ USAGE
   $ obsidian-plugin dev [ENTRYPOINT]
 
 OPTIONS
-  -e, --esbuild-config=esbuild-config  path to a JSON file over esbuild options to enhance/override the current build
-  -h, --help                           show CLI help
-  -n, --no-prompts                     disable prompting for user input
-  -v, --vault-path=vault-path          path to the obsidian vault you want to develop in
+  -S, --with-stylesheet=with-stylesheet  include a stylesheet
+  -e, --esbuild-config=esbuild-config    path to a JSON file over esbuild options to enhance/override the current build
+  -h, --help                             show CLI help
+  -n, --no-prompts                       disable prompting for user input
+  -v, --vault-path=vault-path            path to the obsidian vault you want to develop in
 
 DESCRIPTION
   If --vault-path is not specified, this command will try to intelligently determine where your vaults are located.
@@ -78,7 +80,7 @@ DESCRIPTION
   with --vault-path.
 ```
 
-_See code: [src/commands/dev.ts](https://github.com/zephraph/obsidian-tools/blob/v0.4.5/src/commands/dev.ts)_
+_See code: [src/commands/dev.ts](https://github.com/zephraph/obsidian-tools/blob/v0.5.0/src/commands/dev.ts)_
 
 ## `obsidian-plugin help [COMMAND]`
 
