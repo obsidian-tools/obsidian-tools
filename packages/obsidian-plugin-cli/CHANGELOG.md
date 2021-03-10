@@ -1,3 +1,19 @@
+# v0.5.0 (Wed Mar 10 2021)
+
+#### 🚀 Enhancement
+
+- Add CSS support [#40](https://github.com/zephraph/obsidian-tools/pull/40) ([@zephraph](https://github.com/zephraph))
+
+#### 🐛 Bug Fix
+
+- Add CSS support ([@zephraph](https://github.com/zephraph))
+
+#### Authors: 1
+
+- Justin Bennett ([@zephraph](https://github.com/zephraph))
+
+---
+
 # v0.4.5 (Sun Feb 28 2021)
 
 #### 🐛 Bug Fix
