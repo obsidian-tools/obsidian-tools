@@ -46,7 +46,13 @@ const pluginPath = (plugin: PluginInfo) => path.join(process.cwd(), plugin.id);
   await writeTemplate("manifest.json");
   await writeTemplate("package.json");
   await writeTemplate("main.ts", "src");
+  await writeTemplate("tsconfig.json");
+  await writeTemplate("types.d.ts");
   await writeTemplate(".gitignore");
+
+  if (plugin.hasStylesheet) {
+    await writeTemplate("styles.css", "src");
+  }
 
   console.log("Installing plugin dependencies, this may take a little while.");
 

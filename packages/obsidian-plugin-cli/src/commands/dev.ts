@@ -53,6 +53,10 @@ export default class Dev extends Command {
       char: "n",
       description: "disable prompting for user input",
     }),
+    ["with-stylesheet"]: flags.string({
+      char: "S",
+      description: "include a stylesheet",
+    }),
   };
 
   static args = [{ name: "entryPoint" }];
@@ -63,6 +67,7 @@ export default class Dev extends Command {
       ["esbuild-config"]: esbuildConfigPath,
       ["vault-path"]: vaultPath,
       ["no-prompts"]: noPrompts,
+      ["with-stylesheet"]: stylesheet,
     } = flags;
 
     const [configError, esbuildConfig] = await to(
@@ -201,10 +206,19 @@ export default class Dev extends Command {
       }
     });
 
-    await build({
-      outfile: path.join(pluginPath, "main.js"),
-      watch: true,
-      ...esbuildConfig,
-    });
+    if (stylesheet) {
+      esbuildConfig!.entryPoints!.push(stylesheet);
+      await build({
+        outdir: pluginPath,
+        watch: true,
+        ...esbuildConfig,
+      });
+    } else {
+      await build({
+        outfile: path.join(pluginPath, "main.js"),
+        watch: true,
+        ...esbuildConfig,
+      });
+    }
   }
 }
