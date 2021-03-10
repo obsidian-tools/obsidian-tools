@@ -2,6 +2,19 @@
 
 #### 🚀 Enhancement
 
+- `create-obsidian-plugin@0.4.0`
+  - Generate a readme for the created plugins [#43](https://github.com/zephraph/obsidian-tools/pull/43) ([@zephraph](https://github.com/zephraph))
+
+#### Authors: 1
+
+- Justin Bennett ([@zephraph](https://github.com/zephraph))
+
+---
+
+# (Wed Mar 10 2021)
+
+#### 🚀 Enhancement
+
 - `create-obsidian-plugin@0.3.0`
   - Add license selection [#42](https://github.com/zephraph/obsidian-tools/pull/42) ([@zephraph](https://github.com/zephraph))
 
