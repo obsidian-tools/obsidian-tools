@@ -2,10 +2,10 @@ name: Automated Updates
 
 on:
   push:
-    branches: 
-      - '*'         
-      - '*/*'       
-      - '**'
+    branches:
+      - "*"
+      - "*/*"
+      - "**"
       - "!main"
 
 jobs:
@@ -21,6 +21,8 @@ jobs:
 
       - name: Install dependencies
         uses: bahmutov/npm-install@v1
+        with:
+          install-command: yarn --update-checksums
 
       - name: Run automated updates
         run: |
