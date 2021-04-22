@@ -1,3 +1,16 @@
+# v0.8.1 (Thu Apr 22 2021)
+
+#### 🐛 Bug Fix
+
+- Update missing typescript config entry in obsidian-create-plugin [#44](https://github.com/zephraph/obsidian-tools/pull/44) ([@zephraph](https://github.com/zephraph))
+- Reference obsidian-api from github instead of direct tarball link ([@zephraph](https://github.com/zephraph))
+
+#### Authors: 1
+
+- Justin Bennett ([@zephraph](https://github.com/zephraph))
+
+---
+
 # v0.8.0 (Wed Feb 24 2021)
 
 #### 🚀 Enhancement

@@ -1,3 +1,20 @@
+# (Thu Apr 22 2021)
+
+#### 🐛 Bug Fix
+
+- `obsidian-utils@0.8.1`
+  - Update missing typescript config entry in obsidian-create-plugin [#44](https://github.com/zephraph/obsidian-tools/pull/44) ([@zephraph](https://github.com/zephraph))
+
+#### 🏠 Internal
+
+- Deduplicate dependencies [#45](https://github.com/zephraph/obsidian-tools/pull/45) ([@zephraph](https://github.com/zephraph))
+
+#### Authors: 1
+
+- Justin Bennett ([@zephraph](https://github.com/zephraph))
+
+---
+
 # (Wed Mar 10 2021)
 
 #### 🚀 Enhancement
