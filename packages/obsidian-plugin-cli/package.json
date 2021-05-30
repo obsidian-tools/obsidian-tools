@@ -1,7 +1,7 @@
 {
   "name": "obsidian-plugin-cli",
   "description": "A CLI tool to make it easy to develop plugins for obisidian",
-  "version": "0.5.1",
+  "version": "0.6.0",
   "author": "zephraph <zephraph@gmail.com>",
   "bin": {
     "obsidian-plugin": "./bin/run"
@@ -15,7 +15,7 @@
     "cosmiconfig": "^7.0.0",
     "dedent": "^0.7.0",
     "esbuild": "^0.8.48",
-    "obsidian-utils": "^0.8.1",
+    "obsidian-utils": "^0.9.0",
     "prompts": "^2.4.0",
     "tslib": "^1",
     "update-notifier": "^5.1.0"
