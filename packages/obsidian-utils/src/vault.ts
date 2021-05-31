@@ -7,6 +7,8 @@ import os from "os";
 import path from "path";
 import fs from "fs";
 import { to, readJSON, failIf } from "./utils";
+import which from "which";
+import execa from "execa";
 
 /**
  * The shape of a vault entry in Obsidian's official
@@ -70,11 +72,17 @@ export const findVault = async (vaultPath?: string): Promise<Vault[]> => {
   if (vaultPath && fs.existsSync(vaultPath)) {
     return [getVaultFromPath(vaultPath)];
   }
-  const home = os.homedir();
+  let home = os.homedir();
   let obsidianPath = "";
+
+  const findWindowsObsidianDirectory = (home: string) =>
+    ["Local", "Roaming", "LocalLow"]
+      .map((p) => path.join(home, "AppData", p, "Obsidian"))
+      .find((p) => fs.existsSync(path.join(p, "obsidian.json"))) || "";
+
   switch (os.platform()) {
     case "win32":
-      obsidianPath = path.join(home, "AppData", "Local", "Obsidian");
+      obsidianPath = findWindowsObsidianDirectory(home);
       break;
     case "darwin":
       obsidianPath = path.join(
@@ -85,15 +93,22 @@ export const findVault = async (vaultPath?: string): Promise<Vault[]> => {
       );
       break;
     default: {
-      const obsidianHomePath = path.join(home, ".obsidian");
-      const obsidianConfigPath = path.join(home, ".config", "obsidian");
-      const XDG = process.env.XDG ?? "";
-      const XDGPath = path.join(XDG, "obsidian");
-      obsidianPath = fs.existsSync(obsidianConfigPath)
-        ? obsidianConfigPath
-        : XDG && fs.existsSync(XDGPath)
-        ? XDGPath
-        : obsidianHomePath;
+      // WSL support
+      if (which.sync("wslvar", { nothrow: true })) {
+        const { stdout: userProfile } = await execa("wslvar", ["USERPROFILE"]);
+        const { stdout: wslHome } = await execa("wslpath", [userProfile]);
+        obsidianPath = findWindowsObsidianDirectory(wslHome);
+      } else {
+        const obsidianHomePath = path.join(home, ".obsidian");
+        const obsidianConfigPath = path.join(home, ".config", "obsidian");
+        const XDG = process.env.XDG ?? "";
+        const XDGPath = path.join(XDG, "obsidian");
+        obsidianPath = fs.existsSync(obsidianConfigPath)
+          ? obsidianConfigPath
+          : XDG && fs.existsSync(XDGPath)
+          ? XDGPath
+          : obsidianHomePath;
+      }
     }
   }
 
