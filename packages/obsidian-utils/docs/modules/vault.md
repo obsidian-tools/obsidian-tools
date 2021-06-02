@@ -6,6 +6,10 @@ A collection of tools for working with or locating vaults
 
 ## Table of contents
 
+### Interfaces
+
+- [Vault](../interfaces/vault.vault-1.md)
+
 ### Functions
 
 - [findVault](vault.md#findvault)
@@ -15,7 +19,7 @@ A collection of tools for working with or locating vaults
 
 ### findVault
 
-▸ `Const`**findVault**(`vaultPath?`: *string*): *Promise*<Vault[]\>
+▸ `Const`**findVault**(`vaultPath?`: *string*): *Promise*<[*Vault*](../interfaces/vault.vault-1.md)[]\>
 
 Attempts to find where your obsidian vaults are by locating obsidian's app config. It's relatively reliable
 on Windows and OSX, but there may be issues on linux and will definitely be issues on weird platforms.
@@ -27,7 +31,7 @@ Name | Type | Description |
 :------ | :------ | :------ |
 `vaultPath?` | *string* | A path to an Obsidian vault (which, at the very least contains a .obsidian directory)    |
 
-**Returns:** *Promise*<Vault[]\>
+**Returns:** *Promise*<[*Vault*](../interfaces/vault.vault-1.md)[]\>
 
 ___
 
