@@ -37,13 +37,13 @@ export default class Install extends Command {
       vaultPath: vault as string,
       vaults: [] as any,
       noPrompts: false,
+      registry: null as any,
+      log: this.log,
     };
 
-    const [err, results] = await to(install.exec(context));
+    const [err] = await to(install.exec(context));
     if (err) {
       this.error(err);
-    } else {
-      console.log(results);
     }
   }
 }

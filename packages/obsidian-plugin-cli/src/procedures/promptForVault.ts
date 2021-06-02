@@ -1,6 +1,13 @@
 import { procedure } from "@zephraph/procedure";
-import { Vault, findVault, isVault } from "obsidian-utils";
+import {
+  Vault,
+  findVault,
+  isVault,
+  isWSL,
+  windowsToWSLPath,
+} from "obsidian-utils";
 import prompts from "prompts";
+import path from "path";
 
 type Context = {
   vaultPath: string;
@@ -16,7 +23,9 @@ export default procedure<Context>("promptForVault")
     [manyVaults, selectLastOpenedVaultOrError],
     [singleVault, selectFirstVault],
   ])
-  .update("vaultPath", promptForVaultPathIfEmpty);
+  .update("vaultPath", promptForVaultPathIfEmpty)
+  .update("vaultPath", formatVaultPath)
+  .update("vaults", formatVaults);
 
 async function vaultsFromPath({ vaultPath }: Context) {
   return { vaults: await findVault(vaultPath) };
@@ -44,15 +53,26 @@ async function selectVault({ vaults }: Context) {
     type: "select",
     message: "Select a vault",
     choices: [
+      ...vaults
+        .sort((v1, v2) => {
+          if (v1.open && !v2.open) {
+            return -1;
+          }
+          if (!v1.open && v2.open) {
+            return 1;
+          }
+          return 0;
+        })
+        .map((v) => ({
+          title: v.name,
+          value: v.path,
+          description: v.open ? "Currently open" : "",
+        })),
       {
         title: "none of these",
         description: "Manually enter your vault path",
         value: "",
       },
-      ...vaults.map((v) => ({
-        title: v.name,
-        value: v.path,
-      })),
     ],
   });
   return { vaultPath: selectedVault };
@@ -81,4 +101,22 @@ async function promptForVaultPathIfEmpty(vaultPath: Context["vaultPath"]) {
     return selectedVaultPath as string;
   }
   return vaultPath;
+}
+
+function formatVaultPath(vaultPath: Context["vaultPath"]) {
+  if (isWSL()) {
+    return windowsToWSLPath(vaultPath);
+  }
+  return vaultPath;
+}
+
+function formatVaults(vaults: Context["vaults"]) {
+  if (isWSL()) {
+    return vaults.map((vault) => ({
+      ...vault,
+      name: path.basename(windowsToWSLPath(vault.name)),
+      path: windowsToWSLPath(vault.path),
+    }));
+  }
+  return vaults;
 }
