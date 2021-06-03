@@ -14,6 +14,8 @@ A collection of meta utils that simplifies some common Node.js tasks.
 - [fetchJSON](utils.md#fetchjson)
 - [fetchToDisk](utils.md#fetchtodisk)
 - [fileStats](utils.md#filestats)
+- [findWindowsObsidianDirectory](utils.md#findwindowsobsidiandirectory)
+- [isWSL](utils.md#iswsl)
 - [mkdir](utils.md#mkdir)
 - [read](utils.md#read)
 - [readDir](utils.md#readdir)
@@ -23,6 +25,7 @@ A collection of meta utils that simplifies some common Node.js tasks.
 - [toRead](utils.md#toread)
 - [toReadJSON](utils.md#toreadjson)
 - [toWrite](utils.md#towrite)
+- [windowsToWSLPath](utils.md#windowstowslpath)
 - [write](utils.md#write)
 
 ## Functions
@@ -152,6 +155,28 @@ Name | Type |
 `options?` | StatOptions |
 
 **Returns:** *Promise*<Stats \| BigIntStats\>
+
+___
+
+### findWindowsObsidianDirectory
+
+▸ `Const`**findWindowsObsidianDirectory**(`home`: *string*): *string*
+
+#### Parameters:
+
+Name | Type |
+:------ | :------ |
+`home` | *string* |
+
+**Returns:** *string*
+
+___
+
+### isWSL
+
+▸ `Const`**isWSL**(): *null* \| *string*
+
+**Returns:** *null* \| *string*
 
 ___
 
@@ -377,6 +402,20 @@ Name | Type |
 `...pathParts` | *string*[] |
 
 **Returns:** *Promise*<[*any*, *null*]\> \| *Promise*<[*null*, *void*]\>
+
+___
+
+### windowsToWSLPath
+
+▸ `Const`**windowsToWSLPath**(`filePath`: *string*): *string*
+
+#### Parameters:
+
+Name | Type |
+:------ | :------ |
+`filePath` | *string* |
+
+**Returns:** *string*
 
 ___
 
