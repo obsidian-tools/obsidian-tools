@@ -6,7 +6,7 @@
 import os from "os";
 import path from "path";
 import fs from "fs";
-import { to, readJSON, failIf } from "./utils";
+import { to, readJSON, failIf, findWindowsObsidianDirectory } from "./utils";
 import which from "which";
 import execa from "execa";
 
@@ -24,7 +24,7 @@ interface ObsidianVaultDefinition {
  * A simpler vault representation that can be passed around for other tools
  * to do things with vaults
  */
-interface Vault {
+export interface Vault {
   name: string;
   path: string;
   open?: boolean;
@@ -74,11 +74,6 @@ export const findVault = async (vaultPath?: string): Promise<Vault[]> => {
   }
   let home = os.homedir();
   let obsidianPath = "";
-
-  const findWindowsObsidianDirectory = (home: string) =>
-    ["Local", "Roaming", "LocalLow"]
-      .map((p) => path.join(home, "AppData", p, "Obsidian"))
-      .find((p) => fs.existsSync(path.join(p, "obsidian.json"))) || "";
 
   switch (os.platform()) {
     case "win32":

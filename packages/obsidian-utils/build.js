@@ -11,6 +11,7 @@ esbuild.build({
   outfile: "lib/obsidian-utils.js",
   mainFields: ["module", "main"],
   target: "es2019",
+  sourcemap: true,
 });
 
 esbuild.build({
@@ -24,4 +25,5 @@ esbuild.build({
   outfile: "lib/obsidian-utils.esm.js",
   mainFields: ["module", "main"],
   target: "es2019",
+  sourcemap: true,
 });

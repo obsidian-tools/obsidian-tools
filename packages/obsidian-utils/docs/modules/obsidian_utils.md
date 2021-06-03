@@ -31,6 +31,13 @@ await installPluginFromGithub('pjeby/hot-reload', 'latest', myVault.path)
 - [InstalledPluginInfo](../interfaces/obsidian_utils.installedplugininfo.md)
 - [PluginRegistryData](../interfaces/obsidian_utils.pluginregistrydata.md)
 - [PluginRegistryRecord](../interfaces/obsidian_utils.pluginregistryrecord.md)
+- [Vault](../interfaces/obsidian_utils.vault.md)
+
+### Type aliases
+
+- [GitHubPluginVersion](obsidian_utils.md#githubpluginversion)
+- [PluginVersion](obsidian_utils.md#pluginversion)
+- [Repo](obsidian_utils.md#repo)
 
 ### Functions
 
@@ -40,13 +47,16 @@ await installPluginFromGithub('pjeby/hot-reload', 'latest', myVault.path)
 - [fetchJSON](obsidian_utils.md#fetchjson)
 - [fetchToDisk](obsidian_utils.md#fetchtodisk)
 - [fileStats](obsidian_utils.md#filestats)
+- [findPluginInRegistry](obsidian_utils.md#findplugininregistry)
 - [findVault](obsidian_utils.md#findvault)
+- [findWindowsObsidianDirectory](obsidian_utils.md#findwindowsobsidiandirectory)
 - [getInfoOnInstalledPlugin](obsidian_utils.md#getinfooninstalledplugin)
 - [installLocalPlugin](obsidian_utils.md#installlocalplugin)
 - [installPluginFromGithub](obsidian_utils.md#installpluginfromgithub)
 - [installPluginFromRegistry](obsidian_utils.md#installpluginfromregistry)
 - [isPluginInstalled](obsidian_utils.md#isplugininstalled)
 - [isVault](obsidian_utils.md#isvault)
+- [isWSL](obsidian_utils.md#iswsl)
 - [mkdir](obsidian_utils.md#mkdir)
 - [read](obsidian_utils.md#read)
 - [readDir](obsidian_utils.md#readdir)
@@ -57,6 +67,7 @@ await installPluginFromGithub('pjeby/hot-reload', 'latest', myVault.path)
 - [toReadJSON](obsidian_utils.md#toreadjson)
 - [toWrite](obsidian_utils.md#towrite)
 - [vaultPathToPluginsPath](obsidian_utils.md#vaultpathtopluginspath)
+- [windowsToWSLPath](obsidian_utils.md#windowstowslpath)
 - [write](obsidian_utils.md#write)
 
 ## References
@@ -64,6 +75,24 @@ await installPluginFromGithub('pjeby/hot-reload', 'latest', myVault.path)
 ### registerLogger
 
 Re-exports: [registerLogger](log.md#registerlogger)
+
+## Type aliases
+
+### GitHubPluginVersion
+
+Ƭ **GitHubPluginVersion**: *latest* \| [*PluginVersion*](types.md#pluginversion)
+
+___
+
+### PluginVersion
+
+Ƭ **PluginVersion**: \`${number}.${number}.${number}\`
+
+___
+
+### Repo
+
+Ƭ **Repo**: \`${string}/${string}\`
 
 ## Functions
 
@@ -195,9 +224,23 @@ Name | Type |
 
 ___
 
+### findPluginInRegistry
+
+▸ `Const`**findPluginInRegistry**(`pluginID`: *string*): *Promise*<undefined \| [*PluginRegistryRecord*](../interfaces/plugin_registry.pluginregistryrecord.md)\>
+
+#### Parameters:
+
+Name | Type |
+:------ | :------ |
+`pluginID` | *string* |
+
+**Returns:** *Promise*<undefined \| [*PluginRegistryRecord*](../interfaces/plugin_registry.pluginregistryrecord.md)\>
+
+___
+
 ### findVault
 
-▸ `Const`**findVault**(`vaultPath?`: *string*): *Promise*<Vault[]\>
+▸ `Const`**findVault**(`vaultPath?`: *string*): *Promise*<[*Vault*](../interfaces/vault.vault-1.md)[]\>
 
 Attempts to find where your obsidian vaults are by locating obsidian's app config. It's relatively reliable
 on Windows and OSX, but there may be issues on linux and will definitely be issues on weird platforms.
@@ -209,7 +252,21 @@ Name | Type | Description |
 :------ | :------ | :------ |
 `vaultPath?` | *string* | A path to an Obsidian vault (which, at the very least contains a .obsidian directory)    |
 
-**Returns:** *Promise*<Vault[]\>
+**Returns:** *Promise*<[*Vault*](../interfaces/vault.vault-1.md)[]\>
+
+___
+
+### findWindowsObsidianDirectory
+
+▸ `Const`**findWindowsObsidianDirectory**(`home`: *string*): *string*
+
+#### Parameters:
+
+Name | Type |
+:------ | :------ |
+`home` | *string* |
+
+**Returns:** *string*
 
 ___
 
@@ -251,7 +308,7 @@ ___
 
 ### installPluginFromGithub
 
-▸ **installPluginFromGithub**(`repo`: [*Repo*](types.md#repo), `version`: [*GitHubPluginVersion*](types.md#githubpluginversion), `vaultPath`: *string*): *Promise*<void\>
+▸ **installPluginFromGithub**(`repo`: *string*, `version`: [*GitHubPluginVersion*](types.md#githubpluginversion), `vaultPath`: *string*): *Promise*<void\>
 
 Given a repo short code, version, and the vault to install a plugin with, this
 function downloads the plugin from GitHub's releases and adds it to the specified
@@ -261,7 +318,7 @@ vault.
 
 Name | Type | Description |
 :------ | :------ | :------ |
-`repo` | [*Repo*](types.md#repo) | A short code reference a github repo formatted like `owner/repoName`   |
+`repo` | *string* | A short code reference a github repo formatted like `owner/repoName`   |
 `version` | [*GitHubPluginVersion*](types.md#githubpluginversion) | Latest or a semver like 1.0.0   |
 `vaultPath` | *string* | Path to the vault in which the plugin should be installed    |
 
@@ -314,6 +371,14 @@ Name | Type |
 `vaultPath` | *any* |
 
 **Returns:** *boolean*
+
+___
+
+### isWSL
+
+▸ `Const`**isWSL**(): *null* \| *string*
+
+**Returns:** *null* \| *string*
 
 ___
 
@@ -551,6 +616,20 @@ ___
 Name | Type |
 :------ | :------ |
 `vaultPath` | *string* |
+
+**Returns:** *string*
+
+___
+
+### windowsToWSLPath
+
+▸ `Const`**windowsToWSLPath**(`filePath`: *string*): *string*
+
+#### Parameters:
+
+Name | Type |
+:------ | :------ |
+`filePath` | *string* |
 
 **Returns:** *string*
 

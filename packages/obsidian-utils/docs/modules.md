@@ -6,6 +6,7 @@
 
 ### Modules
 
+- [\_\_tests\_\_/utils.test](modules/__tests___utils_test.md)
 - [log](modules/log.md)
 - [obsidian-utils](modules/obsidian_utils.md)
 - [plugin](modules/plugin.md)

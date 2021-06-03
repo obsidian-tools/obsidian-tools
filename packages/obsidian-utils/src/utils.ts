@@ -9,6 +9,7 @@ import { promisify } from "util";
 import fs from "fs";
 import path from "path";
 import type { Response as NodeResponse } from "node-fetch";
+import which from "which";
 
 export const mkdir = promisify(fs.mkdir);
 export const read = promisify(fs.readFile);
@@ -103,3 +104,17 @@ export const fetchToDisk = (
       downloadStream.on("end", resolve);
     });
   });
+
+export const isWSL = () => which.sync("wslvar", { nothrow: true });
+
+export const findWindowsObsidianDirectory = (home: string) =>
+  ["Roaming", "Local", "LocalLow"]
+    .map((p) => path.join(home, "AppData", p, "Obsidian"))
+    .find((p) => fs.existsSync(path.join(p, "obsidian.json"))) || "";
+
+export const windowsToWSLPath = (filePath: string) => {
+  const parts = filePath.split(path.win32.sep);
+  parts[0] = parts[0].replace(":", "").toLowerCase();
+  parts.unshift("/mnt");
+  return parts.join("/");
+};
