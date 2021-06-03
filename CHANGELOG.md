@@ -1,3 +1,16 @@
+# (Sun May 30 2021)
+
+#### 🚀 Enhancement
+
+- `obsidian-utils@0.9.0`
+  - Add WSL support to obsidian-utils findVault [#46](https://github.com/zephraph/obsidian-tools/pull/46) ([@zephraph](https://github.com/zephraph))
+
+#### Authors: 1
+
+- Justin Bennett ([@zephraph](https://github.com/zephraph))
+
+---
+
 # (Thu Apr 22 2021)
 
 #### 🐛 Bug Fix

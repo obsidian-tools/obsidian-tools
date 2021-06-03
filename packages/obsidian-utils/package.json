@@ -1,6 +1,6 @@
 {
   "name": "obsidian-utils",
-  "version": "0.8.1",
+  "version": "0.9.0",
   "description": "A collection of utilities for interacting with or getting information on obsidian plugins",
   "engines": {
     "node": ">=12.0.0"
