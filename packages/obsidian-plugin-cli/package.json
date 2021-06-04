@@ -14,7 +14,7 @@
     "ansi-colors": "^4.1.1",
     "cosmiconfig": "^7.0.0",
     "dedent": "^0.7.0",
-    "esbuild": "^0.8.48",
+    "esbuild": "^0.12.6",
     "obsidian-utils": "^0.9.0",
     "prompts": "^2.4.0",
     "tslib": "^1",
