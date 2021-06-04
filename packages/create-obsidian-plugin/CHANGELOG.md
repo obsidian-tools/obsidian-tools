@@ -1,3 +1,19 @@
+# v0.4.1 (Fri Jun 04 2021)
+
+#### 🐛 Bug Fix
+
+- Remove unused create-obsidian-plugin test ([@zephraph](https://github.com/zephraph))
+
+#### 🏠 Internal
+
+- Remove unused create-obsidian-plugin test [#49](https://github.com/zephraph/obsidian-tools/pull/49) ([@zephraph](https://github.com/zephraph))
+
+#### Authors: 1
+
+- Justin Bennett ([@zephraph](https://github.com/zephraph))
+
+---
+
 # v0.4.0 (Wed Mar 10 2021)
 
 #### 🚀 Enhancement
