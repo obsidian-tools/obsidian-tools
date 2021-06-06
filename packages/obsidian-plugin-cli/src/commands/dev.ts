@@ -70,6 +70,7 @@ export default class Dev extends Command {
       ["with-stylesheet"]: stylesheet,
     } = flags;
 
+    // load
     const [configError, esbuildConfig] = await to(
       getConfig(args.entryPoint, esbuildConfigPath)
     );
@@ -78,6 +79,7 @@ export default class Dev extends Command {
       this.error(configError);
     }
 
+    // load
     if (!fs.existsSync(localManifestPath)) {
       this.error(
         "Your project should have a manifest.json file in its root but none was found"

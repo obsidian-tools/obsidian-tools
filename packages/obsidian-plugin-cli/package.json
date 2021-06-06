@@ -11,6 +11,7 @@
     "@oclif/command": "^1",
     "@oclif/config": "^1",
     "@oclif/plugin-help": "^3",
+    "@zephraph/procedure": "^0.2.0",
     "ansi-colors": "^4.1.1",
     "cosmiconfig": "^7.0.0",
     "dedent": "^0.7.0",
