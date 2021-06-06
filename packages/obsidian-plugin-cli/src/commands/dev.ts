@@ -209,7 +209,7 @@ export default class Dev extends Command {
     });
 
     if (stylesheet) {
-      esbuildConfig!.entryPoints!.push(stylesheet);
+      (esbuildConfig!.entryPoints as string[]).push(stylesheet);
       await build({
         outdir: pluginPath,
         watch: true,

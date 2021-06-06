@@ -44,7 +44,7 @@ export default class Build extends Command {
     }
 
     if (stylesheet) {
-      esbuildConfig!.entryPoints!.push(stylesheet);
+      (esbuildConfig!.entryPoints as string[]).push(stylesheet);
       await build({
         outdir: outputDir,
         minify: true,
