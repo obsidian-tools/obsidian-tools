@@ -1,3 +1,20 @@
+# v0.10.0 (Sun Jun 06 2021)
+
+#### 🚀 Enhancement
+
+- More WSL support, fix plugin registry, update types [#48](https://github.com/zephraph/obsidian-tools/pull/48) ([@zephraph](https://github.com/zephraph))
+
+#### 🐛 Bug Fix
+
+- Merge branch 'main' into wsl-vault-support ([@zephraph](https://github.com/zephraph))
+- Add more WSL methods, fixup type output, add tests and config ([@zephraph](https://github.com/zephraph))
+
+#### Authors: 1
+
+- Justin Bennett ([@zephraph](https://github.com/zephraph))
+
+---
+
 # v0.9.0 (Sun May 30 2021)
 
 #### 🚀 Enhancement

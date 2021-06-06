@@ -1,3 +1,16 @@
+# (Sun Jun 06 2021)
+
+#### 🚀 Enhancement
+
+- `obsidian-utils@0.10.0`
+  - More WSL support, fix plugin registry, update types [#48](https://github.com/zephraph/obsidian-tools/pull/48) ([@zephraph](https://github.com/zephraph))
+
+#### Authors: 1
+
+- Justin Bennett ([@zephraph](https://github.com/zephraph))
+
+---
+
 # (Fri Jun 04 2021)
 
 #### 🐛 Bug Fix

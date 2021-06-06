@@ -1,3 +1,15 @@
+# v0.7.0 (Sun Jun 06 2021)
+
+#### 🐛 Bug Fix
+
+- Merge branch 'main' into wsl-vault-support ([@zephraph](https://github.com/zephraph))
+
+#### Authors: 1
+
+- Justin Bennett ([@zephraph](https://github.com/zephraph))
+
+---
+
 # v0.6.1 (Fri Jun 04 2021)
 
 #### 🐛 Bug Fix
