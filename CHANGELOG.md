@@ -1,3 +1,21 @@
+# (Fri Jun 04 2021)
+
+#### 🐛 Bug Fix
+
+- `obsidian-plugin-cli@0.6.1`
+  - Bump esbuild version [#51](https://github.com/zephraph/obsidian-tools/pull/51) ([@zephraph](https://github.com/zephraph))
+
+#### 🏠 Internal
+
+- `create-obsidian-plugin@0.4.1`
+  - Remove unused create-obsidian-plugin test [#49](https://github.com/zephraph/obsidian-tools/pull/49) ([@zephraph](https://github.com/zephraph))
+
+#### Authors: 1
+
+- Justin Bennett ([@zephraph](https://github.com/zephraph))
+
+---
+
 # (Sun May 30 2021)
 
 #### 🚀 Enhancement

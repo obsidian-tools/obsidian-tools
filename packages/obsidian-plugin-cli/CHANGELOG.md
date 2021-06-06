@@ -1,3 +1,17 @@
+# v0.6.1 (Fri Jun 04 2021)
+
+#### 🐛 Bug Fix
+
+- Bump esbuild version [#51](https://github.com/zephraph/obsidian-tools/pull/51) ([@zephraph](https://github.com/zephraph))
+- Fix type failures ([@zephraph](https://github.com/zephraph))
+- Bump esbuild version ([@zephraph](https://github.com/zephraph))
+
+#### Authors: 1
+
+- Justin Bennett ([@zephraph](https://github.com/zephraph))
+
+---
+
 # v0.5.0 (Wed Mar 10 2021)
 
 #### 🚀 Enhancement
