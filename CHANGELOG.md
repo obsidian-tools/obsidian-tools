@@ -2,6 +2,19 @@
 
 #### 🚀 Enhancement
 
+- `obsidian-plugin-cli@0.8.0`
+  - Add install to plugin [#47](https://github.com/zephraph/obsidian-tools/pull/47) ([@zephraph](https://github.com/zephraph))
+
+#### Authors: 1
+
+- Justin Bennett ([@zephraph](https://github.com/zephraph))
+
+---
+
+# (Sun Jun 06 2021)
+
+#### 🚀 Enhancement
+
 - `obsidian-utils@0.10.0`
   - More WSL support, fix plugin registry, update types [#48](https://github.com/zephraph/obsidian-tools/pull/48) ([@zephraph](https://github.com/zephraph))
 

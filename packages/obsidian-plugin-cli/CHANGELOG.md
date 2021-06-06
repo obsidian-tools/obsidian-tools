@@ -1,3 +1,21 @@
+# v0.8.0 (Sun Jun 06 2021)
+
+#### 🚀 Enhancement
+
+- Add install to plugin [#47](https://github.com/zephraph/obsidian-tools/pull/47) ([@zephraph](https://github.com/zephraph))
+
+#### 🐛 Bug Fix
+
+- Merge branch 'main' into add-install-to-plugin ([@zephraph](https://github.com/zephraph))
+- Add an install command ([@zephraph](https://github.com/zephraph))
+- WIP ([@zephraph](https://github.com/zephraph))
+
+#### Authors: 1
+
+- Justin Bennett ([@zephraph](https://github.com/zephraph))
+
+---
+
 # v0.7.0 (Sun Jun 06 2021)
 
 #### 🐛 Bug Fix
