@@ -23,7 +23,7 @@ $ npm install -g obsidian-plugin-cli
 $ obsidian-plugin COMMAND
 running command...
 $ obsidian-plugin (-v|--version|version)
-obsidian-plugin-cli/0.7.0 linux-x64 node-v14.17.0
+obsidian-plugin-cli/0.8.0 linux-x64 node-v14.17.0
 $ obsidian-plugin --help [COMMAND]
 USAGE
   $ obsidian-plugin COMMAND
@@ -37,6 +37,7 @@ USAGE
 * [`obsidian-plugin build [ENTRYPOINT]`](#obsidian-plugin-build-entrypoint)
 * [`obsidian-plugin dev [ENTRYPOINT]`](#obsidian-plugin-dev-entrypoint)
 * [`obsidian-plugin help [COMMAND]`](#obsidian-plugin-help-command)
+* [`obsidian-plugin install [PLUGIN]`](#obsidian-plugin-install-plugin)
 
 ## `obsidian-plugin build [ENTRYPOINT]`
 
@@ -53,7 +54,7 @@ OPTIONS
   -o, --output-dir=output-dir            [default: dist] path to write build output to
 ```
 
-_See code: [src/commands/build.ts](https://github.com/zephraph/obsidian-tools/blob/v0.7.0/src/commands/build.ts)_
+_See code: [src/commands/build.ts](https://github.com/zephraph/obsidian-tools/blob/v0.8.0/src/commands/build.ts)_
 
 ## `obsidian-plugin dev [ENTRYPOINT]`
 
@@ -80,7 +81,7 @@ DESCRIPTION
   with --vault-path.
 ```
 
-_See code: [src/commands/dev.ts](https://github.com/zephraph/obsidian-tools/blob/v0.7.0/src/commands/dev.ts)_
+_See code: [src/commands/dev.ts](https://github.com/zephraph/obsidian-tools/blob/v0.8.0/src/commands/dev.ts)_
 
 ## `obsidian-plugin help [COMMAND]`
 
@@ -98,4 +99,29 @@ OPTIONS
 ```
 
 _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v3.2.2/src/commands/help.ts)_
+
+## `obsidian-plugin install [PLUGIN]`
+
+installs a plugin from obsidian's community registry or directly from github
+
+```
+USAGE
+  $ obsidian-plugin install [PLUGIN]
+
+OPTIONS
+  -h, --help         show CLI help
+  -v, --vault=vault  the vault in which to install the plugin
+
+DESCRIPTION
+  To install a plugin from the registry just pass its name
+
+     obsidian-plugin install my-plugin
+
+  To install a plugin from github pass a URL or the owner/repository slugs from the end of the url
+
+     obsidian-plugin install me/my-plugin
+     obsidian-plugin install https://github.com/me/my-plugin
+```
+
+_See code: [src/commands/install.ts](https://github.com/zephraph/obsidian-tools/blob/v0.8.0/src/commands/install.ts)_
 <!-- commandsstop -->
