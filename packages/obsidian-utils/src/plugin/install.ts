@@ -34,7 +34,7 @@ import { vaultPathToPluginsPath } from "./utils";
  * @param vaultPath Path to the vault in which the plugin should be installed
  */
 export async function installPluginFromGithub(
-  repo: Repo,
+  repo: string,
   version: GitHubPluginVersion,
   vaultPath: string
 ) {

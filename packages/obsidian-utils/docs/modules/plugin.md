@@ -18,6 +18,7 @@ A collection of utilities to install, read, and download plugins
 
 ### Functions
 
+- [findPluginInRegistry](plugin.md#findplugininregistry)
 - [getInfoOnInstalledPlugin](plugin.md#getinfooninstalledplugin)
 - [installLocalPlugin](plugin.md#installlocalplugin)
 - [installPluginFromGithub](plugin.md#installpluginfromgithub)
@@ -26,6 +27,20 @@ A collection of utilities to install, read, and download plugins
 - [vaultPathToPluginsPath](plugin.md#vaultpathtopluginspath)
 
 ## Functions
+
+### findPluginInRegistry
+
+▸ `Const`**findPluginInRegistry**(`pluginID`: *string*): *Promise*<undefined \| [*PluginRegistryRecord*](../interfaces/plugin_registry.pluginregistryrecord.md)\>
+
+#### Parameters:
+
+Name | Type |
+:------ | :------ |
+`pluginID` | *string* |
+
+**Returns:** *Promise*<undefined \| [*PluginRegistryRecord*](../interfaces/plugin_registry.pluginregistryrecord.md)\>
+
+___
 
 ### getInfoOnInstalledPlugin
 
@@ -65,7 +80,7 @@ ___
 
 ### installPluginFromGithub
 
-▸ **installPluginFromGithub**(`repo`: [*Repo*](types.md#repo), `version`: [*GitHubPluginVersion*](types.md#githubpluginversion), `vaultPath`: *string*): *Promise*<void\>
+▸ **installPluginFromGithub**(`repo`: *string*, `version`: [*GitHubPluginVersion*](types.md#githubpluginversion), `vaultPath`: *string*): *Promise*<void\>
 
 Given a repo short code, version, and the vault to install a plugin with, this
 function downloads the plugin from GitHub's releases and adds it to the specified
@@ -75,7 +90,7 @@ vault.
 
 Name | Type | Description |
 :------ | :------ | :------ |
-`repo` | [*Repo*](types.md#repo) | A short code reference a github repo formatted like `owner/repoName`   |
+`repo` | *string* | A short code reference a github repo formatted like `owner/repoName`   |
 `version` | [*GitHubPluginVersion*](types.md#githubpluginversion) | Latest or a semver like 1.0.0   |
 `vaultPath` | *string* | Path to the vault in which the plugin should be installed    |
 

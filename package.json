@@ -7,7 +7,7 @@
   "author": "zephraph <zephraph@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "test": "lerna run test",
+    "test": "jest",
     "build": "lerna run build",
     "release": "auto shipit"
   },

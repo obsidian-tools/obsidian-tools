@@ -19,4 +19,5 @@
 export * from "./plugin";
 export * from "./vault";
 export * from "./utils";
+export * from "./types";
 export { registerLogger } from "./log";

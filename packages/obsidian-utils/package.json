@@ -32,18 +32,25 @@
     "prebuild": "rm -rf ./lib",
     "build": "node build",
     "postbuild": "tsc",
-    "generate-docs": "typedoc --plugin typedoc-plugin-markdown --disableSources --excludePrivate --readme .template/docs-readme.md src/"
+    "generate-docs": "typedoc --plugin typedoc-plugin-markdown --disableSources --excludePrivate --readme .template/docs-readme.md src/",
+    "test:jest": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "test": "npm run test:jest --"
   },
   "bugs": {
     "url": "https://github.com/zephraph/obsidian-tools/issues"
   },
   "devDependencies": {
     "@types/date-fns": "^2.6.0",
+    "@types/jest": "^26.0.23",
     "@types/node": "^14.14.28",
     "@types/node-fetch": "^2.5.8",
     "@types/which": "^2.0.0",
     "esbuild": "^0.8.49",
+    "jest": "^27.0.3",
     "obsidian": "obsidianmd/obsidian-api",
+    "ts-jest": "^27.0.2",
     "typedoc": "^0.20.28",
     "typedoc-plugin-markdown": "^3.5.0",
     "typescript": "^4.1.5"
@@ -57,5 +64,22 @@
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",
     "access": "public"
+  },
+  "jest": {
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      "<rootDir>/lib/"
+    ],
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json"
+    ]
   }
 }

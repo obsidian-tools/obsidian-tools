@@ -30,7 +30,16 @@ export class PluginRegistry {
     lastUpdated: new Date(0),
     plugins: [],
   };
+
   constructor(private registryURL: string = DEFAULT_REGISTRY_URL) {}
+
+  private get registry() {
+    return PluginRegistry._registry;
+  }
+
+  private set registry(data: PluginRegistryData) {
+    PluginRegistry._registry = data;
+  }
 
   private async updateRegistry() {
     debug("Fetching the plugin registry...");
@@ -41,16 +50,18 @@ export class PluginRegistry {
       pluginRegistryFetchError,
       "Failed to fetch the plugin registry from github"
     );
-    PluginRegistry._registry = pluginRegistry;
+    this.registry.plugins = pluginRegistry;
     debug("Plugin registry downloaded");
   }
 
   public async getRegistry() {
-    const registry = PluginRegistry._registry;
-    if (isBefore(registry.lastUpdated, subMinutes(Date.now(), 5))) {
+    if (
+      this.registry.plugins.length === 0 ||
+      isBefore(this.registry.lastUpdated, subMinutes(Date.now(), 5))
+    ) {
       await this.updateRegistry();
     }
-    return registry;
+    return this.registry;
   }
 
   public async getPlugin(
@@ -60,3 +71,8 @@ export class PluginRegistry {
     return registry.plugins.find((plugin) => plugin.id === pluginID);
   }
 }
+
+export const findPluginInRegistry = (pluginID: string) => {
+  const registery = new PluginRegistry();
+  return registery.getPlugin(pluginID);
+};
