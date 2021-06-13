@@ -1,0 +1,38 @@
+{
+  "name": "@obsidian-tools/cli",
+  "version": "0.0.1",
+  "description": "A CLI tool for Obsidian.md",
+  "keywords": [
+    "obsidian",
+    "obsidian.md",
+    "cli"
+  ],
+  "author": "Justin Bennett <zephraph@gmail.com>",
+  "homepage": "https://obsidian.tools/cli",
+  "license": "MIT",
+  "main": "lib/obsidian-cli.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zephraph/obsidian-tools.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/zephraph/obsidian-tools/issues"
+  },
+  "dependencies": {
+    "@zephraph/procedure": "^0.2.0",
+    "commander": "^7.2.0",
+    "cosmiconfig": "^7.0.0",
+    "esbuild": "^0.12.6",
+    "esbuild-register": "^2.5.0"
+  }
+}
