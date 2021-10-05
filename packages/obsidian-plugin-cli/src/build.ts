@@ -4,7 +4,7 @@ export const build = (options: esbuild.BuildOptions) => {
   return esbuild.build({
     bundle: true,
     platform: "node",
-    external: ["obsidian"],
+    external: ["obsidian", "electron"],
     format: "cjs",
     mainFields: ["browser", "module", "main"],
     ...options,
