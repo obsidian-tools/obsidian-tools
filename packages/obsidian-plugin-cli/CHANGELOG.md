@@ -1,3 +1,16 @@
+# v0.8.1 (Tue Oct 05 2021)
+
+#### 🐛 Bug Fix
+
+- Make electron an external dependency [#55](https://github.com/obsidian-tools/obsidian-tools/pull/55) ([@zephraph](https://github.com/zephraph))
+- Make electron an external dependency ([@zephraph](https://github.com/zephraph))
+
+#### Authors: 1
+
+- Justin Bennett ([@zephraph](https://github.com/zephraph))
+
+---
+
 # v0.8.0 (Sun Jun 06 2021)
 
 #### 🚀 Enhancement

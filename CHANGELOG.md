@@ -1,3 +1,20 @@
+# (Tue Oct 05 2021)
+
+#### 🐛 Bug Fix
+
+- `obsidian-plugin-cli@0.8.1`
+  - Make electron an external dependency [#55](https://github.com/obsidian-tools/obsidian-tools/pull/55) ([@zephraph](https://github.com/zephraph))
+
+#### 📝 Documentation
+
+- Update logo [#52](https://github.com/obsidian-tools/obsidian-tools/pull/52) ([@zephraph](https://github.com/zephraph))
+
+#### Authors: 1
+
+- Justin Bennett ([@zephraph](https://github.com/zephraph))
+
+---
+
 # (Sun Jun 06 2021)
 
 #### 🚀 Enhancement
