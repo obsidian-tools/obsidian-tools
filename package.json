@@ -21,7 +21,7 @@
   },
   "devDependencies": {
     "@auto-it/all-contributors": "^10.16.5",
-    "@auto-it/first-time-contributor": "^10.16.5",
+    "@auto-it/first-time-contributor": "10.32.6",
     "auto": "^10.16.7",
     "lerna": "^3.22.1"
   },
