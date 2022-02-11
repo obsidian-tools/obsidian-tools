@@ -42,18 +42,18 @@
     "url": "https://github.com/zephraph/obsidian-tools/issues"
   },
   "devDependencies": {
-    "@types/date-fns": "^2.6.0",
+    "@types/date-fns": "2.6.0",
     "@types/jest": "26.0.23",
-    "@types/node": "^14.14.28",
-    "@types/node-fetch": "^2.5.8",
-    "@types/which": "^2.0.0",
-    "esbuild": "^0.8.49",
+    "@types/node": "14.14.31",
+    "@types/node-fetch": "2.5.8",
+    "@types/which": "2.0.0",
+    "esbuild": "0.8.57",
     "jest": "27.5.1",
     "obsidian": "obsidianmd/obsidian-api",
-    "ts-jest": "^27.0.2",
-    "typedoc": "^0.20.28",
-    "typedoc-plugin-markdown": "^3.5.0",
-    "typescript": "^4.1.5"
+    "ts-jest": "27.0.2",
+    "typedoc": "0.20.28",
+    "typedoc-plugin-markdown": "3.5.0",
+    "typescript": "4.2.2"
   },
   "dependencies": {
     "date-fns": "^2.17.0",
