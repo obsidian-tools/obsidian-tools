@@ -123,14 +123,14 @@ ___
 
 ### fileStats
 
-▸ `Const`**fileStats**(`path`: PathLike, `options?`: StatOptions & { `bigint?`: *false*  }): *Promise*<Stats\>
+▸ `Const`**fileStats**(`path`: PathLike, `options?`: StatOptions & { `bigint?`: *false* \| *undefined*  }): *Promise*<Stats\>
 
 #### Parameters:
 
 Name | Type |
 :------ | :------ |
 `path` | PathLike |
-`options?` | StatOptions & { `bigint?`: *false*  } |
+`options?` | StatOptions & { `bigint?`: *false* \| *undefined*  } |
 
 **Returns:** *Promise*<Stats\>
 
@@ -193,14 +193,14 @@ Name | Type |
 
 **Returns:** *Promise*<string \| undefined\>
 
-▸ `Const`**mkdir**(`path`: PathLike, `options?`: Mode \| MakeDirectoryOptions & { `recursive?`: *false*  } \| *null*): *Promise*<void\>
+▸ `Const`**mkdir**(`path`: PathLike, `options?`: Mode \| MakeDirectoryOptions & { `recursive?`: *false* \| *undefined*  } \| *null*): *Promise*<void\>
 
 #### Parameters:
 
 Name | Type |
 :------ | :------ |
 `path` | PathLike |
-`options?` | Mode \| MakeDirectoryOptions & { `recursive?`: *false*  } \| *null* |
+`options?` | Mode \| MakeDirectoryOptions & { `recursive?`: *false* \| *undefined*  } \| *null* |
 
 **Returns:** *Promise*<void\>
 
@@ -219,36 +219,36 @@ ___
 
 ### read
 
-▸ `Const`**read**(`path`: PathLike \| *number*, `options?`: { `encoding?`: *null* ; `flag?`: *string*  } \| *null*): *Promise*<Buffer\>
+▸ `Const`**read**(`path`: PathLike \| *number*, `options?`: { `encoding?`: *null* \| *undefined* ; `flag?`: *string* \| *undefined*  } \| *null*): *Promise*<Buffer\>
 
 #### Parameters:
 
 Name | Type |
 :------ | :------ |
 `path` | PathLike \| *number* |
-`options?` | { `encoding?`: *null* ; `flag?`: *string*  } \| *null* |
+`options?` | { `encoding?`: *null* \| *undefined* ; `flag?`: *string* \| *undefined*  } \| *null* |
 
 **Returns:** *Promise*<Buffer\>
 
-▸ `Const`**read**(`path`: PathLike \| *number*, `options`: { `encoding`: BufferEncoding ; `flag?`: *string*  } \| *string*): *Promise*<string\>
+▸ `Const`**read**(`path`: PathLike \| *number*, `options`: { `encoding`: BufferEncoding ; `flag?`: *string* \| *undefined*  } \| BufferEncoding): *Promise*<string\>
 
 #### Parameters:
 
 Name | Type |
 :------ | :------ |
 `path` | PathLike \| *number* |
-`options` | { `encoding`: BufferEncoding ; `flag?`: *string*  } \| *string* |
+`options` | { `encoding`: BufferEncoding ; `flag?`: *string* \| *undefined*  } \| BufferEncoding |
 
 **Returns:** *Promise*<string\>
 
-▸ `Const`**read**(`path`: PathLike \| *number*, `options?`: BaseEncodingOptions & { `flag?`: *string*  } \| *string* \| *null*): *Promise*<string \| Buffer\>
+▸ `Const`**read**(`path`: PathLike \| *number*, `options?`: BaseEncodingOptions & { `flag?`: *string* \| *undefined*  } \| BufferEncoding \| *null*): *Promise*<string \| Buffer\>
 
 #### Parameters:
 
 Name | Type |
 :------ | :------ |
 `path` | PathLike \| *number* |
-`options?` | BaseEncodingOptions & { `flag?`: *string*  } \| *string* \| *null* |
+`options?` | BaseEncodingOptions & { `flag?`: *string* \| *undefined*  } \| BufferEncoding \| *null* |
 
 **Returns:** *Promise*<string \| Buffer\>
 
@@ -256,36 +256,36 @@ ___
 
 ### readDir
 
-▸ `Const`**readDir**(`path`: PathLike, `options?`: { `encoding`: BufferEncoding \| *null* ; `withFileTypes?`: *false*  } \| BufferEncoding \| *null*): *Promise*<string[]\>
+▸ `Const`**readDir**(`path`: PathLike, `options?`: { `encoding`: BufferEncoding \| *null* ; `withFileTypes?`: *false* \| *undefined*  } \| BufferEncoding \| *null*): *Promise*<string[]\>
 
 #### Parameters:
 
 Name | Type |
 :------ | :------ |
 `path` | PathLike |
-`options?` | { `encoding`: BufferEncoding \| *null* ; `withFileTypes?`: *false*  } \| BufferEncoding \| *null* |
+`options?` | { `encoding`: BufferEncoding \| *null* ; `withFileTypes?`: *false* \| *undefined*  } \| BufferEncoding \| *null* |
 
 **Returns:** *Promise*<string[]\>
 
-▸ `Const`**readDir**(`path`: PathLike, `options`: *buffer* \| { `encoding`: *buffer* ; `withFileTypes?`: *false*  }): *Promise*<Buffer[]\>
+▸ `Const`**readDir**(`path`: PathLike, `options`: *buffer* \| { `encoding`: *buffer* ; `withFileTypes?`: *false* \| *undefined*  }): *Promise*<Buffer[]\>
 
 #### Parameters:
 
 Name | Type |
 :------ | :------ |
 `path` | PathLike |
-`options` | *buffer* \| { `encoding`: *buffer* ; `withFileTypes?`: *false*  } |
+`options` | *buffer* \| { `encoding`: *buffer* ; `withFileTypes?`: *false* \| *undefined*  } |
 
 **Returns:** *Promise*<Buffer[]\>
 
-▸ `Const`**readDir**(`path`: PathLike, `options?`: BaseEncodingOptions & { `withFileTypes?`: *false*  } \| BufferEncoding \| *null*): *Promise*<string[] \| Buffer[]\>
+▸ `Const`**readDir**(`path`: PathLike, `options?`: BaseEncodingOptions & { `withFileTypes?`: *false* \| *undefined*  } \| BufferEncoding \| *null*): *Promise*<string[] \| Buffer[]\>
 
 #### Parameters:
 
 Name | Type |
 :------ | :------ |
 `path` | PathLike |
-`options?` | BaseEncodingOptions & { `withFileTypes?`: *false*  } \| BufferEncoding \| *null* |
+`options?` | BaseEncodingOptions & { `withFileTypes?`: *false* \| *undefined*  } \| BufferEncoding \| *null* |
 
 **Returns:** *Promise*<string[] \| Buffer[]\>
 
