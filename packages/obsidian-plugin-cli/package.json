@@ -22,7 +22,7 @@
     "update-notifier": "^5.1.0"
   },
   "devDependencies": {
-    "@oclif/dev-cli": "1.26.0",
+    "@oclif/dev-cli": "1.26.10",
     "@types/dedent": "0.7.0",
     "@types/node": "10.17.54",
     "@types/prompts": "2.0.9",
