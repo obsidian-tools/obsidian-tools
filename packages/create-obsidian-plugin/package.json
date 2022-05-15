@@ -37,7 +37,7 @@
     "url": "https://github.com/zephraph/obsidian-tools/issues"
   },
   "devDependencies": {
-    "@types/ejs": "3.0.6",
+    "@types/ejs": "3.1.1",
     "@types/node": "14.14.31",
     "@types/prettier": "2.2.2",
     "esbuild": "0.8.57",
