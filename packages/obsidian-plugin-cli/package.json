@@ -1,7 +1,7 @@
 {
   "name": "obsidian-plugin-cli",
   "description": "A CLI tool to make it easy to develop plugins for obisidian",
-  "version": "0.8.0",
+  "version": "0.8.1",
   "author": "zephraph <zephraph@gmail.com>",
   "bin": {
     "obsidian-plugin": "./bin/run"
@@ -22,14 +22,14 @@
     "update-notifier": "^5.1.0"
   },
   "devDependencies": {
-    "@oclif/dev-cli": "^1",
-    "@types/dedent": "^0.7.0",
-    "@types/node": "^10",
-    "@types/prompts": "^2.0.9",
-    "@types/update-notifier": "^5.0.0",
-    "globby": "^10",
-    "ts-node": "^8",
-    "typescript": "^4.2.2"
+    "@oclif/dev-cli": "1.26.0",
+    "@types/dedent": "0.7.0",
+    "@types/node": "10.17.54",
+    "@types/prompts": "2.4.1",
+    "@types/update-notifier": "5.0.0",
+    "globby": "10.0.2",
+    "ts-node": "8.10.2",
+    "typescript": "4.2.2"
   },
   "engines": {
     "node": ">=10.0.0"
