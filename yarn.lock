@@ -2086,10 +2086,10 @@
   resolved "https://registry.yarnpkg.com/@types/dedent/-/dedent-0.7.0.tgz#155f339ca404e6dd90b9ce46a3f78fd69ca9b050"
   integrity sha512-EGlKlgMhnLt/cM4DbUSafFdrkeJoC9Mvnj0PUCU7tFmTjMjNRT957kXCx0wYm3JuEq4o4ZsS5vG+NlkM2DMd2A==
 
-"@types/ejs@3.0.6":
-  version "3.0.6"
-  resolved "https://registry.yarnpkg.com/@types/ejs/-/ejs-3.0.6.tgz#aca442289df623bfa8e47c23961f0357847b83fe"
-  integrity sha512-fj1hi+ZSW0xPLrJJD+YNwIh9GZbyaIepG26E/gXvp8nCa2pYokxUYO1sK9qjGxp2g8ryZYuon7wmjpwE2cyASQ==
+"@types/ejs@3.1.1":
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/@types/ejs/-/ejs-3.1.1.tgz#29c539826376a65e7f7d672d51301f37ed718f6d"
+  integrity sha512-RQul5wEfY7BjWm0sYY86cmUN/pcXWGyVxWX93DFFJvcrxax5zKlieLwA3T77xJGwNcZW0YW6CYG70p1m8xPFmA==
 
 "@types/estree@*":
   version "0.0.46"
@@ -2130,10 +2130,10 @@
   dependencies:
     "@types/istanbul-lib-report" "*"
 
-"@types/jest@26.0.23":
-  version "26.0.23"
-  resolved "https://registry.yarnpkg.com/@types/jest/-/jest-26.0.23.tgz#a1b7eab3c503b80451d019efb588ec63522ee4e7"
-  integrity sha512-ZHLmWMJ9jJ9PTiT58juykZpL7KjwJywFN3Rr2pTSkyQfydf/rk22yS7W8p5DaVUMQ2BQC7oYiU3FjbTM/mYrOA==
+"@types/jest@26.0.24":
+  version "26.0.24"
+  resolved "https://registry.yarnpkg.com/@types/jest/-/jest-26.0.24.tgz#943d11976b16739185913a1936e0de0c4a7d595a"
+  integrity sha512-E/X5Vib8BWqZNRlDxj9vYXhsDwPYbPINqKF9BsnSoon4RQ0D9moEuLD8txgyypFLH7J4+Lho9Nr/c8H0Fi+17w==
   dependencies:
     jest-diff "^26.0.0"
     pretty-format "^26.0.0"
@@ -2156,15 +2156,20 @@
     "@types/node" "*"
     form-data "^3.0.0"
 
-"@types/node@*", "@types/node@14.14.31", "@types/node@>= 8":
+"@types/node@*", "@types/node@>= 8":
   version "14.14.31"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-14.14.31.tgz#72286bd33d137aa0d152d47ec7c1762563d34055"
   integrity sha512-vFHy/ezP5qI0rFgJ7aQnjDXwAMrG0KqqIH7tQG5PPv3BWBayOPIQNBjVc/P6hhdZfMx51REc6tfDNXHUio893g==
 
-"@types/node@10.17.54":
-  version "10.17.54"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-10.17.54.tgz#a737488631aca3ec7bd9f6229d77f1079e444793"
-  integrity sha512-c8Lm7+hXdSPmWH4B9z/P/xIXhFK3mCQin4yCYMd2p1qpMG5AfgyJuYZ+3q2dT7qLiMMMGMd5dnkFpdqJARlvtQ==
+"@types/node@10.17.60":
+  version "10.17.60"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-10.17.60.tgz#35f3d6213daed95da7f0f73e75bcc6980e90597b"
+  integrity sha512-F0KIgDJfy2nA3zMLmWGKxcH2ZVEtCZXHHdOQs2gSaQ27+lNeEfGxzkIw90aXswATX7AZ33tahPbzy6KAfUreVw==
+
+"@types/node@14.18.36":
+  version "14.18.36"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-14.18.36.tgz#c414052cb9d43fab67d679d5f3c641be911f5835"
+  integrity sha512-FXKWbsJ6a1hIrRxv+FoukuHnGTgEzKYGi7kilfMae96AL9UNkPFNWJEEYWzdRI9ooIkbr4AKldyuSTLql06vLQ==
 
 "@types/normalize-package-data@^2.4.0":
   version "2.4.0"
@@ -2186,12 +2191,13 @@
   resolved "https://registry.yarnpkg.com/@types/prettier/-/prettier-2.2.3.tgz#ef65165aea2924c9359205bf748865b8881753c0"
   integrity sha512-PijRCG/K3s3w1We6ynUKdxEc5AcuuH3NBmMDP8uvKVp6X43UY7NQlTzczakXP3DJR0F4dfNQIGjU2cUeRYs2AA==
 
-"@types/prompts@2.4.1":
-  version "2.4.1"
-  resolved "https://registry.yarnpkg.com/@types/prompts/-/prompts-2.4.1.tgz#d47adcb608a0afcd48121ff7c75244694a3a04c5"
-  integrity sha512-1Mqzhzi9W5KlooNE4o0JwSXGUDeQXKldbGn9NO4tpxwZbHXYd+WcKpCksG2lbhH7U9I9LigfsdVsP2QAY0lNPA==
+"@types/prompts@2.4.2":
+  version "2.4.2"
+  resolved "https://registry.yarnpkg.com/@types/prompts/-/prompts-2.4.2.tgz#0785dc09ca79e15ff11b20b7cda2f87af3165a7d"
+  integrity sha512-TwNx7qsjvRIUv/BCx583tqF5IINEVjCNqg9ofKHRlSoUHE62WBHrem4B1HGXcIrG511v29d1kJ9a/t2Esz7MIg==
   dependencies:
     "@types/node" "*"
+    kleur "^3.0.3"
 
 "@types/readable-stream@^2.3.9":
   version "2.3.9"
@@ -2218,18 +2224,18 @@
   dependencies:
     "@types/estree" "*"
 
-"@types/update-notifier@5.0.0":
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/@types/update-notifier/-/update-notifier-5.0.0.tgz#7765369626e9f8c21ba0cf9a59e4a6eddf47997f"
-  integrity sha512-8CdLLv5ytMXEWfjSmWiuuZEffJJAsfNxSQbShZTmZD5picoci18VV1YqhKNTzlZvNCzt5WsnDQLyPSsj6xGuug==
+"@types/update-notifier@5.1.0":
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/@types/update-notifier/-/update-notifier-5.1.0.tgz#52ed6a2e9851fd6f1c88e93c85e8a0e1d5500fda"
+  integrity sha512-aGY5pH1Q/DcToKXl4MCj1c0uDUB+zSVFDRCI7Q7js5sguzBTqJV/5kJA2awofbtWYF3xnon1TYdZYnFditRPtQ==
   dependencies:
     "@types/configstore" "*"
     boxen "^4.2.0"
 
-"@types/which@2.0.0":
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/@types/which/-/which-2.0.0.tgz#446d35586611dee657120de8e0457382a658fc25"
-  integrity sha512-JHTNOEpZnACQdsTojWggn+SQ8IucfqEhtz7g8Z0G67WdSj4x3F0X5I2c/CVcl8z/QukGrIHeQ/N49v1au74XFQ==
+"@types/which@2.0.1":
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/@types/which/-/which-2.0.1.tgz#27ecd67f915b7c3d6ba552135bb1eecd66e63501"
+  integrity sha512-Jjakcv8Roqtio6w1gr0D7y6twbhx6gGgFGF5BLwajPpnOIOxFkakFhCq+LmyyeAz7BX6ULrjBOxdKaCDy+4+dQ==
 
 "@types/yargs-parser@*":
   version "20.2.0"
