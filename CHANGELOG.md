@@ -2,6 +2,24 @@
 
 #### 🐛 Bug Fix
 
+- `auto-plugin-obsidian@0.1.6`, `create-obsidian-plugin@0.4.3`, `obsidian-plugin-cli@0.8.3`, `obsidian-utils@0.10.2`
+  - Update definitelyTyped [#78](https://github.com/obsidian-tools/obsidian-tools/pull/78) ([@renovate[bot]](https://github.com/renovate[bot]))
+
+#### 🏠 Internal
+
+- Group `@types` packages in a single update PR [#77](https://github.com/obsidian-tools/obsidian-tools/pull/77) ([@zephraph](https://github.com/zephraph))
+
+#### Authors: 2
+
+- [@renovate[bot]](https://github.com/renovate[bot])
+- Justin Bennett ([@zephraph](https://github.com/zephraph))
+
+---
+
+# (Sun Feb 05 2023)
+
+#### 🐛 Bug Fix
+
 - Configure Renovate [#56](https://github.com/obsidian-tools/obsidian-tools/pull/56) ([@renovate-bot](https://github.com/renovate-bot) [@renovate[bot]](https://github.com/renovate[bot]))
 - `create-obsidian-plugin@0.4.2`
   - Update dependency @types/prettier to v2.7.2 [#75](https://github.com/obsidian-tools/obsidian-tools/pull/75) ([@renovate[bot]](https://github.com/renovate[bot]))

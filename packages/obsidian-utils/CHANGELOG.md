@@ -1,3 +1,17 @@
+# v0.10.2 (Sun Feb 05 2023)
+
+#### 🐛 Bug Fix
+
+- Update definitelyTyped [#78](https://github.com/obsidian-tools/obsidian-tools/pull/78) ([@renovate[bot]](https://github.com/renovate[bot]))
+- Automated updates ([@renovate[bot]](https://github.com/renovate[bot]))
+- Update definitelyTyped ([@renovate[bot]](https://github.com/renovate[bot]))
+
+#### Authors: 1
+
+- [@renovate[bot]](https://github.com/renovate[bot])
+
+---
+
 # v0.10.1 (Sun Feb 05 2023)
 
 #### 🐛 Bug Fix
