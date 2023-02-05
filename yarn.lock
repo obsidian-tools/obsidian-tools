@@ -2250,10 +2250,10 @@
   dependencies:
     "@types/yargs-parser" "*"
 
-"@zephraph/procedure@^0.2.0":
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/@zephraph/procedure/-/procedure-0.2.0.tgz#e1756548df1c3e44a1eafc63d394e29c8ce58a7d"
-  integrity sha512-8e5/S15+soOGF0hdb59kcw38OwsrvZtfdGtzRwKw1rYE48NN/5eGINjnbUCs+ls0nv3V2tZfepHB6kkWVt1NOQ==
+"@zephraph/procedure@^0.3.0":
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/@zephraph/procedure/-/procedure-0.3.0.tgz#59af63460651d8b2db03f319fcb3988195acbf74"
+  integrity sha512-eVNheuw6JMRekaAyBSoHo/0JpIpHXycEvguozAb8vAw22tu9DNvtYiPkgTALzOkS/v1NleUn+lsWQCEQJRUYcw==
   dependencies:
     endent "^2.0.1"
     stacktracey "^2.1.7"
