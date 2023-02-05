@@ -1,3 +1,32 @@
+# (Sun Feb 05 2023)
+
+#### 🐛 Bug Fix
+
+- Configure Renovate [#56](https://github.com/obsidian-tools/obsidian-tools/pull/56) ([@renovate-bot](https://github.com/renovate-bot) [@renovate[bot]](https://github.com/renovate[bot]))
+- `create-obsidian-plugin@0.4.2`
+  - Update dependency @types/prettier to v2.7.2 [#75](https://github.com/obsidian-tools/obsidian-tools/pull/75) ([@renovate[bot]](https://github.com/renovate[bot]))
+- `obsidian-utils@0.10.1`
+  - Pin dependencies [#58](https://github.com/obsidian-tools/obsidian-tools/pull/58) ([@renovate-bot](https://github.com/renovate-bot) [@renovate[bot]](https://github.com/renovate[bot]))
+
+#### 🏠 Internal
+
+- Update dependency @auto-it/first-time-contributor to v10.32.6 [#67](https://github.com/obsidian-tools/obsidian-tools/pull/67) ([@renovate-bot](https://github.com/renovate-bot) [@renovate[bot]](https://github.com/renovate[bot]))
+- `obsidian-utils@0.10.1`
+  - Update dependency @types/node-fetch to v2.6.2 [#62](https://github.com/obsidian-tools/obsidian-tools/pull/62) ([@renovate[bot]](https://github.com/renovate[bot]))
+- `auto-plugin-obsidian@0.1.5`
+  - Update dependency @types/semver to v7.3.13 [#64](https://github.com/obsidian-tools/obsidian-tools/pull/64) ([@renovate[bot]](https://github.com/renovate[bot]))
+- `obsidian-plugin-cli@0.8.2`
+  - Update dependency @types/prompts to v2.4.1 [#63](https://github.com/obsidian-tools/obsidian-tools/pull/63) ([@renovate[bot]](https://github.com/renovate[bot]))
+- `auto-plugin-obsidian@0.1.5`, `create-obsidian-plugin@0.4.2`, `obsidian-plugin-cli@0.8.2`, `obsidian-utils@0.10.1`
+  - Pin dependencies [#57](https://github.com/obsidian-tools/obsidian-tools/pull/57) ([@renovate-bot](https://github.com/renovate-bot) [@renovate[bot]](https://github.com/renovate[bot]))
+
+#### Authors: 2
+
+- [@renovate[bot]](https://github.com/renovate[bot])
+- Mend Renovate ([@renovate-bot](https://github.com/renovate-bot))
+
+---
+
 # (Tue Oct 05 2021)
 
 #### 🐛 Bug Fix

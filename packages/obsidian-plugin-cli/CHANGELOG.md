@@ -1,3 +1,24 @@
+# v0.8.2 (Sun Feb 05 2023)
+
+#### 🐛 Bug Fix
+
+- Update dependency @types/prompts to v2.4.1 ([@renovate[bot]](https://github.com/renovate[bot]))
+- Pin dependencies ([@renovate-bot](https://github.com/renovate-bot))
+
+#### 🏠 Internal
+
+- Update dependency @types/node-fetch to v2.6.2 [#62](https://github.com/obsidian-tools/obsidian-tools/pull/62) ([@renovate[bot]](https://github.com/renovate[bot]))
+- Update dependency @types/semver to v7.3.13 [#64](https://github.com/obsidian-tools/obsidian-tools/pull/64) ([@renovate[bot]](https://github.com/renovate[bot]))
+- Update dependency @types/prompts to v2.4.1 [#63](https://github.com/obsidian-tools/obsidian-tools/pull/63) ([@renovate[bot]](https://github.com/renovate[bot]))
+- Pin dependencies [#57](https://github.com/obsidian-tools/obsidian-tools/pull/57) ([@renovate-bot](https://github.com/renovate-bot) [@renovate[bot]](https://github.com/renovate[bot]))
+
+#### Authors: 2
+
+- [@renovate[bot]](https://github.com/renovate[bot])
+- Mend Renovate ([@renovate-bot](https://github.com/renovate-bot))
+
+---
+
 # v0.8.1 (Tue Oct 05 2021)
 
 #### 🐛 Bug Fix

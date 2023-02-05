@@ -1,3 +1,22 @@
+# v0.4.2 (Sun Feb 05 2023)
+
+#### 🐛 Bug Fix
+
+- Update dependency @types/prettier to v2.7.2 [#75](https://github.com/obsidian-tools/obsidian-tools/pull/75) ([@renovate[bot]](https://github.com/renovate[bot]))
+- Update dependency @types/prettier to v2.7.2 ([@renovate[bot]](https://github.com/renovate[bot]))
+- Pin dependencies ([@renovate-bot](https://github.com/renovate-bot))
+
+#### 🏠 Internal
+
+- Pin dependencies [#57](https://github.com/obsidian-tools/obsidian-tools/pull/57) ([@renovate-bot](https://github.com/renovate-bot) [@renovate[bot]](https://github.com/renovate[bot]))
+
+#### Authors: 2
+
+- [@renovate[bot]](https://github.com/renovate[bot])
+- Mend Renovate ([@renovate-bot](https://github.com/renovate-bot))
+
+---
+
 # v0.4.1 (Fri Jun 04 2021)
 
 #### 🐛 Bug Fix

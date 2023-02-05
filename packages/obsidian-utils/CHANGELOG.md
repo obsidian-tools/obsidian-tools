@@ -1,3 +1,24 @@
+# v0.10.1 (Sun Feb 05 2023)
+
+#### 🐛 Bug Fix
+
+- Update dependency @types/node-fetch to v2.6.2 ([@renovate[bot]](https://github.com/renovate[bot]))
+- Pin dependencies ([@renovate-bot](https://github.com/renovate-bot))
+- Pin dependencies [#58](https://github.com/obsidian-tools/obsidian-tools/pull/58) ([@renovate-bot](https://github.com/renovate-bot) [@renovate[bot]](https://github.com/renovate[bot]))
+
+#### 🏠 Internal
+
+- Update dependency @types/node-fetch to v2.6.2 [#62](https://github.com/obsidian-tools/obsidian-tools/pull/62) ([@renovate[bot]](https://github.com/renovate[bot]))
+- Pin dependencies [#57](https://github.com/obsidian-tools/obsidian-tools/pull/57) ([@renovate-bot](https://github.com/renovate-bot) [@renovate[bot]](https://github.com/renovate[bot]))
+- Update dependency @auto-it/first-time-contributor to v10.32.6 [#67](https://github.com/obsidian-tools/obsidian-tools/pull/67) ([@renovate-bot](https://github.com/renovate-bot) [@renovate[bot]](https://github.com/renovate[bot]))
+
+#### Authors: 2
+
+- [@renovate[bot]](https://github.com/renovate[bot])
+- Mend Renovate ([@renovate-bot](https://github.com/renovate-bot))
+
+---
+
 # v0.10.0 (Sun Jun 06 2021)
 
 #### 🚀 Enhancement
