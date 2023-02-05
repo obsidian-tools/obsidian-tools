@@ -1,5 +1,18 @@
 # (Sun Feb 05 2023)
 
+#### 🚀 Enhancement
+
+- `obsidian-plugin-cli@0.9.0`
+  - Add more builtins from sample plugin [#79](https://github.com/obsidian-tools/obsidian-tools/pull/79) ([@zephraph](https://github.com/zephraph))
+
+#### Authors: 1
+
+- Justin Bennett ([@zephraph](https://github.com/zephraph))
+
+---
+
+# (Sun Feb 05 2023)
+
 #### 🐛 Bug Fix
 
 - `auto-plugin-obsidian@0.1.6`, `create-obsidian-plugin@0.4.3`, `obsidian-plugin-cli@0.8.3`, `obsidian-utils@0.10.2`

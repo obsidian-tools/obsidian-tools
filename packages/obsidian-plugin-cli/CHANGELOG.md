@@ -1,3 +1,20 @@
+# v0.9.0 (Sun Feb 05 2023)
+
+#### 🚀 Enhancement
+
+- Add more builtins from sample plugin [#79](https://github.com/obsidian-tools/obsidian-tools/pull/79) ([@zephraph](https://github.com/zephraph))
+
+#### 🐛 Bug Fix
+
+- Merge branch 'main' into add-more-builtins ([@zephraph](https://github.com/zephraph))
+- Add more builtins from sample plugin ([@zephraph](https://github.com/zephraph))
+
+#### Authors: 1
+
+- Justin Bennett ([@zephraph](https://github.com/zephraph))
+
+---
+
 # v0.8.3 (Sun Feb 05 2023)
 
 #### 🐛 Bug Fix
