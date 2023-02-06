@@ -1,8 +1,8 @@
 import { procedure } from "@zephraph/procedure";
 import * as esbuild from "esbuild";
-import { cosmiconfig } from "cosmiconfig";
 import path from "path";
 import fs from "fs/promises";
+import { esbuildConfig, isDefined } from "./shared";
 
 export type Context = {
   esbuildConfigPath: string;
@@ -15,40 +15,6 @@ export default procedure<Context>("build")
   .load(esbuildConfig)
   .validate("outDir", isDefined)
   .do(build);
-
-// -----------------------------------------------------
-
-async function esbuildConfig({
-  esbuildConfig,
-  esbuildConfigPath,
-  entryPoint,
-}: Context) {
-  const configFinder = cosmiconfig("esbuild");
-  if (esbuildConfigPath) {
-    const { config } = (await configFinder.load(esbuildConfigPath)) ?? {
-      config: {},
-    };
-    esbuildConfig = config;
-  } else {
-    const { config } = (await configFinder.search()) ?? { config: {} };
-    esbuildConfig = config;
-  }
-
-  if (entryPoint) {
-    esbuildConfig.entryPoints = [entryPoint];
-    return { esbuildConfig };
-  }
-
-  if (!esbuildConfig.entryPoints) {
-    throw new Error("Please provide the path to a file to build");
-  }
-
-  return { esbuildConfig };
-}
-
-function isDefined(v: unknown) {
-  return !!v;
-}
 
 async function build({ outDir, esbuildConfig }: Context) {
   await esbuild.build({

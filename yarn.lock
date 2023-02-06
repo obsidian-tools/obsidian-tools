@@ -2259,6 +2259,16 @@
     stacktracey "^2.1.7"
     ts-union-tools "^0.0.1"
 
+"@zephraph/procedure@^2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@zephraph/procedure/-/procedure-2.0.0.tgz#6a023249f6a8ff6987636f0646e751b82dd5369f"
+  integrity sha512-tg/zxh3SyzZyjdz1Pwdxdy+DTcrB4x/S4qxUgSWPkeiQ0y10fBAxHpUsWaTSEgye2JONTpC5z6/BpLedLANdIA==
+  dependencies:
+    endent "^2.0.1"
+    stacktracey "^2.1.7"
+    ts-pattern "^4.0.6"
+    type-fest "^3.3.0"
+
 "@zkochan/cmd-shim@^3.1.0":
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/@zkochan/cmd-shim/-/cmd-shim-3.1.0.tgz#2ab8ed81f5bb5452a85f25758eb9b8681982fd2e"
@@ -3213,6 +3223,13 @@ cli-width@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/cli-width/-/cli-width-3.0.0.tgz#a2f48437a2caa9a22436e794bf071ec9e61cedf6"
   integrity sha512-FxqpkPPwu1HjuN93Omfm4h8uIanXofW0RxVEW3k5RKx+mJJYSthzNhp32Kzxxy3YAEZ/Dc/EWN1vZRY0+kOhbw==
+
+clipanion@^3.2.0-rc.14:
+  version "3.2.0-rc.14"
+  resolved "https://registry.yarnpkg.com/clipanion/-/clipanion-3.2.0-rc.14.tgz#d98154a74ae533a940de1af041e6246ba9725f0e"
+  integrity sha512-lj5zydbH786t6gpXe6oNX7CM5YKhd0CDhcXG8pKyRa2Nz5cgj1yhnNKxDi/MyPYwjyvAG5oVBeDdYCGUAgD8lQ==
+  dependencies:
+    typanion "^3.8.0"
 
 cliui@^5.0.0:
   version "5.0.0"
@@ -9153,6 +9170,11 @@ ts-node@^9, ts-node@^9.1.1:
     source-map-support "^0.5.17"
     yn "3.1.1"
 
+ts-pattern@^4.0.6:
+  version "4.0.6"
+  resolved "https://registry.yarnpkg.com/ts-pattern/-/ts-pattern-4.0.6.tgz#02b17695f6385fcc6d2f3ba7962b0952f709d348"
+  integrity sha512-sFHQYD4KoysBi7e7a2mzDPvRBeqA4w+vEyRE+P5MU9VLq8eEYxgKCgD9RNEAT+itGRWUTYN+hry94GDPLb1/Yw==
+
 ts-union-tools@^0.0.1:
   version "0.0.1"
   resolved "https://registry.yarnpkg.com/ts-union-tools/-/ts-union-tools-0.0.1.tgz#ebe59afacbf5c5ac67b57f4ed9d0dd4c39afe605"
@@ -9189,6 +9211,11 @@ tweetnacl@^0.14.3, tweetnacl@~0.14.0:
   version "0.14.5"
   resolved "https://registry.yarnpkg.com/tweetnacl/-/tweetnacl-0.14.5.tgz#5ae68177f192d4456269d108afa93ff8743f4f64"
   integrity sha1-WuaBd/GS1EViadEIr6k/+HQ/T2Q=
+
+typanion@^3.12.1, typanion@^3.8.0:
+  version "3.12.1"
+  resolved "https://registry.yarnpkg.com/typanion/-/typanion-3.12.1.tgz#d33deb130aba23ef6f2a3c69e7fb28148dd9089a"
+  integrity sha512-3SJF/czpzqq6G3lprGFLa6ps12yb1uQ1EmitNnep2fDMNh1aO/Zbq9sWY+3lem0zYb2oHJnQWyabTGUZ+L1ScQ==
 
 type-check@~0.3.2:
   version "0.3.2"
@@ -9236,6 +9263,11 @@ type-fest@^0.8.1:
   version "0.8.1"
   resolved "https://registry.yarnpkg.com/type-fest/-/type-fest-0.8.1.tgz#09e249ebde851d3b1e48d27c105444667f17b83d"
   integrity sha512-4dbzIzqvjtgiM5rw1k5rEHtBANKmdudhGyBEajN01fEyhaAIhsoKNy6y7+IN93IfpFtwY9iqi7kD+xwKhQsNJA==
+
+type-fest@^3.3.0:
+  version "3.3.0"
+  resolved "https://registry.yarnpkg.com/type-fest/-/type-fest-3.3.0.tgz#3378c9664eecfd1eb4f0522b13cb0630bc1ec044"
+  integrity sha512-gezeeOIZyQLGW5uuCeEnXF1aXmtt2afKspXz3YqoOcZ3l/YMJq1pujvgT+cz/Nw1O/7q/kSav5fihJHsC/AOUg==
 
 typedarray-to-buffer@^3.1.5:
   version "3.1.5"

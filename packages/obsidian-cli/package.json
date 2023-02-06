@@ -23,16 +23,19 @@
     "url": "git+https://github.com/zephraph/obsidian-tools.git"
   },
   "scripts": {
+    "dev": "node -r esbuild-register src/cli/index.ts",
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "bugs": {
     "url": "https://github.com/zephraph/obsidian-tools/issues"
   },
   "dependencies": {
-    "@zephraph/procedure": "^0.2.0",
+    "@zephraph/procedure": "^2.0.0",
+    "clipanion": "^3.2.0-rc.14",
     "commander": "^7.2.0",
     "cosmiconfig": "^7.0.0",
     "esbuild": "^0.12.6",
-    "esbuild-register": "^2.5.0"
+    "esbuild-register": "^2.5.0",
+    "typanion": "^3.12.1"
   }
 }
