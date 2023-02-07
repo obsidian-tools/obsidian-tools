@@ -26,4 +26,4 @@ npm install obsidian-utils
 
 ## Usage
 
-See the [docs]('docs/modules/index.md')
+See the [docs]('docs/modules/obsidian_utils.md')
