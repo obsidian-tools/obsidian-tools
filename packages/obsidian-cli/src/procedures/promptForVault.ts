@@ -9,7 +9,7 @@ import {
 import prompts from "prompts";
 import path from "path";
 
-type Context = {
+export type Context = {
   vaultPath: string;
   noPrompts: boolean;
   vaults: Vault[];
