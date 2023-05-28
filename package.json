@@ -22,7 +22,7 @@
   "devDependencies": {
     "@auto-it/all-contributors": "10.16.7",
     "@auto-it/first-time-contributor": "10.32.6",
-    "auto": "10.16.7",
+    "auto": "10.46.0",
     "lerna": "3.22.1"
   },
   "auto": {
