@@ -10,6 +10,7 @@ obsidian-tools.code-workspace
 
 # ignore node_modules in packages
 packages/*/node_modules
+node_modules
 
 # ignore build output
 packages/*/dist
