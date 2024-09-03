@@ -1,6 +1,20 @@
-node_modules
 .env
 packages/*/lib
 *-error.log
 package-lock.json
 .npmrc
+
+# ignore VSCode workspace settings
+.vscode
+obsidian-tools.code-workspace
+
+# ignore node_modules in packages
+packages/*/node_modules
+
+# ignore build output
+packages/*/dist
+
+# ignore .DS_Store
+.DS_Store
+
+
