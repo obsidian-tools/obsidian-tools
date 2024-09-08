@@ -9271,10 +9271,10 @@ typescript-memoize@^1.0.0-alpha.3:
   resolved "https://registry.yarnpkg.com/typescript-memoize/-/typescript-memoize-1.0.0.tgz#ad3b0e7e5a411ca234be123f913a2a31302b7eb6"
   integrity sha512-B1eufjs/mGzHqoGeI1VT/dnSBoZr2v3i3/Wm8NmdxlZflyVdleE8wO0QwUuj4NfundD7T5nU3I7HSKp/5BD9og==
 
-typescript@4.2.2:
-  version "4.2.2"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.2.2.tgz#1450f020618f872db0ea17317d16d8da8ddb8c4c"
-  integrity sha512-tbb+NVrLfnsJy3M59lsDgrzWIflR4d4TIUjz+heUnHZwdF7YsrMTKoRERiIvI2lvBG95dfpLxB21WZhys1bgaQ==
+typescript@4.9.5:
+  version "4.9.5"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.9.5.tgz#095979f9bcc0d09da324d58d03ce8f8374cbe65a"
+  integrity sha512-1FXk9E2Hm+QzZQ7z+McJiHL4NW1F2EzMu9Nq9i3zAaGqibafqYwCVU6WyWAuyQRRzOlxou8xZSyXLEN8oKj24g==
 
 typical@^4.0.0:
   version "4.0.0"
