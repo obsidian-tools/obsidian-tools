@@ -23,9 +23,9 @@
   },
   "devDependencies": {
     "@oclif/dev-cli": "1.26.0",
-    "@types/dedent": "0.7.0",
+    "@types/dedent": "0.7.2",
     "@types/node": "10.17.60",
-    "@types/prompts": "2.4.2",
+    "@types/prompts": "2.4.9",
     "@types/update-notifier": "5.1.0",
     "builtin-modules": "^3.3.0",
     "globby": "10.0.2",
