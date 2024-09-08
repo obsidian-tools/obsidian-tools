@@ -52,7 +52,7 @@
     "obsidian": "obsidianmd/obsidian-api",
     "ts-jest": "27.0.2",
     "typedoc": "0.20.28",
-    "typedoc-plugin-markdown": "3.5.0",
+    "typedoc-plugin-markdown": "3.17.1",
     "typescript": "4.9.5"
   },
   "dependencies": {
