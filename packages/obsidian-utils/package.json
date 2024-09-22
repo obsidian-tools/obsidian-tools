@@ -47,7 +47,7 @@
     "@types/node": "14.18.36",
     "@types/node-fetch": "2.6.2",
     "@types/which": "2.0.1",
-    "esbuild": "0.8.57",
+    "esbuild": "0.24.0",
     "jest": "27.5.1",
     "obsidian": "obsidianmd/obsidian-api",
     "ts-jest": "27.0.2",
